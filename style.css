@@ -1,0 +1,94 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid gray 2px;
+}
+
+#top-left-img1 {
+    font-size: xxx-large;
+}
+
+#top-right-img1 {
+    font-size: xxx-large;
+    margin: 0 20px;
+}
+
+#top-right-img2 {
+    font-size: xxx-large;
+    margin: 0 20px;
+}
+
+#top-right-img3 {
+    font-size: xxx-large;
+    margin: 0 20px;
+}
+
+.main-middle {
+    display: flex;
+}
+
+.main-middle-left {
+    border-right: solid black 2px;
+    width: 30%;
+}
+
+.main-middle-left-list {}
+
+.main-middle-left-list-column {
+    padding: 10px;
+}
+
+.main-middle-right {
+    width: 70%;
+}
+
+.main-middle-right-content {}
+
+.main-middle-right-title {}
+
+.todo-card {
+    margin: 10px;
+    border: solid black 1px;
+}
+
+.todo-card-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-card-namedue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.todo-card-namedue h5 {
+    margin: 0px;
+}
+
+.todo-card-lower-funtion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.todo-card-namedue h5 {
+    padding: 2px 10px;
+}
+
+.todo-card-lower-funtion-right {
+    justify-content: space-around;
+    width: 9%;
+    display: flex;
+    padding-bottom: 9px;
+}
