@@ -12,55 +12,89 @@
   </head>
   <body>
     
-    <!----   navbar   ---->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mx-4 ">
-      <a class="navbar-brand" href="#">
-        <img class="nav-brand" width="20vw" height="20vh" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSY4TjomvQUObKWUt0CeYxiGPINdcLxOthuw&usqp=CAU">
-      </a>
-      
-  
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link active" href="/index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/addnew.html">Add New</a>        
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Alarms</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Setting</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        
-        
+    <!----   navbar desktop  ---->
+    <nav class="navbar navbar-expand-lg navbar-success bg-light mx-4 border-primary d-none d-md-block">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="nav-brand" width="20vw" height="20vh" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSY4TjomvQUObKWUt0CeYxiGPINdcLxOthuw&usqp=CAU">
+        </a>
+    
+        <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link active" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/addnew.html">Add New</a>        
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Alarms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Setting</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+          
+        </div>
       </div>
-      <a class="btn d-lg-none d-md-block" href="addnew.html">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-        </svg>
-      </a>
     </nav>
 
-  
-    
+    <!---- end of navbar desktop ---->
 
-    <!---- end of navbar ---->
+    <!---- navbar moblie ---->
+    <nav class="navbar navbar-primary bg-primary d-md-none d-block">
+        
+      <div class="d-flex justify-content-between">
+        <a class="btn align-self-start" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </a>
+        <a class="btn d-lg-none d-md-block align-self-end" href="addnew.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </svg>
+        </a>
+      </div>
+        
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0">Today</li>
+              <li class="list-group-item">Next 7 Days</li>
+              <li class="list-group-item border-0">Work</li>
+              <li class="list-group-item border-0">Personnal</li>
+              <li class="list-group-item border-0">Family</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+      
+      
+    </nav>
+
+
+    <!---- end of navbar moblie ---->
 
 
 
     <div class="container-fluid">
-      <div class="row">  
+      <div class="row justify-content-center justify-content-md-around p-2">  
            <!------left-menu----->
-        <div class="col d-none d-sm-none d-md-block" >
+        <div class="col-2 d-none d-sm-none d-md-block" >
           <ul class="list-group list-group-flush d-sm-none d-md-block">
-            <li class="list-group-item border-0 mt-3">Today</li>
+            <li class="list-group-item border-0">Today</li>
             <li class="list-group-item">Next 7 Days</li>
             <li class="list-group-item border-0">Work</li>
             <li class="list-group-item border-0">Personnal</li>
@@ -68,7 +102,7 @@
           </ul>
         </div>                                    
            <!------right-menu----->
-        <div class="col-8 justify-content-center" width="70%">
+        <div class="col-8 justify-content-center overflow-auto" width="70%">
           <h1 class="display2">Calendar</h1>
           <div>
             <img class="" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjojCJlrlZh6xVrwBYEqJ5aMKhHXhUrZNq8g&usqp=CAU">
@@ -78,6 +112,7 @@
     </div>
 
     
+
     
 
     <!-- Optional JavaScript; choose one of the two! -->
