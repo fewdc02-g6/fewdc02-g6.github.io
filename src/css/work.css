@@ -106,7 +106,11 @@ header{
     width: 70%;
 }
 
-.main-middle-right-content {}
+.main-middle-right-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
 
 .main-middle-right-title {
     padding-left: 25px;
