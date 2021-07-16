@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <link href="./src/css/add_new.css" rel="stylesheet" type="text/css">
+        <link href="src/css/index.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,141 +11,160 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <title>Group-Project</title>
     </head>
 
     <body>
     <header class="top-bar">
         <div class="top-left-bar">
-            <i id='top-left-img1' class="fas fa-align-justify"></i>
+            <i id='top-left-img1' class="fas fa-align-justify"></i>          
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><i id='top-left-img1' class="fas fa-align-justify"></i>  </button>
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-content-itm">Today</a>
+              <a href="#" class="dropdown-content-itm">Next 7 Days</a>
+              <a href="#" class="dropdown-content-itm">Work</a>
+              <a href="#" class="dropdown-content-itm">Family</a>
+              <a href="#" class="dropdown-content-itm">Personal</a>
+              <a href="#" class="dropdown-content-itm">Calendar</a>
+            </div>
         </div>
         <div class="top-right-bar">
+            <form class="top-right-bar-search"><input type="search" placeholder="Search"></form>
+            <div class="top-right-bar2">
+                <a class="top-right-bar2-items"><h4>Addnews</h4></a>
+                <a class="top-right-bar2-items"><h4>Alarms</h4></a>
+                <a class="top-right-bar2-items"><h4>Setting</h4></a>
+
+            </div>
+        </div>
+        <div class="mobile-top-right-bar1">
             <i id="top-right-img1" class="fas fa-search"></i>
             <i id="top-right-img2" class="far fa-bell"></i>
             <i id="top-right-img3" class="fas fa-cog"></i>
+        </div>
+        <div class="mobile-top-right-bar2">
+            <i id="top-right-img4" class="fas fa-plus"></i>
         </div>
     </header>
     <div class="main-middle">
         <div class="main-middle-left">
             <ul class="main-middle-left-list">
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
-                <li class="main-middle-left-list-column">list@@</li>
+                <li class="main-middle-left-list-column">Today</li>
+                <li class="main-middle-left-list-column">Next 7 Days</li>
+                <li class="main-middle-left-list-column">All</li>                
 
             </ul>
-        </div>
+            <hr>
+            <ul class="main-middle-left-list">
+                <li class="main-middle-left-list-column">Work</li>
+                <li class="main-middle-left-list-column">Family</li>
+                <li class="main-middle-left-list-column">Personal</li>                
+                <li class="main-middle-left-list-column">Other</li>                
 
-
-     <div class="add-new-middle-right">
-            <div class="add-new-middle-right-content">
-                <div class="add-new-middle-right-title">
-                    <h3 class="">Add New</h3>
-                </div>
-
-    <div class="add-new-card">
-        <div class="add-new-card-namedue">
-
-    <div class="task-name"></div>
-                           
-        <label for="tname">Task Name:</label>
-        <input type="text" id="tname" name="tname"><br><br>
-    </div>
-
-
-    <div class="type">
-     <lable for="type">Type:</lable>
-
-         <select id="type">
-         <option value="business">Business</option>
-         <option value="faimly">Faimly</option>
-         <option value="personal">Personal</option>
-         </select>
-
-         <br><br>
-         </div>
-
-
-    <div class="start-end-date">
-      <form id="date">
-           <label>
-              Start Date 
-               <input type="date" name="start" value="Today"/>
-            </label>
-                           
-                <label>
-                    End Date 
-                     <input type="date" name="end" data-value="7" value="After one week"/>
-                </label> <br><br>
-    </div>
-                          
-    <div class="description" >
-        <label for="description">Description</label>
-         <input type="text" id="tname" name="tname"><br><br>
-    </div>
-
-
-    <div class="status">
-      <lable for="type">Status</lable>
-
-        <select id="type">
-          <option value="planing">Planing</option>
-          <option value="in-progress">In progress</option>
-          <option value="done">Done</option>
-        </select>
-        <br><br>
-    </div>
-
-    
-    <div class="importance">
-        <section class="patties">
-            <label for="importance-level">importance</label>
-            <br>
-            <span>Trivial</span>
-            <input type="range" name="importance" id="importance" value="3" min="1" max="5">
-            <span>Critical</span>
-        </section>
-          <hr>
-        
-    </div>             
-                        
-    <div class="assigned">
-
-    </div>
-                        <h5>Assigned to</h5>
-                    </form>
-
-                    </div>
-                    
-                    
-                    <div class="new-add-card-lower-funtion">
-                        <div class="new-add-card-lower-funtion-right">
-                            <button type="button">Comfirm</button>
-                        </div>
-                        
-
-                    </div>
-                </div>
-                
-
-                    </div>
-                </div>
-
+            </ul>
+            <div class="calender">
+                <input type="date" id="calender-date">
             </div>
         </div>
+        <div class="main-middle-right">
+            <div class="add-new-middle-right">
+                        <div class="add-new-middle-right-content">
+                            <div class="add-new-middle-right-title">
+                                <h3 class="">Add New</h3>
+                            </div>
+                        </div>
+            </div>
+                
 
-    </div>
+            <div class="add-new-card">
+                <div class="add-new-card-namedue">
+
+                <div class="task-name"></div>
+                                
+                <label for="tname">Task Name:</label>
+                <input type="text" id="tname" name="tname"><br><br>
+                </div>
+            </div>
+
+
+            <div class="type">
+                <lable for="type">Type:</lable>
+
+                <select id="type">
+                <option value="business">Business</option>
+                <option value="faimly">Faimly</option>
+                <option value="personal">Personal</option>
+                </select>
+
+                <br><br>
+            </div>
+
+
+            <div class="start-end-date">
+                <form id="date">
+                <label>
+                    Start Date 
+                    <input type="date" name="start" value="Today"/>
+                    </label>
+                                
+                    <label>
+                        End Date 
+                        <input type="date" name="end" data-value="7" value="After one week"/>
+                    </label>       
+                </form>
+                <br><br>
+            </div>
+                                
+            <div class="description" >
+                <label for="description">Description</label>
+                <input type="text" id="tname" name="tname"><br><br>
+            </div>
+
+
+            <div class="status">
+                <lable for="type">Status</lable>
+
+                <select id="type">
+                <option value="planing">Planing</option>
+                <option value="in-progress">In progress</option>
+                <option value="done">Done</option>
+                </select>
+                <br><br>
+            </div>
+
+        
+            <div class="importance">
+                <section class="patties">
+                    <label for="importance-level">Importance</label>
+                    <br>
+                    <span>Trivial</span>
+                    <input type="range" name="importance" id="importance" value="3" min="1" max="5">
+                    <span>Critical</span>
+                </section>
+                <hr>
+                
+            </div>             
+                                
+            <div class="assigned">
+                <label for="assigned">Assigned to</label>
+                <input type="text" id="tname" name="tname">
+            </div>
+                                
+                            
+            <div class="new-add-card-lower-funtion">
+                <div class="new-add-card-lower-funtion-right">
+                    <button type="button">Comfirm</button><br><br>
+                </div>
+            </div>
+        </div>
+                
+
+
+            
+
+
 
 
     </body>
