@@ -93,16 +93,10 @@ body{
 }
 #calender-date{
     text-align: center;
-}
-.main-middle-right {
-    width: 70%;
+
+/** Add new middle right**/
 }
 
-.main-middle-right-content {}
-
-.main-middle-right-title {
-    padding-left: 25px;
-}
 
 .add-new-middle-right {
     width: 70%;
@@ -110,23 +104,20 @@ body{
 
 .add-new-middle-right-content {}
 
-.add-new-middle-right-title {}
+.add-new-middle-right-title {
+    padding-left: px;
+}
 
 .add-new-card {
     margin: 10px;
-    border: solid black 1px;
+     ;
 }
 
-.new-add-card-namedue {
+.add-new-card-namedue {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    
 }
-
-.new-add-card-namedue h5 {
-    margin: 0px;
-}
-
 .new-add-card-lower-funtion {
     display: flex;
     flex-direction: row;
