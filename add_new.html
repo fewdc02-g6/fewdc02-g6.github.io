@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <link href="src/css/index.css" rel="stylesheet" type="text/css">
+        <link href="src/css/add_new.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,25 +68,29 @@
                 <input type="date" id="calender-date">
             </div>
         </div>
+        
+
         <div class="main-middle-right">
             <div class="add-new-middle-right">
                         <div class="add-new-middle-right-content">
-                            <div class="add-new-middle-right-title">
+                            <div class="add-new-middle-right-title"></div>
                                 <h3 class="">Add New</h3>
-                            </div>
                         </div>
-            </div>
+            
+        
+        
                 
 
             <div class="add-new-card">
                 <div class="add-new-card-namedue">
 
-                <div class="task-name"></div>
-                                
-                <label for="tname">Task Name:</label>
-                <input type="text" id="tname" name="tname"><br><br>
+                   <div class="task-name">
+                    <label for="tname">Task Name:</label>
+                   <input type="text" id="tname" name="tname" placeholder="Task Name">
+                    </div>
+                    <br><br>
                 </div>
-            </div>
+           
 
 
             <div class="type">
@@ -114,12 +118,12 @@
                         <input type="date" name="end" data-value="7" value="After one week"/>
                     </label>       
                 </form>
-                <br><br>
+                <br>
             </div>
                                 
             <div class="description" >
                 <label for="description">Description</label>
-                <input type="text" id="tname" name="tname"><br><br>
+                <input type="text" id="tname" name="tname" placeholder="NAMES"><br><br>
             </div>
 
 
@@ -136,20 +140,21 @@
 
         
             <div class="importance">
-                <section class="patties">
+                   
                     <label for="importance-level">Importance</label>
                     <br>
                     <span>Trivial</span>
                     <input type="range" name="importance" id="importance" value="3" min="1" max="5">
                     <span>Critical</span>
-                </section>
-                <hr>
-                
+                   
+                <br>
+                <br>
             </div>             
                                 
             <div class="assigned">
                 <label for="assigned">Assigned to</label>
-                <input type="text" id="tname" name="tname">
+                <input type="text" id="tname" name="tname" placeholder="Assigned to">
+                <br><br>
             </div>
                                 
                             
@@ -160,13 +165,13 @@
             </div>
         </div>
                 
-
+    
 
             
+    </div>
+    </div>
 
-
-
-
+    
     </body>
 
 </html>
