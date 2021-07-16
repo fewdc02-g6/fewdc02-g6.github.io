@@ -1,8 +1,12 @@
-
+* {
+    margin: 0;
+    padding: 0;
+}
 h1,h2,h3,h4,h5,h6,label,a, .main-middle {
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 1px;
-    color: rgb(0, 0, 0, 0.5);
+    color: rgba(25, 135, 84)
+    
 }
 ul,li,a{
     list-style: none;
@@ -10,8 +14,11 @@ ul,li,a{
 }
 /*    navbar    */
 
-header{
+header.top-bar {
     background-color: #ffc107;
+    position: sticky;
+    top: 0px;
+    
 }
 
 .top-bar {
@@ -30,6 +37,7 @@ header{
 .top-right-bar2{
     display: flex;
     flex-direction: row;
+    align-items: center;
 
 }
 .top-right-bar-search{
@@ -49,6 +57,7 @@ header{
 #top-left-img1 {
     font-size: xxx-large;
     padding-left: 5px;
+    display: none;
 }
 
 #top-right-img1 {
@@ -71,15 +80,17 @@ header{
     margin: 0 20px;
 }
 
+
 /* end of navbar */
 
 .main-middle {
     display: flex;
 }
 
-.main-middle-left {
+div.main-middle-left {
     border-right: solid black 2px;
     width: 30%;
+    
 }
 .main-middle-left hr{
     background: gray;
@@ -90,7 +101,7 @@ header{
 }
 
 .main-middle-left-list-column {
-    border: solid 1px;
+    
     padding: 10px;
     margin: 2px;
 }
@@ -102,6 +113,9 @@ header{
 #calender-date{
     text-align: center;
 }
+
+/*  main right   */
+
 .main-middle-right {
     width: 70%;
 }
@@ -113,7 +127,8 @@ header{
 }
 
 .main-middle-right-title {
-    padding-left: 25px;
+    padding: 25px;
+    
 }
 
 .todo-card {
@@ -167,37 +182,51 @@ header{
     color: red;    
 }
 
+.flag3 {
+    color: blue !important;
+}
+
+.todo-card-lower-function-left {
+    padding-left: 5px;
+    
+}
+
+/* nav mobile  */
+
+
 .dropbtn {      
     font-size: 16px;
     border: none;
   }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    
   }
-  .dropdown-content-itm{
-      border: solid 1px;      
-      margin: 1px;
-  }
-  .dropdown-content a {
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      font-size: 40px;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      border: solid 1px;      
-      margin: 1px;    
-
-  }
+.dropdown-content-itm{
+    border: solid 1px;      
+    margin: 1px;
+    
+}
+.dropdown-content a {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: solid 1px;      
+    margin: 1px;    
+    color: rgba(25, 135, 84, 0.5)
+}
 
 
 
@@ -206,7 +235,9 @@ header{
 
 
 @media only screen and (max-width:500px){
-
+    #top-left-img1 {
+        display: block;
+    }
 
     .main-middle-left{
         display: none;
