@@ -213,16 +213,16 @@ body{
 .dropdown-content a:hover {
     background-color: #ddd;
 }
-.dropdown-content a:hover i{
-    color: white;
+.dropdown-content :hover .dropbtn{
+    background: white;
 }
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.dropdown:hover .dropbtn {
-    background: #000000;    
+.dropdown:hover .dropbtn { 
+    background: #000000;   
+    color: white;
 }
 .dropbtn:hover i{
-    color: white;
 }
 }
