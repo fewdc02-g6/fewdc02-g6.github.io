@@ -117,8 +117,8 @@ header.top-bar {
 
 div.main-middle-left {
     border-right: solid #ffc107 2px;
-    width: 25%;
-    padding: 20px;
+    width: 20%;
+    padding: 40px;
 }
 .main-middle-left hr{
     background: gray;
@@ -157,8 +157,11 @@ div.main-middle-left {
 
 .main-middle-right-title {
     padding: 25px;
+    margin-top: 25px;
     
 }
+
+
 
 .todo-card {
     margin: 10px;
