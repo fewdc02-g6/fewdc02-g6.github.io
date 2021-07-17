@@ -3,8 +3,10 @@ h1,h2,h3,h4,h5,h6,label,a {
     letter-spacing: 1px;   
     color: #198754; 
 }
-.todo-card h4{
+.next7days-content h4{
     font-family: 'Zen Loop', cursive;
+    margin: 0px;
+    background:#ffc107;;
 }
 ul,li,a{
     list-style: none;
@@ -14,11 +16,7 @@ ul,li,a{
 hr{
     color:#ffc107;
 }
-body{
-    margin: 0;
-    padding: 0;
-   
-}
+
 .top-bar {
     display: flex;
     justify-content: space-between;
@@ -171,69 +169,16 @@ body{
 }
 .main-middle-right {
     width: 73.6%;
-}
-
-.main-middle-right-content {
-
-}
-
-.main-middle-right-title {
-    padding-left: 25px;
-}
-
-.todo-card {
-    margin: 10px;
-    border: solid black 1px;
-    border-left: solid rgb(32, 30, 30) 10px;
-    background: #ffe73b80;
-}
-.todo-cardtype{
-    background: burlywood;
-    text-align: center;
-    border-bottom: solid 1px;
-}
-.todo-cardtype h4{
-    margin: 2px;
-}
-.todo-card-content {   
-    padding: 10px;
-}
-.todo-card-content h4{
-    margin: 3px;
-}
-.todo-card-namedue {
+    justify-content: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
-.todo-card-namedue h5 {
-    margin: 0px;
+.main-middle-right {
 }
 
-.todo-card-lower-funtion {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.next7days-content{
+    width: 60%;
 }
-
-.todo-card-namedue h5 {
-    padding: 2px 10px;
-}
-
-.todo-card-lower-funtion-right {
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    width: 20%;
-    display: flex;
-    padding-bottom: 9px;
-}
-#tclfr3{    
-    color: red;    
-}
-
-
-
 
 
 
