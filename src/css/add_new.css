@@ -83,6 +83,9 @@ header.top-bar {
 
 /* end of navbar */
 
+
+/*   main left   */
+
 .main-middle {
     display: flex;
 }
@@ -107,52 +110,22 @@ div.main-middle-left {
 }
 .calender{
     flex-direction: column-reverse;
-    display: flex;
+    
     padding: 6px;
 }
 #calender-date{
     text-align: center;
 }
 
-/*  main right   */
+/*    main  right   */
 
-.main-middle-right {
+div.main-middle-right {
     width: 70%;
-    margin-auto:auto;
+    padding: 20px 50px !important;
+    margin: 20px 50px !important;
 }
 
-.add-new-middle-right-content {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 0 25px;
-}
-
-.add-new-middle-right-title {
-    padding: 25px;
 
 
-.add-new-card{
-    margin: 10px;
-    border: solid black 1px;
-    border-left: solid reb(32, 30, 30) 10px;
-    background: #ffe73b80;
-}
 
-.add-new-card-namedue {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: burlywood;
-    text-align: center;
-    border-bottom: solid 1px;
-    
-}
-.new-add-card-lower-funtion {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-
-}
 
