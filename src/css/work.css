@@ -35,13 +35,7 @@ header.top-bar {
     display: flex;
     flex-direction: row;
 }
-.top-right-bar input{
-    border: none;
-    border-radius: 5px;
-    width: 208px;
-    height: 36px; 
-    margin: auto 4px;
-}
+
 .top-right-bar2{
     display: flex;
     flex-direction: row;
@@ -51,8 +45,14 @@ header.top-bar {
 .top-right-bar-search{
     margin: auto;
 }
-
-.top-right-bar-search button{
+.top-right-bar input{
+    border: none;
+    border-radius: 5px;
+    width: 208px;
+    height: 36px; 
+    margin: auto 4px;
+}
+.top-right-bar-search button {
     width: 76px;
     height: 34px;
     border: 1px solid transparent;
@@ -143,9 +143,15 @@ div.main-middle-left {
 }
 
 /*  main right   */
+.font-change {
+    font-family: 'Zen Loop';
+    font-size: 20px;
+}
+
 
 .main-middle-right {
     width: 70%;
+   
 }
 
 .main-middle-right-content {
@@ -153,6 +159,7 @@ div.main-middle-left {
     flex-direction: column;
     align-content: center;
     padding: 0 25px;
+    
 }
 
 .main-middle-right-title {
