@@ -143,9 +143,15 @@ div.main-middle-left {
 }
 
 /*  main right   */
+.font-change {
+    font-family: 'Zen Loop';
+    font-size: 20px;
+}
+
 
 .main-middle-right {
     width: 70%;
+   
 }
 
 .main-middle-right-content {
@@ -153,6 +159,7 @@ div.main-middle-left {
     flex-direction: column;
     align-content: center;
     padding: 0 25px;
+    
 }
 
 .main-middle-right-title {
