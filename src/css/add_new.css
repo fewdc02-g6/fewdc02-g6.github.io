@@ -18,7 +18,7 @@ header.top-bar {
     background-color: #ffc107;
     position: sticky;
     top: 0px;
-    
+    height: 55px;
 }
 
 .top-bar {
@@ -41,7 +41,7 @@ header.top-bar {
 
 }
 .top-right-bar-search{
-    margin: 21.28px;
+    margin: auto;
 }
 .top-right-bar input{
     border: none;
