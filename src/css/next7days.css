@@ -3,9 +3,8 @@ h1,h2,h3,h4,h5,h6,label,a {
     letter-spacing: 1px;   
     color: #198754; 
 }
-
 .next7days-content h4{
-    font-family: 'Zen Loop', cursive;
+    /*font-family: 'Zen Loop', cursive;*/
     margin: 0px;
     background:#ffc107;    
 }
@@ -14,12 +13,10 @@ ul,li,a{
     text-decoration: none;
     color: #198754; 
 }
-hr{
-    color:#ffc107;
-}
 body{
     margin: 0;
     padding: 0;
+   
 }
 .top-bar {
     display: flex;
@@ -30,7 +27,7 @@ body{
     padding-right: 12px;
 }
 .top-left-bar{
-    visibility: hidden;
+    
 }
 .dropbtn {      
     background: #198754;
@@ -44,7 +41,8 @@ body{
   
   .dropdown {
     position: relative;
-    display: inline-block;    
+    display: inline-block;   
+    visibility: hidden;   
   }
   .dropdown-content {
     display: none;
@@ -152,9 +150,9 @@ body{
     padding: 20px;
     font-family: 'Bebas Neue', cursive;
 }
-.main-middle-left hr{
-    background: gray;
+.main-middle-left hr{    
     height: 1px;
+    background: gray;
 }
 .main-middle-left-list {     
     margin: 0px;
@@ -162,10 +160,9 @@ body{
     letter-spacing: 1px;
 }
 
-.main-middle-left-list-column {    
+.main-middle-left-list-column {
     padding: 10px;
-    margin: 2px;  
-    
+    margin: 2px;   
 }
 .calender{
     flex-direction: column-reverse;
@@ -194,7 +191,7 @@ body{
 
 @media only screen and (max-width:500px){
 
-    .top-left-bar{
+    .dropdown{
         visibility: visible;
     }
     .main-middle-left{

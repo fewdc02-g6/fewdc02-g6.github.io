@@ -26,8 +26,7 @@ header.top-bar {
     justify-content: space-between;
     
 }
-.top-left-bar{
-    display: none;
+.top-left-bar{    
     
 }
 .top-right-bar{
@@ -81,14 +80,14 @@ header.top-bar {
     display: none;
 }
 #top-left-img1 {
-    font-size: xxx-large;
-    padding-left: 5px;
+    font-size: xxx-large;    
     display: none;
+    padding: 1px 6px;
 }
 
 #top-right-img1 {
     font-size: xxx-large;
-    margin: 0 20px;
+    margin: 4px;
 }
 
 #top-right-img2 {
@@ -103,7 +102,7 @@ header.top-bar {
 }
 #top-right-img4{
     font-size: xxx-large;
-    margin: 0 20px;
+    margin: 4px;
 }
 
 
@@ -228,37 +227,39 @@ div.main-middle-left {
 
 
 .dropbtn {      
-    font-size: 16px;
+    background: #198754;
+    color: white;
+    font-size: 16px;    
     border: none;
+    height: 52px;
+    margin: 2px;
+    border-radius: 6px;
   }
 .dropdown {
-position: relative;
-display: inline-block;
+    position: relative;
+    display: inline-block;  
+    visibility: hidden; 
 }
 .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f1f1f1;
+    position: absolute;    
     min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    
   }
 .dropdown-content-itm{
-    border: solid 1px;      
-    margin: 1px;
-    
+    border: solid 1px;    
+    background: white;
+    color: #198754;
 }
 .dropdown-content a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 40px;
-    
+    font-size: 40px;      
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    border: solid 1px;      
-    margin: 1px;    
-    color: rgba(25, 135, 84, 0.5)
+    border: solid 1px #198754;
+    border-radius: 5px;  
 }
 
 
@@ -268,6 +269,11 @@ display: inline-block;
 
 
 @media only screen and (max-width:500px){
+
+    .dropdown{
+        visibility: visible;
+    }
+    
     #top-left-img1 {
         display: block;
     }
@@ -296,8 +302,7 @@ display: inline-block;
         display: block;
     }
     .dropdown:hover .dropbtn { 
-        background: #000000;   
-        color: white;
+      
     }
     .dropbtn:hover i{
     }
