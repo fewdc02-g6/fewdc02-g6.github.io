@@ -112,6 +112,7 @@ div.main-middle-left {
 }
 #calender-date{
     text-align: center;
+    
 }
 
 /*  main right   */
@@ -120,8 +121,15 @@ div.main-middle-left {
     width: 70%;    
     display: flex;
     justify-content: center;
+    
 }
 
+.font-change {
+    font-family: 'Zen loop', cursive;
+    letter-spacing: 1px
+    font-weight: bolder;
+    font-size: 25px;
+}
 
 .add-new-middle-right-title {
     padding: 25px;
@@ -183,6 +191,7 @@ display: inline-block;
     }
     .main-middle-right{
         width: 100%;
+        
     }
     .top-right-bar{
         display: none;
