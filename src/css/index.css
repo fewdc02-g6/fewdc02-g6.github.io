@@ -3,6 +3,7 @@ h1,h2,h3,h4,h5,h6,label,a {
     letter-spacing: 1px;   
     color: #198754; 
 }
+
 .todo-card h4{
     font-family: 'Zen Loop', cursive;
 }
@@ -10,9 +11,6 @@ ul,li,a{
     list-style: none;
     text-decoration: none;
     color: #198754; 
-}
-hr{
-    color:#ffc107;
 }
 body{
     margin: 0;
@@ -42,7 +40,8 @@ body{
   
   .dropdown {
     position: relative;
-    display: inline-block;    
+    display: inline-block;  
+    visibility: hidden;  
   }
   .dropdown-content {
     display: none;
@@ -146,21 +145,26 @@ body{
 
 .main-middle-left {
     border-right: solid #ffc107 3px;
-    width: 26.4%;
+    width: 25%;
+    padding: 20px;
+    font-family: 'Bebas Neue', cursive;
 }
 .main-middle-left hr{    
     height: 1px;
+    background: gray;
 }
 .main-middle-left-list {     
-    padding: 5px 5px;
+    margin: 0px;
+    padding: 0px 10px;
+    letter-spacing: 1px;
 }
 
+
 .main-middle-left-list-column {
-    border: solid 1px;
     padding: 10px;
-    margin: 2px;
-    font-weight: 600;
+    margin: 2px;    
 }
+    
 .calender{
     flex-direction: column-reverse;
     display: flex;
@@ -240,8 +244,11 @@ body{
 
 
 @media only screen and (max-width:500px){
-
-
+    
+    .dropdown{
+        visibility: visible;
+    }
+    
     .main-middle-left{
         display: none;
     }
