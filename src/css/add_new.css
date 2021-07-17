@@ -117,8 +117,9 @@ div.main-middle-left {
 /*  main right   */
 
 .main-middle-right {
-    width: 70%;
-    margin-auto:auto;
+    width: 70%;    
+    display: flex;
+    justify-content: center;
 }
 
 .add-new-middle-right-content {
