@@ -1,25 +1,70 @@
 h1,h2,h3,h4,h5,h6,label,a {
     font-family: 'Bebas Neue', cursive;
-    letter-spacing: 1px;
-    color: rgb(0, 0, 0, 0.5);
+    letter-spacing: 1px;   
+    color: #198754; 
+}
+.todo-card h4{
+    font-family: 'Zen Loop', cursive;
 }
 ul,li,a{
     list-style: none;
     text-decoration: none;
+    color: #198754; 
+}
+hr{
+    color:#ffc107;
 }
 body{
-    background: #00a6ff21;
+   
 }
 .top-bar {
     display: flex;
     justify-content: space-between;
-    border-bottom: solid gray 2px;
+    color: #198754;
+    background-color: #ffc107;    
+    height: 56px;
+    padding-right: 12px;
 }
 .top-left-bar{
-    padding-left: 5px;
-    display: none;
-    
+        
 }
+.dropbtn {      
+    background: #198754;
+    color: white;
+    font-size: 16px;    
+    border: none;
+    height: 52px;
+    margin: 2px;
+    border-radius: 6px;
+}
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;    
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;    
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content-itm{
+      border: solid 1px;    
+      background: white;
+      color: #198754;
+            
+  }
+  .dropdown-content a {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 40px;      
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      border: solid 1px #198754;
+      border-radius: 5px;    
+  }
+
 .top-right-bar{
     display: flex;
     flex-direction: row;
@@ -30,10 +75,37 @@ body{
 
 }
 .top-right-bar-search{
-    margin: 21.28px;
+    margin: auto;
+    
 }
+.top-right-bar input{
+    border: none;
+    border-radius: 5px;
+    width: 208px;
+    height: 36px; 
+    margin: auto 4px;
+}
+.top-right-bar-search button{
+    width: 76px;
+    height: 34px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font: 400 13.3333px Arial;
+    font-weight: 700;
+    background: #198754;
+    color: white;    
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    
+}
+.top-right-bar-search button:hover{
+    color: #fff;
+    background-color: #157347;
+    border-color: #146c43;
+}
+    
+
 .top-right-bar2-items{
-    margin: 0 10px;
+    margin: 0 8px;
 }
 .mobile-top-right-bar1{
     display: none;
@@ -62,19 +134,19 @@ body{
 }
 #top-right-img4{
     font-size: xxx-large;
-    margin: 0 20px;
+    margin: auto 6px;
 }
 
 .main-middle {
     display: flex;
+    background: white;
 }
 
 .main-middle-left {
-    border-right: solid black 2px;
+    border-right: solid #ffc107 3px;
     width: 26.4%;
 }
-.main-middle-left hr{
-    background: gray;
+.main-middle-left hr{    
     height: 1px;
 }
 .main-middle-left-list {     
@@ -85,6 +157,7 @@ body{
     border: solid 1px;
     padding: 10px;
     margin: 2px;
+    font-weight: 600;
 }
 .calender{
     flex-direction: column-reverse;
@@ -95,10 +168,12 @@ body{
     text-align: center;
 }
 .main-middle-right {
-    width: 70%;
+    width: 73.6%;
 }
 
-.main-middle-right-content {}
+.main-middle-right-content {
+
+}
 
 .main-middle-right-title {
     padding-left: 25px;
@@ -155,37 +230,6 @@ body{
     color: red;    
 }
 
-.dropbtn {      
-    font-size: 16px;
-    border: none;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 300px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  .dropdown-content-itm{
-      border: solid 1px;      
-      margin: 1px;
-  }
-  .dropdown-content a {
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      font-size: 40px;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border: solid 1px;      
-    margin: 1px;
-
-  }
 
 
 
@@ -220,8 +264,7 @@ body{
     display: block;
 }
 .dropdown:hover .dropbtn { 
-    background: #000000;   
-    color: white;
+ 
 }
 .dropbtn:hover i{
 }
