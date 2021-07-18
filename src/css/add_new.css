@@ -82,7 +82,7 @@ header.top-bar {
 }
 #top-left-img1 {
     font-size: xxx-large;
-    padding-left: 5px;
+    padding: 1px 6px;
     display: none;
 }
 
