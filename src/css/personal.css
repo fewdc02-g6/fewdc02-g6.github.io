@@ -41,6 +41,7 @@ header.top-bar {
 }
 .top-right-bar-search{
     margin: auto;
+    display: flex;
 }
 
 .top-right-bar input{

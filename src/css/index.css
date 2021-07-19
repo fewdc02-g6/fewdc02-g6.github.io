@@ -79,6 +79,7 @@ body{
 }
 .top-right-bar-search{
     margin: auto;
+    display: flex;
     
 }
 .top-right-bar input{
@@ -244,8 +245,7 @@ body{
 
 
 
-
-@media only screen and (max-width:500px){
+@media only screen and (max-width:500px){    
     
     .dropdown{
         visibility: visible;
