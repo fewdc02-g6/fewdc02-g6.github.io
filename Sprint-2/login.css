@@ -1,0 +1,27 @@
+.mainContainer{
+    margin: 0px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.loginTable{
+    margin: 30px auto;
+    margin: 2;
+    background: gray;
+    width: 83%;
+    text-align: center;
+    border-radius: 14px;
+}
+.loginTable h1{
+    padding-top: 130px;   
+    
+}
+#inputLogin{
+    color:#216cf3d9;
+    width: 42%;
+    margin: 20px;
+}form p{
+    padding: 0px 0px 20px;
+}
+.signUp{
+    color:#216cf3d9;
+    text-decoration: none;
+}
