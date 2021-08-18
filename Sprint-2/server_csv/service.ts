@@ -1,10 +1,9 @@
 import fs from 'fs'
+import { AddTodoListForm } from './util/model'
 
 export class Service {
     constructor() {
     }
-
-
 
     async readTodoList() {
         const filePath = __dirname + '/TodoList.csv'
@@ -27,16 +26,7 @@ export class Service {
         return result;
     }
 
-    async addTodoList(
-        post: {
-            id: string,
-            name?: string,
-            description?: string,
-            assignedto?: string,
-            duedate?: string,
-            status?: string,
-        }
-    ) {
+    async addTodoList(post: AddTodoListForm) {
 
         const filePath = __dirname + '/TodoList.csv'
         console.log(post)
