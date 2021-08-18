@@ -1,6 +1,5 @@
 import { Request, Response } from 'express'
 import { Service } from './service'
-import { AddTodoListForm } from './util/model'
 
 export class Controller {
     constructor(private service: Service) {
@@ -54,7 +53,8 @@ export class Controller {
     // [done]
     getTodoList = async (req: Request, res: Response) => {
         try {
-            const returnedTodoList = await this.service.readTodoList()
+            const type = req.query.type as string
+            const returnedTodoList = await this.service.readTodoList(type)
             res.status(200).json(returnedTodoList)
         } catch (e) {
             res.status(500).json({
@@ -71,7 +71,7 @@ export class Controller {
             const maxTaskID = tasks.reduce((acc, cur) => {
                 console.log('acc: ' + acc)
                 console.log('cur: ' + cur)
-                return acc > 1 * cur['id'] ? acc : 1 * cur['id']
+                return acc > 1 * parseInt(cur['id']) ? acc : 1 * parseInt(cur['id'])
             }, 1)
             
             if (!req.body.name) {

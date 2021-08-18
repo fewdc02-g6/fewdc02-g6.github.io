@@ -1,15 +1,15 @@
 import fs from 'fs'
-import { AddTodoListForm } from './util/model'
+import { AddTodoListForm, TodoListItem } from './util/model'
 
 export class Service {
     constructor() {
     }
 
-    async readTodoList() {
+    async readTodoList(type:string = "") {
         const filePath = __dirname + '/TodoList.csv'
         const data = await fs.promises.readFile(filePath, 'utf-8')
         const lines = data.split('\n')
-        let result: [] = []
+        let result: TodoListItem[] = []
         const headers = lines[0].split(',')
         for (let i = 1; i < lines.length; i++) {
             if (lines[i] == undefined || lines[i].trim() == "") {
@@ -23,6 +23,11 @@ export class Service {
             // @ts-ignore
             result.push(task);
         }
+
+        if(type){
+            result = result.filter(item => item.type === type)
+        }
+
         return result;
     }
 
@@ -30,7 +35,7 @@ export class Service {
 
         const filePath = __dirname + '/TodoList.csv'
         console.log(post)
-        const reformedInput = "\n" + post.id + "," + post.name + "," + post.description + "," + post.assignedto + "," + post.duedate + "," + post.status
+        const reformedInput = "\n" + post.id + "," + post.name + "," + post.description + ","  + post.duedate + "," + post.type
 
         await fs.appendFile(filePath, reformedInput, (e) => console.log(e))
 
