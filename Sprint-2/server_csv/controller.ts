@@ -110,9 +110,8 @@ export class Controller {
                     req.params.id,
                     req.body.name,
                     req.body.description,
-                    req.body.assignedto,
                     req.body.duedate,
-                    req.body.status
+                    req.body.type
                 )
             )
         } catch (e) {
