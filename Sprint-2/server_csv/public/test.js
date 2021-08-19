@@ -33,32 +33,34 @@ let taskID = 0;
 
 
 // asssign background-color with task type 
-const taskTypeBgColor = (type) =>{
-	if(type.toUpperCase() === "WORK"){
+/*
+const  = (type) =>{
+	if(type === "work"){
 		return 'bg-blue'
-	} else if (type.toUpperCase() === 'FAMILY'){
+	} else if (type === 'family'){
 		return 'bg-orange'
-	} else if(type.toUpperCase() === 'PERSONAL'){
+	} else if(type === 'personal'){
 		return 'bg-green'
 	} 
-	
 }
+*/
 // get all data 
 async function showData() {
 	const response = await fetch('http://localhost:8080/todolist')	
 	if (response.ok) {
 		const dataArr = await response.json()
 		for (let i = 0; i < dataArr.length; i++) {
+			// console.log(dataArr[i].type)
 			display.innerHTML +=
 				`<div class="memo memo-${dataArr[i].id}" id="${dataArr[i].id}">
-    			<div class="memoTopBorder ${taskTypeBgColor(dataArr[i].type)}"></div>
+    			<div class="memoTopBorder ${(dataArr[i].type)} ${dataArr[i].type}"></div>
     			<div class="memoTopBar">
         		<p id="${dataArr[i].id}" class="memoType blue">Task-${dataArr[i].id}: ${dataArr[i].name}</p> 
         		<svg class="delete-btn" id="${dataArr[i].id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
     			</div>
     
     			<div class="memoContent description">${dataArr[i].description}</div>
-    			<div class="memoContent ${dataArr[i].type}">${dataArr[i].type}</div>
+    			<div class="memoContent">${dataArr[i].type}</div>
     			<div class="memoContent duedate">Due Date:${dataArr[i].duedate}</div>
     			<div class="memoMiniFunction">                     
         		<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/></svg>
@@ -108,7 +110,7 @@ async function showTaskById(id){
 		
 	editMemo.outerHTML = `
     <div class="memo memo-${selectedArr.id}" id="${selectedArr.id}">
-    <div class="memoTopBorder ${taskTypeBgColor(selectedArr.type)}"></div>
+    <div class="memoTopBorder ${(selectedArr.type)}"></div>
     <div class="memoTopBar">
     <p id="${selectedArr.id}" class="memoType blue">${selectedArr.name}/ Task-${selectedArr.id}</p> 
     <svg class="delete-btn" id="${selectedArr.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
@@ -138,7 +140,7 @@ async function showTaskById(id){
 // add new task
 async function addTask(event) {
     const form = event.target	
-    let type = form.name.value.toUpperCase()
+    let type = form.type.value
 	const dataObj = {
 		id: taskID,
 		name: form.name.value,
@@ -204,7 +206,7 @@ async function editTaskById(id){
 	console.log(editMemo)	
 	editMemo.outerHTML = `
 		<div class="memo ${memo}" id="${selectedArr.id}">
-		<div class="memoTopBorder ${taskTypeBgColor(selectedArr.type)}"></div>
+		<div class="memoTopBorder ${(selectedArr.type)}"></div>
 		<form class="update-form-${selectedArr.id}" style="display: flex; flex-direction: column;padding: 10px;" action="http://localhost:8080/todolist" method="POST"> 
 		<input type="text" name="name" value="${selectedArr.name}" required>
 		<input type="text" name="description" value="${selectedArr.description}" required>
@@ -251,7 +253,7 @@ async function updateTask(dataObj){
         /*
 		editMemo.outerHTML =
         `<div class="memo memo-${dataArr.id}" id="${dataArr.id}">
-        <div class="memoTopBorder ${taskTypeBgColor(dataArr.type)}"></div>
+        <div class="memoTopBorder ${(dataArr.type)}"></div>
         <div class="memoTopBar">
         <p id="${dataArr.id}" class="memoType blue">${dataArr.name}/ Task-${dataArr.id}</p> 
         <svg class="delete-btn" id="${dataArr.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
