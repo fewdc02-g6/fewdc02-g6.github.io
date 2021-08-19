@@ -18,3 +18,8 @@ addMemoDeleteBtn.addEventListener('click',()=>{
 footerMenuBtn.addEventListener('click',()=>{
     navBar.classList.add
 })
+
+
+
+//////////////////////////
+
