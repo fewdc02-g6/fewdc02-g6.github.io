@@ -11,31 +11,36 @@
     <title>index</title>
 </head>
 <body>
-    <div class="section"> 
+    <div class="seccion"> 
         <div class="popup-wrapper hidden">
             <div class="addMemo">
                 <form class="add-form">
                     <form action="http://localhost:8080/" method="POST"> 
                         <svg  id='addMemo-DeleteBtn' width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                       
-                        <label for="type">Type</label>        
-                        <select id="type" name ="type" required>
-                            <option value="family">Family</option>
-                            <option value="work">Work</option>
-                            <option value="personal">Personal</option>
-                        </select>  <br>
-                        <label for="taskName">Memo-Title</label>                                       
-                        <input id="taskName" name="taskName" type="text" required>  
-                        <br>                
-                        <label for="duedate">Due Date</label>                                       
-                        <input id="duedate" name="duedate" type="date" required><br>                 
-                        
+                        <div>
+                            <label for="type">Type</label>        
+                            <select id="type" name ="type" required>
+                                <option value="family">Family</option>
+                                <option value="work">Work</option>
+                                <option value="personal">Personal</option>
+                            </select>  <br>
+                        </div>
+                        <div>
+                            <label for="name">Memo Title</label>                                       
+                            <input id="name" name="name" type="text" required>  
+                            <br>               
+                        </div>
+                        <div>
+                            <label for="duedate">Duedate</label>                                       
+                            <input id="duedate" name="duedate" type="date" required><br>                
+                        </div>                       
                                   
-                       <label for="message">Description:</label>
+                       <label for="message"></label>
                        <textarea id="description" name="description" required rows="8" cols="40"></textarea>
                 
-                        <input type="submit" value="Add" >
+                        <input id="submitBtn" type="submit" value="Add" >
                 
-                      </form>
+                    </form>
                 </form>
             </div>
         </div> 
@@ -43,13 +48,12 @@
         <div class="nav">
             <div class="nav-menu">
               <h2 class="greeting">Welcome! User</h2>
-              <a class="nav-menu-item show-all-button" href="#">All</a>
-              <a class="nav-menu-item" href="#">Category</a>
-              <a class="nav-menu-item" href="#">Work</a>
-              <a class="nav-menu-item" href="#">Family</a>
-              <a class="nav-menu-item" href="#">Personal</a>
-              <a class="nav-menu-item" href="#">Theme</a>
-              <a class="nav-menu-item" href="#">Setting</a>
+              <a class="nav-menu-item show-all-button" id='navItem1' href="#">All</a>              
+              <a class="nav-menu-item" id='navItem2' hre5f="#">Work</a>
+              <a class="nav-menu-item" id='navItem3' href="#">Family</a>
+              <a class="nav-menu-item" id='navItem4' href="#">Personal</a>
+              <a class="nav-menu-item" id='navItem5' href="#">Theme</a>
+              <a class="nav-menu-item" id='navItem6' href="#">Setting</a>
             </div>
         </div>    
         <!-- ---------------NavBar---------------- -->
@@ -83,8 +87,8 @@
                         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
                     </div>
                     
-                </div>
-                <div class="memo">
+                </div> 
+                <!-- <div class="memo">
                     <div class="memoTopBorder bg-green"></div>
                     <div class="memoTopBar">
                         <p class="memoType green">Management</p> 
@@ -229,10 +233,10 @@
                         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
                     </div>
                     
-                </div>
-                
-                <button class="addBtn">+</button> 
+                </div> -->
+                 
             </div>
+            <button class="addBtn">+</button> 
             
         
         </div>
@@ -249,6 +253,8 @@
             <svg id='footerBtn4'xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 7.001c0 3.865-3.134 7-7 7s-7-3.135-7-7c0-3.867 3.134-7.001 7-7.001s7 3.134 7 7.001zm-1.598 7.18c-1.506 1.137-3.374 1.82-5.402 1.82-2.03 0-3.899-.685-5.407-1.822-4.072 1.793-6.593 7.376-6.593 9.821h24c0-2.423-2.6-8.006-6.598-9.819z"/></svg>
         </div>
     </div>
-    <script src="./main.js"></script> 
+    <!-- <script src="./main.js"></script>      -->
+    <script src="./test.js"></script>     
+
 </body>
 </html>

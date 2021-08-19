@@ -2,7 +2,7 @@
     margin: 0px;
     font-family: 'Noto Sans JP', sans-serif;
 }
-.loginTable{
+.creatACTable{
     margin: 30px auto;
     margin: 2;
     
@@ -10,11 +10,11 @@
     text-align: center;
     border-radius: 14px;
 }
-.loginTable h1{
+.creatACTable h1{
     padding-top: 130px;   
     
 }
-#inputLogin{
+#creatAcBtn{
     color:#216cf3d9;
     width: 170px;
     margin: 20px;
@@ -23,9 +23,10 @@
 form p{
     padding: 0px 0px 20px;
 }
-.inputRadius {
+form input{
     border-radius: 5px;
 }
+
 .signUp{
     color:#216cf3d9;
     text-decoration: none;

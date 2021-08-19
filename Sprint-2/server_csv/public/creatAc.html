@@ -8,28 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>Document</title>
+    <title>creatAc</title>
 </head>
 <body>
     <div class="mainContainer">
-        <div class="loginTable">
+        <div class="creatACTable">
              <h1>Create account</h1>             
              <p>Already have an account? Sign in <a class="signUp" href="./loginPage.html"> Sign in</a ></p>
-             <form>
-                 <label>
-                 Set Your User Name <br>
-                 <input class='inputRadius'type="text" name="username" required>
-                 </label>
-                 <br>
-                 <label>
-                 Set Your Password <br>
-                 <input class='inputRadius'type="password" name="password" required>
-                 </label>
-                 <br>
-                 <input class='inputRadius' id='inputLogin' type="submit" value="Create">
+             <form class="creatAc-form">
+                 <label for="username">Set Your User Name <br></label>
+                 <input id='userNameInput' type="text" name="username" required><br>
+                 <label for="inputpassword">Set Your Password <br></label>
+                 <input id='inputpassword'type="password" name="password" required><br>
+                 <input id='creatAcBtn' type="submit" value="Create">
                  
              </form>
         </div>  
      </div>
+     <script src="creatAc.js"></script>
 </body>
 </html>
