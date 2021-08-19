@@ -66,9 +66,8 @@ export class Service {
         id: string, 
         name?: string, 
         description?: string, 
-        assignedto?: string, 
         duedate?: string, 
-        status?: string) {
+        type?: string) {
 
         const filePath = __dirname + '/TodoList.csv'
         const data = await fs.promises.readFile(filePath, 'utf-8')
@@ -82,9 +81,8 @@ export class Service {
             if (words[0] == id) {
                 words[1] = "" + name;
                 words[2] = "" + description;
-                words[3] = "" + assignedto;
-                words[4] = "" + duedate;
-                words[5] = "" + status;
+                words[3] = "" + duedate;
+                words[4] = "" + type;
                 result = result + words.join(',') + "\n"
             } else {
                 result = result + lines[i] + "\n"
