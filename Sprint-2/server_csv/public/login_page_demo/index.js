@@ -1,3 +1,4 @@
+//css effect
 document.querySelectorAll('.dock li').forEach(li => {
     li.addEventListener('mousemove', e => {
         let item = e.target;
