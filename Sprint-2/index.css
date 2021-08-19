@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;     /* 0819add */
 }
 .seccion{
     display: flex;
@@ -8,6 +9,62 @@
 .hidden{
     display: none;
 }
+/* navbar */
+.container {
+    display: flex;
+    overflow: hidden;
+  }
+  .nav{
+    flex: 1;
+    display: block;
+    background-color: rgb(139, 170, 255);
+  }
+  .nav-menu{
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-greet{
+    display: flex;
+    align-content: flex-end;
+    padding: 5px;
+    color: white;
+  }
+  h2.greeting{
+    background-color:rgba(59, 59, 255, 0.7);
+    height: fit-content;
+    padding: 5px;
+    position: relative;
+    color: white;
+    padding-top: 20px;
+  }
+  .nav-menu-item{
+    margin: 5px;
+    padding: 5px;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+  }
+  .nav-menu-item{
+    padding: 5px;
+  }
+  .main-body{
+    flex: 5;
+    width: 75%;
+    height: 100vh;   
+  }
+  .mobile-nav{
+    display: none;
+  }
+  .mobile-nav-bottom{
+    display: none;
+  }
+
+/* navbar */
+
+
+
 .popup-wrapper{
     
     background: rgba(0, 0, 0, 0.7);
@@ -197,9 +254,84 @@ form textarea{
 }
 
 @media only screen and (max-width:500px){
-    .fakeBar{
+
+    /* leftNavbar */
+    .nav{
+        visibility: hidden;
+      }
+      .visibility{
+        visibility:visible;
+      }
+      .main-body{
+        width: 100vw;
+        height: 100vh;    
+      }
+      .mobile-nav{
+        /* display: block; */
+        background-color: white;
         display: none;
-    }
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        /* z-index: -1; */
+      }
+      .nav-banner{
+        height: 15vh;
+        background-color: rgba(59, 59, 255, 0.7);
+        padding: 5px;
+      }
+      .nav-banner h3{
+        color: white;
+        position: relative;
+        z-index: 1;
+        top: 50px
+      }
+      .nav-dropdown{
+        display: flex;
+        flex-direction: column;  
+        padding: 5px;
+      }
+      .nav-dropdown-btn{
+        color: black;
+        text-decoration: none;
+        padding: 5px;
+      }
+      .nav-dropdown-item{
+        color: black;
+        text-decoration: none;
+        padding: 5px;
+      }
+      hr{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .nav-function{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+      }
+      .nav-function-item{
+        color: black;
+        text-decoration: none;
+        padding: 5px;
+      }
+      .mobile-nav-bottom{
+        display: flex;    
+        position: sticky;
+        top: 95vh;
+        justify-content: space-around;
+        align-content: center;
+        z-index: 1;
+      }
+      .mobile-nav-icon{
+        font-size: 30px;    
+      }
+      
+    /* .fakeBar{
+        display: none;
+    } */
     .welcomeText{
         display: none;
     }
