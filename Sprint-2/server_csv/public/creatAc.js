@@ -9,7 +9,7 @@ async function addTask(event) {
 	
 
 	
-	const response = await fetch('http://localhost:8080/login', 
+	const response = await fetch('http://localhost:8080/user/register', 
 		{
 			method: 'POST',
 			headers: {
