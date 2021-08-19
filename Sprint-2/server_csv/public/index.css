@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;     /* 0819add */
 }
-.seccion{
+.section{
     display: flex;
     height: 600px;
 }
@@ -64,8 +64,7 @@
 
 
 
-.popup-wrapper{
-    
+.popup-wrapper, .popup-update-area {    
     background: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
@@ -82,7 +81,7 @@
     width: fit-content;    
     background: white;    
 }
-#addMemo-DeleteBtn{
+#addMemo-DeleteBtn,#popup-memo-close-button{
     left: 290px;
     position: relative;
     margin: 5px;
@@ -101,7 +100,7 @@ div select{
     width: 132px;
     height: 23px;   
 }
-#submitBtn{
+#submitBtn, #update-btn{
     padding: 4px;
     width: 56px;
     margin: 10px;
