@@ -1,6 +1,6 @@
 "use strict"
 // eventListener
-window.addEventListener('load',showData())
+window.addEventListener('load',showData)
 const addBtn = document.querySelector('.addBtn');
 const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
@@ -49,6 +49,7 @@ const  = (type) =>{
 */
 // get all data 
 async function showData() {
+    display.innerHTML = "<br>"
 	const response = await fetch('http://localhost:8080/todolist')	
 	if (response.ok) {
 		const dataArr = await response.json()
@@ -280,8 +281,8 @@ async function updateTask(dataObj){
 		
 	})
 	if(response.ok){
-        console.log(dataId)  
-        
+        // console.log(dataId)  
+        showData()
         
 	}
 }
