@@ -83,6 +83,7 @@ async function addTask(event) {
 			body: JSON.stringify(dataObj)
 	})
 	if(response.ok){
+        
 		
 	}
 }
@@ -153,9 +154,9 @@ async function editTaskById(id){
 // edit task
 async function updateTask(dataObj){
 	let memo = 'memo-'+ dataObj.id
-	console.log(memo)
+	// console.log(memo)
 	let editMemo = document.querySelector(`.${memo}`)
-	console.log(editMemo)
+	// console.log(editMemo)
 	const url = 'http://localhost:8080/todolist/' + dataObj.id
 	let response = await fetch(url, {
 		method: 'PUT',
