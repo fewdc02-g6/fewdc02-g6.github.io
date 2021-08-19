@@ -29,9 +29,11 @@ export class UserController {
       const { username, password } = req.body;
       if(!username){
         res.status(400).json({message:'username is undefined'})
+        return
       }
       if(!password){
         res.status(400).json({message:'password is undefined'})
+        return
       }
       const userData = this.userService.getAllUserData();
       const user = userData.find((user) => user.username === username);
