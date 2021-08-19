@@ -5,6 +5,35 @@
     display: flex;
     height: 600px;
 }
+.hidden{
+    display: none;
+}
+.popup-wrapper{
+    
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.addMemo{    
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    width: fit-content;    
+    background: white;
+    text-align: center;
+}
+#addMemo-DeleteBtn{
+    left: 200px;
+    position: relative;
+    margin: 5px;
+}
+form textarea{    
+    display: block;
+}
 .fakeBar{
     width: 17%;
     height: 100%;
@@ -142,8 +171,8 @@
     background: #f5deb32e;
 }
 .addBtn{
-    visibility: hidden;
-    background: #2424cee3;
+    /* visibility: hidden; */
+    background:#216cf3d9;
     border-radius: 79px;
     color: white;
     font-size: 36px;
@@ -153,6 +182,7 @@
     right: 20px;
     z-index: 100;
 }
+
 .footer{
     display: none;
     justify-content: space-between;
