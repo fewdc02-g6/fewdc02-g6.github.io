@@ -1,5 +1,5 @@
 "use strict"
-const showButton = document.querySelector('.show-button')
+const showButton = document.querySelector('.show-all-button')
 // const addButton = document.querySelector('.add-button')
 // const delButton = document.querySelector('.delete-btn')
 const display = document.querySelector('.memolist')
@@ -64,7 +64,8 @@ showButton.addEventListener('click', showData)
 
 // add new task
 async function addTask(event) {
-	const form = event.target	
+    const form = event.target	
+    let type = form.taskName.value.toUpperCase() + ''
 	const dataObj = {
 		id: taskID,
 		name: form.taskName.value,
@@ -87,7 +88,7 @@ async function addTask(event) {
 	}
 }
 
-document.querySelector('.test-form').addEventListener('submit', event => {
+document.querySelector('.add-form').addEventListener('submit', event => {
 	event.preventDefault();
 	addTask(event)
 	taskID++

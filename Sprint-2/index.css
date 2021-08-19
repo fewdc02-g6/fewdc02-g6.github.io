@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;     /* 0819add */
 }
-.seccion{
+.section{
     display: flex;
     height: 600px;
 }
@@ -197,7 +197,7 @@ form textarea{
 
 /* mobile */
 
-.mobileSeccion{
+.mobilesection{
     width: 100%;
     background: #9e9e9e26;  
 }
