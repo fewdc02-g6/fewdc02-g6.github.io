@@ -14,7 +14,7 @@
     <div class="seccion"> 
         <div class="popup-wrapper hidden">
             <div class="addMemo">
-                <form>
+                <form class="add-form">
                     <form action="http://localhost:8080/" method="POST"> 
                         <svg  id='addMemo-DeleteBtn' width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                       
                         <label for="type">Type</label>        
@@ -23,8 +23,8 @@
                             <option value="work">Work</option>
                             <option value="personal">Personal</option>
                         </select>  <br>
-                        <label for="memo-title">Memo-Title</label>                                       
-                        <input id="memo-title" name="memo-title" type="text" required>  
+                        <label for="name">Memo Title</label>                                       
+                        <input id="name" name="name" type="text" required>  
                         <br>                
                         <label for="duedate">duedate</label>                                       
                         <input id="duedate" name="duedate" type="date" required><br>                 
@@ -43,6 +43,7 @@
         <div class="nav">
             <div class="nav-menu">
               <h2 class="greeting">Welcome! User</h2>
+              <a class="nav-menu-item show-all-button" id='navItem1' href="#">All</a>
               <a class="nav-menu-item" id='navItem1' href="#">Category</a>
               <a class="nav-menu-item" id='navItem2' hre5f="#">Work</a>
               <a class="nav-menu-item" id='navItem3' href="#">Family</a>
