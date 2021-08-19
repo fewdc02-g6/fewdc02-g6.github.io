@@ -151,3 +151,9 @@ body, html {
   background: #f05855;
   color: white;
 }
+
+.to-do-list{
+  font-size: 50px;
+  border: 10px bold black;
+  margin-left: 100px;
+}
