@@ -1,4 +1,30 @@
 "use strict"
+// eventListener
+
+const addBtn = document.querySelector('.addBtn');
+const popupWrapper = document.querySelector('.popup-wrapper')
+const addMemoDeleteBtn = document.getElementById('addMemo-DeleteBtn')
+const footerMenuBtn = document.getElementById('footerBtn1')
+const navBar = document.querySelector('nav')
+
+addBtn.addEventListener('click',()=>{
+    popupWrapper.classList.remove('hidden',)
+    addBtn.classList.add('hidden')
+
+})
+
+addMemoDeleteBtn.addEventListener('click',()=>{
+    popupWrapper.classList.add('hidden')
+    addBtn.classList.remove('hidden')
+})
+
+footerMenuBtn.addEventListener('click',()=>{
+    navBar.classList.add
+})
+
+
+// HTTP methods
+
 const showAllButton = document.querySelector('.show-all-button')
 // const addButton = document.querySelector('.add-button')
 // const delButton = document.querySelector('.delete-btn')
@@ -27,7 +53,7 @@ async function showData() {
 				`<div class="memo memo-${dataArr[i].id}" id="${dataArr[i].id}">
     			<div class="memoTopBorder ${taskTypeBgColor(dataArr[i].type)}"></div>
     			<div class="memoTopBar">
-        		<p id="${dataArr[i].id}" class="memoType blue">${dataArr[i].name}/ Task-${dataArr[i].id}</p> 
+        		<p id="${dataArr[i].id}" class="memoType blue">Task-${dataArr[i].id}: ${dataArr[i].name}</p> 
         		<svg class="delete-btn" id="${dataArr[i].id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
     			</div>
     
@@ -148,7 +174,7 @@ async function delTask(id){
 		method: 'DELETE'
 	})
 	if(response.ok){
-		prompt(`Task-${id} was deleted`)
+		alert(`Task-${id} was deleted`)
 	}
 
 }
@@ -170,7 +196,7 @@ async function editTaskById(id){
 	}
 	let memo = 'memo-'+ selectedArr.id
 	let editMemo = document.querySelector(`.${memo}`)
-	// console.log(editMemo)	
+	console.log(editMemo)	
 	editMemo.outerHTML = `
 		<div class="memo ${memo}" id="${selectedArr.id}">
 		<div class="memoTopBorder ${taskTypeBgColor(selectedArr.type)}"></div>
