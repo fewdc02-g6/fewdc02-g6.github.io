@@ -34,11 +34,11 @@ let taskID = 0;
 
 // asssign background-color with task type 
 const taskTypeBgColor = (type) =>{
-	if(type === "WORK\r"){
+	if(type.toUpperCase() === "WORK"){
 		return 'bg-blue'
-	} else if (type === 'FAMILY\r'){
+	} else if (type.toUpperCase() === 'FAMILY'){
 		return 'bg-orange'
-	} else if(type === 'PERSONAL\r'){
+	} else if(type.toUpperCase() === 'PERSONAL'){
 		return 'bg-green'
 	} 
 	
@@ -144,7 +144,7 @@ async function addTask(event) {
 		name: form.name.value,
 		description: form.description.value,
 		duedate: form.duedate.value,
-		type: form.type.value + '\r'
+		type: form.type.value 
 	}
 
 	
@@ -157,8 +157,13 @@ async function addTask(event) {
 			body: JSON.stringify(dataObj)
 	})
 	if(response.ok){
-		
-	}
+		console.log('success')
+        alert('haha')
+        popupWrapper.classList.add('hidden')
+        addBtn.classList.remove('hidden')
+        showData()
+    }
+	
 }
 
 document.querySelector('.add-form').addEventListener('submit', event => {
@@ -201,11 +206,16 @@ async function editTaskById(id){
 		<div class="memo ${memo}" id="${selectedArr.id}">
 		<div class="memoTopBorder ${taskTypeBgColor(selectedArr.type)}"></div>
 		<form class="update-form-${selectedArr.id}" style="display: flex; flex-direction: column;padding: 10px;" action="http://localhost:8080/todolist" method="POST"> 
-		<input type="text" name="name" value="${selectedArr.name}">
-		<input type="text" name="description" value="${selectedArr.description}">
-		<input type="text" name="duedate" value="${selectedArr.duedate}">
-		<input type="text" name="type" value="${selectedArr.type}">
-		<input type="text" name="id" value="${selectedArr.id}">
+		<input type="text" name="name" value="${selectedArr.name}" required>
+		<input type="text" name="description" value="${selectedArr.description}" required>
+		<input type="text" name="duedate" value="${selectedArr.duedate}" required>
+		
+		<select id="type" name ="type" required>
+                            <option value="family">Family</option>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                        </select
+		<input type="text" name="id" value="${selectedArr.id}" required>
 		<input type="submit" class="add-button" value="Send">
 		</form>
 		</div>`
@@ -218,7 +228,7 @@ async function editTaskById(id){
 		targetData.name = event.target.name.value
 		targetData.description = event.target.description.value
 		targetData.duedate = event.target.duedate.value
-		targetData.type = event.target.type.value + '\r'
+		targetData.type = event.target.type.value 
 		updateTask(targetData)
 	})
 

@@ -58,7 +58,7 @@ document.querySelector('.add-form').addEventListener('submit', async (event) => 
         alert('haha')
         popupWrapper.classList.add('hidden')
         addBtn.classList.remove('hidden')
-        // showData()
+        showData()
     }
 })
 
