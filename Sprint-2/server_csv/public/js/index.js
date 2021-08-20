@@ -40,8 +40,6 @@ footerMenuBtn.addEventListener('click', () => {
 // HTTP methods
 
 const showAllButton = document.querySelector('.show-all-button')
-// const addButton = document.querySelector('.add-button')
-// const delButton = document.querySelector('.delete-btn')
 const display = document.querySelector('.memolist')
 let taskID = 1;
 
@@ -53,15 +51,13 @@ async function showData() {
 	if (response.ok) {
 		const dataArr = await response.json()
 		for (let i = 0; i < dataArr.length; i++) {
-			// console.log(dataArr[i].type)
 			display.innerHTML +=
 				`<div class="memo memo-${dataArr[i].id}" id="${dataArr[i].id}">
     			<div class="memoTopBorder ${(dataArr[i].type)} ${dataArr[i].type}"></div>
     			<div class="memoTopBar">
         		<p id="${dataArr[i].id}" class="memoType blue">Task-${dataArr[i].id}: ${dataArr[i].name}</p> 
         		<svg class="delete-btn" id="${dataArr[i].id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
-    			</div>
-    
+    			</div>    
     			<div class="memoContent description">${dataArr[i].description}</div>
     			<div class="memoContent">${dataArr[i].type}</div>
     			<div class="memoContent duedate">Due Date:${dataArr[i].duedate}</div>
@@ -76,7 +72,6 @@ async function showData() {
 			item.addEventListener('click', (event) => {
 				event.preventDefault();
 				delTask(event.target.id);
-
 			})
 		}
 
@@ -86,13 +81,9 @@ async function showData() {
 				event.preventDefault();
 				popupUpdateArea.classList.remove('hidden')
 				addBtn.classList.add('hidden')
-				// console.log(event.target)
-				// console.log(event.target.id)
 				editTaskById(event.target.id)
-
 			})
 		}
-
 	}
 }
 showAllButton.addEventListener('click', showData)
@@ -108,13 +99,11 @@ async function showTaskById(id) {
 		for (let item of tempArr) {
 			if (item.id === id) {
 				selectedArr = { ...item }
-
 			}
 		}
 	}
 	let memo = 'memo-' + selectedArr.id
 	let editMemo = document.querySelector(`.${memo}`)
-
 	editMemo.outerHTML = `
     <div class="memo memo-${selectedArr.id}" id="${selectedArr.id}">
     <div class="memoTopBorder ${(selectedArr.type)}"></div>
@@ -122,7 +111,6 @@ async function showTaskById(id) {
     <p id="${selectedArr.id}" class="memoType blue">${selectedArr.name}/ Task-${selectedArr.id}</p> 
     <svg class="delete-btn" id="${selectedArr.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
     </div>
-
     <div class="memoContent description">${selectedArr.description}</div>
     <div class="memoContent ${selectedArr.type}">${selectedArr.type}</div>
     <div class="memoContent duedate">Due Date:${selectedArr.duedate}</div>
@@ -136,14 +124,11 @@ async function showTaskById(id) {
 		delTask(event.target.id);
 	})
 
-
 	document.querySelector('.update-btn').addEventListener('click', (event) => {
 		event.preventDefault();
 		popupWrapper.classList.remove('hidden')
 		editTaskById(event.target.id)
-		// editTask(event.target.id)
 	})
-
 }
 
 // show task by type
@@ -160,8 +145,7 @@ async function showTypeData(taskType) {
     			<div class="memoTopBar">
         		<p id="${obj.id}" class="memoType blue">Task-${obj.id}: ${obj.name}</p> 
         		<svg class="delete-btn" id="${obj.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
-    			</div>
-    
+    			</div>    
     			<div class="memoContent description">${obj.description}</div>
     			<div class="memoContent">${obj.type}</div>
     			<div class="memoContent duedate">Due Date:${obj.duedate}</div>
@@ -203,8 +187,6 @@ async function addTask(event) {
 		duedate: form.duedate.value,
 		type: form.type.value
 	}
-
-
 	const response = await fetch('http://localhost:8080/todolist',
 		{
 			method: 'POST',
@@ -215,7 +197,7 @@ async function addTask(event) {
 		})
 	if (response.ok) {
 		console.log('success')
-		alert('haha')
+		alert('Task Added!')
 		popupWrapper.classList.add('hidden')
 		addBtn.classList.remove('hidden')
 		showData()
@@ -242,7 +224,6 @@ async function delTask(id) {
 
 // transform task to form by id
 async function editTaskById(id) {
-	// console.log(id)
 	let tempArr = {}
 	let selectedArr = {}
 	const url = 'http://localhost:8080/todolist/'
@@ -319,7 +300,6 @@ async function updateTask(dataObj) {
 		body: JSON.stringify(dataObj)
 	})
 	if (response.ok) {
-		// console.log(dataId)  
 		showData()
 	}
 }
