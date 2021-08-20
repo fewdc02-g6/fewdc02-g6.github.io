@@ -291,7 +291,7 @@ async function editTaskById(id) {
                         </div>
                         <div>
                             <label for="duedate">Due Date</label>                                       
-                            <input id="duedate" name="duedate" type="text" value="${selectedArr.duedate}" required><br>                
+                            <input id="duedate" name="duedate" type="date" value="${selectedArr.duedate}" required><br>                
                         </div>                       
                         <input type="text" name="id" value="${selectedArr.id}" required hidden>          
                        <label for="message"></label>
