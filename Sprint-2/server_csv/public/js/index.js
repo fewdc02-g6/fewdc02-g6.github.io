@@ -2,15 +2,15 @@
 
 // eventListener
 window.addEventListener('load', showData)
-const addBtn = document.querySelector('.addBtn');
+const addBtn = document.querySelector('.add-btn');
 const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
-const addMemoDeleteBtn = document.getElementById('addMemo-DeleteBtn')
+const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
 const footerMenuBtn = document.getElementById('footerBtn1')
 const navBar = document.querySelector('nav')
-const typeWork = document.querySelector('#navItem2')
-const typeFamily = document.querySelector('#navItem3')
-const typePersonal = document.querySelector('#navItem4')
+const typeWork = document.querySelector('#nav-item2')
+const typeFamily = document.querySelector('#nav-item3')
+const typePersonal = document.querySelector('#nav-item4')
 
 typeWork.addEventListener('click', () => {
 	showTypeData('work')
@@ -257,7 +257,7 @@ async function editTaskById(id) {
 	}
 	let addClassType = 'type-' + selectedArr.type
 	popupUpdateArea.innerHTML =
-		`<div class="addMemo">
+		`<div class="add-memo">
                 <form class="update-form">
                     <form action="http://localhost:8080/" method="PUT"> 
                         <svg  id='popup-memo-close-button' width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                       

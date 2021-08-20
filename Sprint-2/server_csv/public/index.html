@@ -15,10 +15,10 @@
         <!-- add task form & update task form-->
         <div class="popup-update-area hidden"></div>
         <div class="popup-wrapper hidden">
-            <div class="addMemo">
+            <div class="add-memo">
                 <form class="add-form">
                     <form action="http://localhost:8080/" method="POST"> 
-                        <svg  id='addMemo-DeleteBtn' width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                       
+                        <svg  id='add-memo-delete-btn' width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                       
                         <div>
                             <label for="type">Type</label>        
                             <select id="type" name ="type" required>
@@ -33,14 +33,14 @@
                             <br>               
                         </div>
                         <div>
-                            <label for="duedate">Duedate</label>                                       
+                            <label for="duedate">Due Date</label>                                       
                             <input id="duedate" name="duedate" type="date" required><br>                
                         </div>                       
                                   
                        <label for="message"></label>
                        <textarea id="description" name="description" required rows="8" cols="40"></textarea>
                 
-                        <input id="submitBtn" type="submit" value="Add" >
+                        <input id="submit-btn" type="submit" value="Add" >
                 
                     </form>
                 </form>
@@ -52,19 +52,19 @@
         <!-- ---------------NavBar---------------- -->
         <div class="nav">
             <div class="nav-menu">
-              <h2 class="greeting">Welcome! User</h2>
-              <a class="nav-menu-item show-all-button" id='navItem1' href="#">All</a>              
-              <a class="nav-menu-item" id='navItem2' href="#">Work</a>
-              <a class="nav-menu-item" id='navItem3' href="#">Family</a>
-              <a class="nav-menu-item" id='navItem4' href="#">Personal</a>
-              <a class="nav-menu-item" id='navItem5' href="#">Theme</a>
-              <a class="nav-menu-item" id='navItem6' href="#">Setting</a>
+              <h2 class="greeting"></h2>
+              <a class="nav-menu-item show-all-button" id='nav-item1' href="#">All</a>              
+              <a class="nav-menu-item" id='nav-item2' href="#">Work</a>
+              <a class="nav-menu-item" id='nav-item3' href="#">Family</a>
+              <a class="nav-menu-item" id='nav-item4' href="#">Personal</a>
+              <a class="nav-menu-item" id='nav-item5' href="#">Theme</a>
+              <a class="nav-menu-item" id='nav-item6' href="#">Setting</a>
             </div>
         </div>    
         <!-- ---------------NavBar---------------- -->
         
         <div class="rightMain">
-            <div class="welcomeText fontNSJ">
+            <div class="welcome-text">
                 <h2>Welcome Back ,  Michael</h2>
             </div>
             <div class="miniFunction">
@@ -241,7 +241,7 @@
                 </div> -->
                  
             </div>
-            <button class="addBtn">+</button> 
+            <button class="add-btn">+</button> 
             
         
         </div>
