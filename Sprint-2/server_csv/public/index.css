@@ -17,11 +17,12 @@
   .nav{
     flex: 1;
     display: block;
-    background-color: rgb(139, 170, 255);
+    background-color: #216cf3d9;;
   }
   .nav-menu{
     display: flex;
     flex-direction: column;
+    font-family: 'Noto Sans JP', sans-serif;
   }
   .nav-greet{
     display: flex;
@@ -32,22 +33,25 @@
   h2.greeting{
     background-color:rgba(59, 59, 255, 0.7);
     height: fit-content;
-    padding: 5px;    
+    padding: 30px;    
     color: white;
     padding-top: 20px;
   }
   .nav-menu-item{
+    box-shadow: 2px 4px 5px rgb(71 61 128 / 9%);
+    color: #ffffffcf;
     margin: 5px;
-    padding: 5px;
+    padding: 18px;
+    font-weight: 700;
+  }
+  .nav-menu-item:hover{
+    color: white;
   }
   a{
     text-decoration: none;
     color: black;
     padding: 5px;
-  }
-  .nav-menu-item{
-    padding: 5px;
-  }
+  } 
   .main-body{
     flex: 5;
     width: 75%;
@@ -120,6 +124,7 @@ div select{
 }
 
 .welcomeText h2{
+    color: #216cf3d9;
     /* text-align: center; */
 }
 .miniFunction{
@@ -244,7 +249,7 @@ div select{
     /* visibility: hidden; */
     background:#216cf3d9;
     border-radius: 79px;
-    color: white;
+    color: #ffffffcf;
     font-size: 36px;
     padding: 2px 13px;
     position: fixed;
@@ -252,7 +257,11 @@ div select{
     right: 20px;
     z-index: 100;
 }
-
+.addBtn:hover{
+    color: white;
+    padding: 3px 15px;   
+    
+}
 .footer{
     display: none;
     justify-content: space-between;

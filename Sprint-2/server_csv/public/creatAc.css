@@ -17,8 +17,14 @@
 #creatAcBtn{
     color:#216cf3d9;
     width: 170px;
+    height: 25px;
     margin: 20px;
     font-weight: 700;
+}
+#creatAcBtn:hover{
+    color: blue;
+    height: 26px;
+    width: 172px;
 }
 form p{
     padding: 0px 0px 20px;
@@ -31,12 +37,6 @@ form input{
     color:#216cf3d9;
     text-decoration: none;
 }
-.error{
-    border :5px red solid;
-}
-.errorMessage{
-    margin: 0;
-    margin-bottom: 5px;
-    width: 100%;
-    color: red;
+.signUp:hover{
+    color: blue;
 }

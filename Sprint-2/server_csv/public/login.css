@@ -16,9 +16,15 @@
 }
 #inputLogin{
     color:#216cf3d9;
+    height: 25px;
     width: 170px;
     margin: 20px;
     font-weight: 700;
+}
+#inputLogin:hover{
+    color: blue;
+    height: 26px;
+    width: 172px;
 }
 form p{
     padding: 0px 0px 20px;
@@ -29,4 +35,17 @@ form p{
 .signUp{
     color:#216cf3d9;
     text-decoration: none;
+}
+.signUp:hover{
+    color: blue;
+}
+
+.error{
+    border :5px red solid;
+}
+.errorMessage{
+    margin: 0;
+    margin-bottom: 5px;
+    width: 100%;
+    color: red;
 }
