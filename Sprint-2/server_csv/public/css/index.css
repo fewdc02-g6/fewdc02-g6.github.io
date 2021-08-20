@@ -35,7 +35,7 @@
   h2.greeting{
     background-color:rgba(59, 59, 255, 0.7);
     height: fit-content;
-    padding: 30px;    
+    padding: 80px;   
     color: white;
     padding-top: 20px;
   }
@@ -122,12 +122,11 @@ div select{
 .welcome-text{
     padding: 30px;
     margin-top: 30px;
-}
-
-
-.welcomeText h2{
     color: #216cf3d9;
 }
+
+
+
 .miniFunction{
     display: flex;
     justify-content: flex-end;
@@ -247,15 +246,15 @@ div select{
     border-radius: 79px;
     color: #ffffffcf;
     font-size: 36px;
-    padding: 2px 13px;
+    padding: 2px 18px;
     position: fixed;
     bottom: 75px;
     right: 20px;
     z-index: 100;
 }
-.addBtn:hover{
+.add-btn:hover{
     color: white;
-    padding: 3px 15px;   
+    padding: 3px 20px;   
     
 }
 .footer{
