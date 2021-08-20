@@ -149,15 +149,11 @@ async function showTaskById(id) {
 // show task by type
 async function showTypeData(taskType) {
 	display.innerHTML = "<br>"
-	// console.log(type)
-
 	const response = await fetch('http://localhost:8080/todolist')
 	if (response.ok) {
 		const dataArr = await response.json()
-		// console.log(dataArr)
 		for (let obj of dataArr) {
 			if (taskType === obj.type){
-				console.log(obj)
 				display.innerHTML +=
 				`<div class="memo memo-${obj.id}" id="${obj.id}">
     			<div class="memoTopBorder ${(obj.type)} ${obj.type}"></div>
@@ -181,7 +177,6 @@ async function showTypeData(taskType) {
 			item.addEventListener('click', (event) => {
 				event.preventDefault();
 				delTask(event.target.id);
-
 			})
 		}
 
@@ -191,16 +186,11 @@ async function showTypeData(taskType) {
 				event.preventDefault();
 				popupUpdateArea.classList.remove('hidden')
 				addBtn.classList.add('hidden')
-				// console.log(event.target)
-				// console.log(event.target.id)
 				editTaskById(event.target.id)
-
 			})
 		}
-
 	}
 }
-
 
 // add new task
 async function addTask(event) {
@@ -230,7 +220,6 @@ async function addTask(event) {
 		addBtn.classList.remove('hidden')
 		showData()
 	}
-
 }
 
 document.querySelector('.add-form').addEventListener('submit', event => {
@@ -247,8 +236,8 @@ async function delTask(id) {
 	})
 	if (response.ok) {
 		alert(`Task-${id} was deleted`)
+		showData()
 	}
-
 }
 
 // transform task to form by id
@@ -263,14 +252,10 @@ async function editTaskById(id) {
 		for (let item of tempArr) {
 			if (item.id === id) {
 				selectedArr = { ...item }
-
 			}
 		}
 	}
-	// console.log(selectedArr)
 	let addClassType = 'type-' + selectedArr.type
-	console.log(selectedArr.description)
-
 	popupUpdateArea.innerHTML =
 		`<div class="addMemo">
                 <form class="update-form">
@@ -296,8 +281,7 @@ async function editTaskById(id) {
                         <input type="text" name="id" value="${selectedArr.id}" required hidden>          
                        <label for="message"></label>
                        <textarea id="description" name="description" rows="8" cols="40" required>${selectedArr.description}</textarea>                
-                        <input id="update-btn" type="submit" value="Update">
-                
+                        <input id="update-btn" type="submit" value="Update">                
                     </form>
                 </form>
             </div> `
@@ -321,7 +305,6 @@ async function editTaskById(id) {
 		targetData.type = event.target.type.value
 		updateTask(targetData)
 	})
-
 }
 
 // edit task
@@ -334,16 +317,9 @@ async function updateTask(dataObj) {
 		method: 'PUT',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(dataObj)
-
 	})
 	if (response.ok) {
 		// console.log(dataId)  
 		showData()
-
 	}
 }
-
-// verify user input for task
-
-
-// verify user input for log-in page
