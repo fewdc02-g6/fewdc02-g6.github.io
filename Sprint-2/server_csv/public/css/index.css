@@ -34,9 +34,9 @@
   h2.greeting{
     background-color:rgba(59, 59, 255, 0.7);
     height: fit-content;
-    padding: 5px;    
+    width: max-content;
+    padding: 20px 8px 0px;    
     color: white;
-    padding-top: 20px;
   }
   .nav-menu-item{
     margin: 5px;
@@ -138,9 +138,10 @@ div select{
 .memolist{         
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .memo{
-    width: 22%;
+    width: 250px;
     margin: 16px;
     box-shadow: 2px 4px 5px rgb(71 61 128 / 22%);
     background: white;
