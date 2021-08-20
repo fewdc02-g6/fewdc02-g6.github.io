@@ -17,9 +17,11 @@
              <p>Already have an account? Sign in <a class="signUp" href="./loginPage.html"> Sign in</a ></p>
              <form class="creatAc-form">
                  <label for="username">Set Your User Name <br></label>
-                 <input id='userNameInput' type="text" name="username" required><br>
+                 <input id='userNameInput' type="text" name="username" required pattern="[0-9a-zA-Z]{6,12}" placeholder="請輸入6-12位數字或英文"/><br>
+                 <div id="errorMessage1"></div>
                  <label for="inputpassword">Set Your Password <br></label>
-                 <input id='inputpassword'type="password" name="password" required><br>
+                 <input id='inputpassword'type="password" name="password" required pattern="[0-9a-zA-Z]{6,12}" placeholder="請輸入6-12位數字或英文"/><br>
+                 <div id="errorMessage2"></div>
                  <input id='creatAcBtn' type="submit" value="Create">
                  
              </form>

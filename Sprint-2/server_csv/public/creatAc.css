@@ -31,3 +31,12 @@ form input{
     color:#216cf3d9;
     text-decoration: none;
 }
+.error{
+    border :5px red solid;
+}
+.errorMessage{
+    margin: 0;
+    margin-bottom: 5px;
+    width: 100%;
+    color: red;
+}
