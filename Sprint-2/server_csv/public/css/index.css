@@ -19,11 +19,12 @@
   .nav{
     flex: 1;
     display: block;
-    background-color: rgb(139, 170, 255);
+    background-color: #216cf3d9;;
   }
   .nav-menu{
     display: flex;
     flex-direction: column;
+    font-family: 'Noto Sans JP', sans-serif;
   }
   .nav-greet{
     display: flex;
@@ -35,21 +36,24 @@
     background-color:rgba(59, 59, 255, 0.7);
     height: fit-content;
     width: max-content;
-    padding: 20px 8px 0px;    
+    padding: 80px;   
     color: white;
   }
   .nav-menu-item{
+    box-shadow: 2px 4px 5px rgb(71 61 128 / 9%);
+    color: #ffffffcf;
     margin: 5px;
-    padding: 5px;
+    padding: 18px;
+    font-weight: 700;
+  }
+  .nav-menu-item:hover{
+    color: white;
   }
   a{
     text-decoration: none;
     color: black;
     padding: 5px;
-  }
-  .nav-menu-item{
-    padding: 5px;
-  }
+  } 
   .main-body{
     flex: 5;
     width: 75%;
@@ -88,8 +92,7 @@
     position: relative;
     margin: 5px;
 }
-.add-form{    
-}
+
 form textarea{    
     display: block;
     margin: 5px;
@@ -119,18 +122,16 @@ div select{
 .welcome-text{
     padding: 30px;
     margin-top: 30px;
+    color: #216cf3d9;
 }
 
-.welcome-text h2{
-    /* text-align: center; */
-}
+
+
 .miniFunction{
     display: flex;
     justify-content: flex-end;
 }
-.gridFunction{
-    /* background: #0072ff80; */
-}
+
 .gridFunction img{
     width: 35px;
     padding: 0px 10px;
@@ -244,15 +245,19 @@ div select{
     /* visibility: hidden; */
     background:#216cf3d9;
     border-radius: 79px;
-    color: white;
-    font-size: 30px;
-    padding: 0px 13px 1px;
+    color: #ffffffcf;
+    font-size: 36px;
+    padding: 2px 18px;
     position: fixed;
     bottom: 75px;
     right: 20px;
     z-index: 100;
 }
-
+.add-btn:hover{
+    color: white;
+    padding: 3px 20px;   
+    
+}
 .footer{
     display: none;
     justify-content: space-between;
