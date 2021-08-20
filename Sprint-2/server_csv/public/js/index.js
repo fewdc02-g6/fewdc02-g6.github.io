@@ -7,7 +7,7 @@ const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
 const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
 const footerMenuBtn = document.getElementById('footerBtn1')
-const navBar = document.querySelector('nav')
+const navBar = document.querySelector('.nav')
 const typeWork = document.querySelector('#nav-item2')
 const typeFamily = document.querySelector('#nav-item3')
 const typePersonal = document.querySelector('#nav-item4')
@@ -33,9 +33,26 @@ addMemoDeleteBtn.addEventListener('click', () => {
 	addBtn.classList.remove('hidden')
 })
 
-footerMenuBtn.addEventListener('click', () => {
-	navBar.classList.add
+
+footerMenuBtn.addEventListener('click', ()=>{
+	if(footerMenuBtn.value=='on'){
+		navBar.classList.add('show')
+		document.getElementById('footerBtn1').value='off'
+	}else{
+		navBar.classList.remove('show')
+		document.getElementById('footerBtn1').value='on'
+	}
+	
 })
+// footerMenuBtn.addEventListener('click', () => {
+// 	navBar.classList.add('show')
+// 	console.log('123')
+// })
+
+
+
+
+
 
 // HTTP methods
 
@@ -303,3 +320,8 @@ async function updateTask(dataObj) {
 		showData()
 	}
 }
+
+///////tesk footerbutton on/off
+
+
+
