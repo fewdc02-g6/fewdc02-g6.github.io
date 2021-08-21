@@ -17,6 +17,8 @@ const popupUpdateArea = document.querySelector('.popup-update-area')
 const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
 const footerMenuBtn = document.getElementById('footerBtn1')
 const navBar = document.querySelector('.nav')
+const navMenu = document.querySelector('.nav-menu')
+const navItem6 = document.querySelector('#nav-item6')
 const greeTing = document.querySelector('.greeting')
 const typeWork = document.querySelector('#nav-item2')
 const typeFamily = document.querySelector('#nav-item3')
@@ -71,6 +73,7 @@ gridFunction1.addEventListener('click',()=>{
 
 colorBox1.addEventListener('click',()=>{		
 	navBar.style.backgroundColor = '#f00555d9';
+	navMenu.style.backgroundColor = '#f00555d9';
 	addBtn.style.backgroundColor = '#f00555d9';
 	welcomeText.style.color = '#f00555d9';
 	greeTing.style.backgroundColor = '#f00555d9'
@@ -78,52 +81,57 @@ colorBox1.addEventListener('click',()=>{
 })
 colorBox2.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#f46236d1';
+	navMenu.style.backgroundColor = '#f46236d1';
 	addBtn.style.backgroundColor = '#f46236d1';
 	welcomeText.style.color = '#f46236d1';
 	greeTing.style.backgroundColor = '#f46236d1'	
 })
 colorBox3.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#f3d921d9';
+	navMenu.style.backgroundColor = '#f3d921d9';
 	addBtn.style.backgroundColor = '#f3d921d9';
 	welcomeText.style.color = '#f3d921d9';
 	greeTing.style.backgroundColor = '#f3d921d9';		
 })
 colorBox4.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#2ec578c7';
+	navMenu.style.backgroundColor = '#2ec578c7';
 	addBtn.style.backgroundColor = '#2ec578c7';
 	welcomeText.style.color = '#2ec578c7';
 	greeTing.style.backgroundColor = '#2ec578c7'	
 })
 colorBox5.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#00bcd4';
+	navMenu.style.backgroundColor = '#00bcd4';
 	addBtn.style.backgroundColor = '#00bcd4';
 	welcomeText.style.color = '#00bcd4';
 	greeTing.style.backgroundColor = '#00bcd4'	
 })
 
-
-
-
 colorBox6.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#216cf3d9';
+	navMenu.style.backgroundColor = '#216cf3d9';
 	addBtn.style.backgroundColor = '#216cf3d9';
 	welcomeText.style.color = '#216cf3d9';
 	greeTing.style.backgroundColor = '#216cf3d9'	
 })
 colorBox7.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#673ab7d4';
+	navMenu.style.backgroundColor = '#673ab7d4';
 	addBtn.style.backgroundColor = '#673ab7d4';
 	welcomeText.style.color = '#673ab7d4';
 	greeTing.style.backgroundColor = '#673ab7d4'	
 })
 colorBox8.addEventListener('click',()=>{
 	navBar.style.backgroundColor = 'gray';
+	navMenu.style.backgroundColor = 'gray';
 	addBtn.style.backgroundColor = 'gray';
 	welcomeText.style.color = 'gray';
 	greeTing.style.backgroundColor = 'gray'	
 })
 colorBox9.addEventListener('click',()=>{
 	navBar.style.backgroundColor = 'black';
+	navMenu.style.backgroundColor = 'black';
 	addBtn.style.backgroundColor = 'black';
 	welcomeText.style.color = 'black';
 	greeTing.style.backgroundColor = 'black'	
