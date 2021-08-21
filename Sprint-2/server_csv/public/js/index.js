@@ -75,6 +75,10 @@ colorBox5.addEventListener('click',()=>{
 	welcomeText.style.color = '#00bcd4';
 	greeTing.style.backgroundColor = '#00bcd4'	
 })
+
+
+
+
 colorBox6.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#216cf3d9';
 	addBtn.style.backgroundColor = '#216cf3d9';
