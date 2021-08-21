@@ -13,22 +13,41 @@
 // getResult()
 
 
-const loginBtn = document.getElementById('inputLogin')
-loginBtn.addEventListener('click',()=>{
-    window.location.href = "./index.html";
+const loginBtn = document.getElementById('login-form')
+
+loginBtn.addEventListener('submit',(event)=>{
+    event.preventDefault()
+    console.log('yo')
+    const form = event.target	
+    console.log(form)
+    // let type = form.name.value.toUpperCase()
+    const dataObj = {	
+        // id: taskID,	
+        username: form.username.value,
+        password: form.password.value		
+    }
+    console.log(dataObj)
+    login(dataObj)
 })
 
 
 
-async function showData() {    
-	const response = await fetch('http://localhost:8080/user/register')	
+async function login(obj) {    
+	const response = await fetch('http://localhost:8080/login', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(obj)
+})	
 	if (response.ok) {
         console.log('success')
+		window.location.replace("http://localhost:8080/index.html")
 		
 	}
 }
 
-showData()
+// showData()
 
 
 

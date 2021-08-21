@@ -51,7 +51,8 @@ async function addTask(event) {
 	})
 	if(response.ok){
 		console.log('success')
-        alert('haha')        
+        alert('haha') 
+        window.location.replace("http://localhost:8080/index.html")       
     }	
 }
 
