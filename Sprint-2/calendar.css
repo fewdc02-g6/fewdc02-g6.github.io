@@ -21,6 +21,7 @@ body, html {
   transform: translate(-50%, -50%);
   transition: all 0.195s ease;
   transform-style: preserve-3d;
+  display:flex
 }
 .main.is-rotated-left {
   transform: translate(-50%, -50%) rotateY(-4deg);
@@ -139,21 +140,46 @@ body, html {
   color: #303633;
   cursor: pointer;
 }
+
 .main .sideb table td.selectable:hover {
   background: #f05855;
   color: white;
 }
-.main .sideb table td.between {
-  background-color: #333;
-  color: white;
-}
+
 .main .sideb table td.active, .main .sideb table td.hover {
   background: #f05855;
   color: white;
 }
 
-.to-do-list{
-  font-size: 50px;
-  border: 10px bold black;
-  margin-left: 100px;
+.to-do-list-card {
+  /* flex-basis: 500p n  x; */
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  max-width: 600px;
+  /* max-width: 80%; */
+  /* align-self: center; */
+  /* margin-right: 100px; */
+  /* margin: auto; */
+  box-sizing: border-box;
+  margin: auto;
+  /* margin-left: 100px;
+  margin-right: 100px; */
+}
+
+.to-do-list-header {
+  /* Add shadows to create the "card" effect */
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.to-do-list-item {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  padding: 4px;
+  /* margin-left: 10px; */
 }
