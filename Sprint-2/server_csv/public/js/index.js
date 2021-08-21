@@ -1,7 +1,10 @@
 "use strict"
 
-// eventListener
+// load website will show all task
 window.addEventListener('load', showData)
+
+
+// eventListener
 const addBtn = document.querySelector('.add-btn');
 const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
@@ -13,6 +16,7 @@ const typeFamily = document.querySelector('#nav-item3')
 const typePersonal = document.querySelector('#nav-item4')
 const gridFunction1 = document.getElementById('gridFun1')
 const gridFunction2 = document.getElementById('gridFun2')
+const showToday = document.querySelector('.today-date')
 
 typeWork.addEventListener('click', () => {
 	showTypeData('work')
@@ -53,6 +57,16 @@ gridFunction1.addEventListener('click',()=>{
 	alert('123')
 	
 })
+
+// show Date 
+const showTodayDate = () =>{
+	let now = new Date()
+	let dateStr = new Date().toDateString()
+	showToday.innerHTML = dateStr
+	console.log(now)
+	console.log(dateStr)
+}
+window.addEventListener('load', showTodayDate)
 
 
 // HTTP methods

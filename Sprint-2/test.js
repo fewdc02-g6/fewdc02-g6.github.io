@@ -1,5 +1,6 @@
 var YY,MM,DD, dateArr, date
 
+/*
 window.addEventListener('load',()=>{
 	YY = document.querySelector('.year')
 	MM = document.querySelector('.month')
@@ -20,7 +21,7 @@ window.addEventListener('load',()=>{
 		})
 	})
 })
-
+*/
 const monthToNum = (text) =>{
 	switch (text){
 		case "January":
@@ -49,11 +50,46 @@ const monthToNum = (text) =>{
 			return '12';
 	}
 }
+const monthFull = (text) =>{
+	switch (text){
+		case "Jan":
+			return 'January';
+		case "Feb":
+			return 'February';
+		case "Mar":
+			return 'March';
+		case "Apr":
+			return 'April';
+		case "May":
+			return 'May';
+		case "Jun":
+			return 'June';
+		case "Jul":
+			return 'July';
+		case "Aug":
+			return 'August';
+		case "Sep":
+			return 'September';
+		case "Oct":
+			return 'October';
+		case "Nov":
+			return 'November';
+		case "Dec":
+			return 'December';
+	}
+}
 
 async function showTaskByDate(date){
 
 }
 
-
-
+let now = new Date()
+// let Y = now.getFullYear()
+// let M = now.getMonth()
+// let D = now.getDate()
+let dateStr = new Date().toDateString()
+	// showToday.innerHTML = now
+let arr = dateStr.split(' ')
+	console.log(now)
+	console.log(arr)
 
