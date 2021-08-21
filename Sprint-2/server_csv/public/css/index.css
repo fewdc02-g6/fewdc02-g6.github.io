@@ -302,6 +302,7 @@ div select{
     }
     .nav-menu{
         background-color: #216cf3d9;
+        position: absolute;
     }
     .greeting{
         /* background-color: rgba(59, 59, 255, 0.7); */
@@ -405,6 +406,8 @@ div select{
     
     .memolist{        
         display: flex;
+        position: relative;
+        z-index: -2;
     }
     .memoContent{
         color: #2424cee3;
