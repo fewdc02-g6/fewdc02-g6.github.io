@@ -13,24 +13,22 @@
 // getResult()
 
 
-
+const loginBtn = document.getElementById('inputLogin')
+loginBtn.addEventListener('click',()=>{
+    window.location.href = "./index.html";
+})
 
 
 
 async function showData() {    
 	const response = await fetch('http://localhost:8080/user/register')	
 	if (response.ok) {
-		const dataArr = await response.json()
-		return dataArr
+        console.log('success')
+		
 	}
 }
-showData()
-.then(res=>{
-    console.log('ok')
-    console.log(res)
-})
-.catch(err=>console.log('fale'))
 
+showData()
 
 
 

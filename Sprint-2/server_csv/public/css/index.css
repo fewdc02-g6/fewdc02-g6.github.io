@@ -83,7 +83,7 @@
 }
 .add-memo{    
     font-family: 'Noto Sans JP', sans-serif;
-    margin-top: 168px;
+    margin-top: 128px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid;
@@ -145,7 +145,7 @@ div select{
     justify-content: center;
 }
 .memo{
-    width: 250px;
+    width: 20%x;
     margin: 16px;
     box-shadow: 2px 4px 5px rgb(71 61 128 / 22%);
     background: white;
@@ -191,7 +191,13 @@ div select{
     border-top-left-radius: 100px;
     height: 4px;
 }
-
+.delete-btn{
+    border-radius: 100px;
+    padding: 3px;    
+}
+.delete-btn:hover{
+    background: #5e3ab712;
+}
 .memoTopBar{
     display: flex;
     justify-content: space-between;

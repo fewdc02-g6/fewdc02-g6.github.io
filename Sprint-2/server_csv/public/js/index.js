@@ -11,6 +11,8 @@ const navBar = document.querySelector('.nav')
 const typeWork = document.querySelector('#nav-item2')
 const typeFamily = document.querySelector('#nav-item3')
 const typePersonal = document.querySelector('#nav-item4')
+const gridFunction1 = document.getElementById('gridFun1')
+const gridFunction2 = document.getElementById('gridFun2')
 
 typeWork.addEventListener('click', () => {
 	showTypeData('work')
@@ -44,14 +46,13 @@ footerMenuBtn.addEventListener('click', ()=>{
 	}
 	
 })
-// footerMenuBtn.addEventListener('click', () => {
-// 	navBar.classList.add('show')
-// 	console.log('123')
-// })
 
-
-
-
+//gridFunction
+gridFunction1.addEventListener('click',()=>{
+	setAttribute('width','300px')
+	alert('123')
+	
+})
 
 
 // HTTP methods
@@ -321,7 +322,7 @@ async function updateTask(dataObj) {
 	}
 }
 
-///////tesk footerbutton on/off
+
 
 
 
