@@ -37,6 +37,7 @@
   }
   h2.greeting{
     background-color:rgba(59, 59, 255, 0.7);
+    box-shadow: 2px 4px 5px rgb(71 61 128 / 9%);
     height: fit-content;
     width: max-content;
     padding: 80px;   
@@ -134,10 +135,29 @@ div select{
     display: flex;
     justify-content: flex-end;
 }
-
+#gridFun3{
+    margin-right: 4px;
+    padding: 7px;
+}
 .gridFunction img{
     width: 35px;
     padding: 0px 10px;
+}
+.swatches{
+    display: none;
+    width: 80px;    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid gray;
+    left: 888px;
+    position: relative;
+    
+}
+.colorBox{    
+    padding: 1px;
+    margin: 5px;
+    width: 13px;
+    height: 13px;
 }
 .memolist{         
     display: flex;
@@ -166,6 +186,33 @@ div select{
 }
 .purple{
     color:#673ab7d4;
+}
+.bg-red{
+    background-color:#f00555d9;;
+}
+.bg-orange{
+    background-color:#f46236d1;
+}
+.bg-yellow{
+    background-color:#f3d921d9;
+}
+.bg-green{
+    background-color:#2ec578c7;
+}
+.bg-green2{
+    background-color:#00bcd4;
+}
+.bg-blue{
+    background-color:#216cf3d9;
+}
+.bg-purple{
+    background-color:#673ab7d4;
+}
+.bg-gray{
+    background-color: gray;
+}
+.bg-black{
+    background-color: black;
 }
 .work{
     background:#216cf3d9;
