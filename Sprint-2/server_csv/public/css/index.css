@@ -128,7 +128,9 @@ div select{
     margin-top: 30px;
     color: #216cf3d9;
 }
-
+.today-date {
+    word-spacing: 2px;
+}
 
 
 .miniFunction{

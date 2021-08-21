@@ -1,9 +1,16 @@
 "use strict"
 
-// eventListener
+// load website will show all task
 window.addEventListener('load', showData)
+<<<<<<< HEAD
 const welcomeText = document.querySelector('.welcome-text')
 const addBtn = document.querySelector('.add-btn')
+=======
+
+
+// eventListener
+const addBtn = document.querySelector('.add-btn');
+>>>>>>> da8d030a0e55ffd3f5ab43f01ae79031812e6042
 const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
 const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
@@ -15,6 +22,7 @@ const typeFamily = document.querySelector('#nav-item3')
 const typePersonal = document.querySelector('#nav-item4')
 const gridFunction1 = document.getElementById('gridFun1')
 const gridFunction2 = document.getElementById('gridFun2')
+<<<<<<< HEAD
 const gridFunction3 = document.getElementById('gridFun3')
 //swatches colorBox
 const colorBox1 =document.getElementById('color-Box1')
@@ -98,6 +106,9 @@ colorBox9.addEventListener('click',()=>{
 
 
 
+=======
+const showToday = document.querySelector('.today-date')
+>>>>>>> da8d030a0e55ffd3f5ab43f01ae79031812e6042
 
 typeWork.addEventListener('click', () => {
 	showTypeData('work')
@@ -138,6 +149,16 @@ footerMenuBtn.addEventListener('click', ()=>{
 // 	alert('123')
 	
 // })
+
+// show Date 
+const showTodayDate = () =>{
+	let now = new Date()
+	let dateStr = new Date().toDateString()
+	showToday.innerHTML = dateStr
+	console.log(now)
+	console.log(dateStr)
+}
+window.addEventListener('load', showTodayDate)
 
 
 // HTTP methods
