@@ -150,9 +150,10 @@ div select{
     width: 80px;    
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px solid gray;
-    left: 888px;
-    position: relative;
+    border: 1px solid gray;    
+    position: absolute;
+    right: 35px;
+    background: white;
     
 }
 .colorBox{    
@@ -167,7 +168,7 @@ div select{
     justify-content: center;
 }
 .memo{
-    width: 20%x;
+    width: 20%;
     margin: 16px;
     box-shadow: 2px 4px 5px rgb(71 61 128 / 22%);
     background: white;
@@ -347,14 +348,13 @@ div select{
         /* visibility: hidden; */
         z-index: -1;
     }
-    .nav-menu{
+    /* .nav-menu{
         background-color: #216cf3d9;
     }
     .greeting{
         /* background-color: rgba(59, 59, 255, 0.7); */
-        background-color: #216cf3d9;
-
-    }
+        /* background-color: #216cf3d; 
+    } */
       .visibility{
         visibility:visible;
       }
@@ -375,11 +375,11 @@ div select{
       }
       .nav-banner{
         height: 15vh;
-        background-color: rgba(59, 59, 255, 0.7);
+        /* background-color: rgba(59, 59, 255, 0.7); */
         padding: 5px;
       }
       .nav-banner h3{
-        color: white;
+        /* color: white; */
         position: relative;
         z-index: 1;
         top: 50px

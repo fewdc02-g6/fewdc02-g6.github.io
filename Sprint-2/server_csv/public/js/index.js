@@ -1,7 +1,10 @@
 "use strict"
-
+// let meMo
 // load website will show all task
-window.addEventListener('load', showData)
+window.addEventListener('load', ()=>{
+	showData()
+}
+)
 
 const welcomeText = document.querySelector('.welcome-text')
 const addBtn = document.querySelector('.add-btn')
@@ -9,7 +12,6 @@ const addBtn = document.querySelector('.add-btn')
 
 
 // eventListener
-const addBtn = document.querySelector('.add-btn');
 const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
 const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
@@ -20,9 +22,10 @@ const typeWork = document.querySelector('#nav-item2')
 const typeFamily = document.querySelector('#nav-item3')
 const typePersonal = document.querySelector('#nav-item4')
 const gridFunction1 = document.getElementById('gridFun1')
-const gridFunction2 = document.getElementById('gridFun2')
-
+const gridFunction2 = document.getElementById('gridFun2')//maybe delete
 const gridFunction3 = document.getElementById('gridFun3')
+
+
 //swatches colorBox
 const colorBox1 =document.getElementById('color-Box1')
 const colorBox2 =document.getElementById('color-Box2')
@@ -36,20 +39,42 @@ const colorBox9 =document.getElementById('color-Box9')
 
 
 //swatches colorBox evenlistener
+let swatchesOnOff = 0;
 gridFunction3.addEventListener('click',()=>{
-	if(gridFunction3.title=='0'){		
+	if(swatchesOnOff =='0'){		
 		document.querySelector('.swatches').style.display = 'flex';
-		gridFunction3.title = '1';
+		swatchesOnOff  = '1';
 	}else{
 		document.querySelector('.swatches').style.display = 'none';
-		gridFunction3.title = '0';
+		swatchesOnOff  = '0';
 	}
 })
-colorBox1.addEventListener('click',()=>{
+
+//change memo display pattern
+let displayPattenOnOff = 0;
+gridFunction1.addEventListener('click',()=>{	
+	let memoArr = document.querySelectorAll('.memo')	
+	if(displayPattenOnOff=='0'){		
+		for(let memo of memoArr){
+		memo.style.width = '35%'
+	}
+	displayPattenOnOff = '1';
+	}else{		
+		for(let memo of memoArr){
+		memo.style.width = '20%'
+	}
+	displayPattenOnOff = '0';
+	}
+})
+
+
+
+colorBox1.addEventListener('click',()=>{		
 	navBar.style.backgroundColor = '#f00555d9';
 	addBtn.style.backgroundColor = '#f00555d9';
 	welcomeText.style.color = '#f00555d9';
-	greeTing.style.backgroundColor = '#f00555d9'		
+	greeTing.style.backgroundColor = '#f00555d9'
+		
 })
 colorBox2.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#f46236d1';
@@ -61,7 +86,7 @@ colorBox3.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#f3d921d9';
 	addBtn.style.backgroundColor = '#f3d921d9';
 	welcomeText.style.color = '#f3d921d9';
-	greeTing.style.backgroundColor = '#f3d921d9'	
+	greeTing.style.backgroundColor = '#f3d921d9';		
 })
 colorBox4.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#2ec578c7';
