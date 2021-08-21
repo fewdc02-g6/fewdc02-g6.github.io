@@ -1,22 +1,150 @@
 "use strict"
-
+// let meMo
 // load website will show all task
-window.addEventListener('load', showData)
+window.addEventListener('load', ()=>{
+	showData()
+}
+)
+
+const welcomeText = document.querySelector('.welcome-text')
+const addBtn = document.querySelector('.add-btn')
+
 
 
 // eventListener
-const addBtn = document.querySelector('.add-btn');
 const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
 const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
 const footerMenuBtn = document.getElementById('footerBtn1')
 const navBar = document.querySelector('.nav')
+const navMenu = document.querySelector('.nav-menu')
+const navItem6 = document.querySelector('#nav-item6')
+const greeTing = document.querySelector('.greeting')
 const typeWork = document.querySelector('#nav-item2')
 const typeFamily = document.querySelector('#nav-item3')
 const typePersonal = document.querySelector('#nav-item4')
 const gridFunction1 = document.getElementById('gridFun1')
-const gridFunction2 = document.getElementById('gridFun2')
+const gridFunction2 = document.getElementById('gridFun2')//maybe delete
+const gridFunction3 = document.getElementById('gridFun3')
+
+
+//swatches colorBox
+const colorBox1 =document.getElementById('color-Box1')
+const colorBox2 =document.getElementById('color-Box2')
+const colorBox3 =document.getElementById('color-Box3')
+const colorBox4 =document.getElementById('color-Box4')
+const colorBox5 =document.getElementById('color-Box5')
+const colorBox6 =document.getElementById('color-Box6')
+const colorBox7 =document.getElementById('color-Box7')
+const colorBox8 =document.getElementById('color-Box8')
+const colorBox9 =document.getElementById('color-Box9')
+
+
+//swatches colorBox evenlistener
+let swatchesOnOff = 0;
+gridFunction3.addEventListener('click',()=>{
+	if(swatchesOnOff =='0'){		
+		document.querySelector('.swatches').style.display = 'flex';
+		swatchesOnOff  = '1';
+	}else{
+		document.querySelector('.swatches').style.display = 'none';
+		swatchesOnOff  = '0';
+	}
+})
+
+//change memo display pattern
+let displayPattenOnOff = 0;
+gridFunction1.addEventListener('click',()=>{	
+	let memoArr = document.querySelectorAll('.memo')	
+	if(displayPattenOnOff=='0'){		
+		for(let memo of memoArr){
+		memo.style.width = '35%'
+	}
+	displayPattenOnOff = '1';
+	}else{		
+		for(let memo of memoArr){
+		memo.style.width = '20%'
+	}
+	displayPattenOnOff = '0';
+	}
+})
+
+
+
+colorBox1.addEventListener('click',()=>{		
+	navBar.style.backgroundColor = '#f00555d9';
+	navMenu.style.backgroundColor = '#f00555d9';
+	addBtn.style.backgroundColor = '#f00555d9';
+	welcomeText.style.color = '#f00555d9';
+	greeTing.style.backgroundColor = '#f00555d9'
+		
+})
+colorBox2.addEventListener('click',()=>{
+	navBar.style.backgroundColor = '#f46236d1';
+	navMenu.style.backgroundColor = '#f46236d1';
+	addBtn.style.backgroundColor = '#f46236d1';
+	welcomeText.style.color = '#f46236d1';
+	greeTing.style.backgroundColor = '#f46236d1'	
+})
+colorBox3.addEventListener('click',()=>{
+	navBar.style.backgroundColor = '#f3d921d9';
+	navMenu.style.backgroundColor = '#f3d921d9';
+	addBtn.style.backgroundColor = '#f3d921d9';
+	welcomeText.style.color = '#f3d921d9';
+	greeTing.style.backgroundColor = '#f3d921d9';		
+})
+colorBox4.addEventListener('click',()=>{
+	navBar.style.backgroundColor = '#2ec578c7';
+	navMenu.style.backgroundColor = '#2ec578c7';
+	addBtn.style.backgroundColor = '#2ec578c7';
+	welcomeText.style.color = '#2ec578c7';
+	greeTing.style.backgroundColor = '#2ec578c7'	
+})
+colorBox5.addEventListener('click',()=>{
+	navBar.style.backgroundColor = '#00bcd4';
+	navMenu.style.backgroundColor = '#00bcd4';
+	addBtn.style.backgroundColor = '#00bcd4';
+	welcomeText.style.color = '#00bcd4';
+	greeTing.style.backgroundColor = '#00bcd4'	
+})
+
+colorBox6.addEventListener('click',()=>{
+	navBar.style.backgroundColor = '#216cf3d9';
+	navMenu.style.backgroundColor = '#216cf3d9';
+	addBtn.style.backgroundColor = '#216cf3d9';
+	welcomeText.style.color = '#216cf3d9';
+	greeTing.style.backgroundColor = '#216cf3d9'	
+})
+colorBox7.addEventListener('click',()=>{
+	navBar.style.backgroundColor = '#673ab7d4';
+	navMenu.style.backgroundColor = '#673ab7d4';
+	addBtn.style.backgroundColor = '#673ab7d4';
+	welcomeText.style.color = '#673ab7d4';
+	greeTing.style.backgroundColor = '#673ab7d4'	
+})
+colorBox8.addEventListener('click',()=>{
+	navBar.style.backgroundColor = 'gray';
+	navMenu.style.backgroundColor = 'gray';
+	addBtn.style.backgroundColor = 'gray';
+	welcomeText.style.color = 'gray';
+	greeTing.style.backgroundColor = 'gray'	
+})
+colorBox9.addEventListener('click',()=>{
+	navBar.style.backgroundColor = 'black';
+	navMenu.style.backgroundColor = 'black';
+	addBtn.style.backgroundColor = 'black';
+	welcomeText.style.color = 'black';
+	greeTing.style.backgroundColor = 'black'	
+})
+
+
+
+
+
+
+
 const showToday = document.querySelector('.today-date')
+
 
 typeWork.addEventListener('click', () => {
 	showTypeData('work')
@@ -52,11 +180,11 @@ footerMenuBtn.addEventListener('click', ()=>{
 })
 
 //gridFunction
-gridFunction1.addEventListener('click',()=>{
-	setAttribute('width','300px')
-	alert('123')
+// gridFunction1.addEventListener('click',()=>{
+// 	setAttribute('width','300px')
+// 	alert('123')
 	
-})
+// })
 
 // show Date 
 const showTodayDate = () =>{
