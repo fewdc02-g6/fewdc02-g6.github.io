@@ -199,12 +199,7 @@ footerMenuBtn.addEventListener('click', ()=>{
 	
 })
 
-//gridFunction
-// gridFunction1.addEventListener('click',()=>{
-// 	setAttribute('width','300px')
-// 	alert('123')
-	
-// })
+
 
 // show Date 
 const showTodayDate = () =>{

@@ -321,3 +321,22 @@ function deleteTask(deletedTaskId) {
     displayTasks(selectedDateTasks);
 }
 */
+
+
+
+/*-----------------------addBtn-----------------*/
+const addBtn = document.querySelector('.add-btn')
+const popupWrapper = document.querySelector('.popup-wrapper')
+const popupUpdateArea = document.querySelector('.popup-update-area')
+const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
+
+addBtn.addEventListener('click', () => {
+	popupWrapper.classList.remove('hidden')
+	addBtn.classList.add('hidden')
+
+})
+
+addMemoDeleteBtn.addEventListener('click', () => {
+	popupWrapper.classList.add('hidden')
+	addBtn.classList.remove('hidden')
+})
