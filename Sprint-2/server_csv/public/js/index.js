@@ -26,6 +26,7 @@ const typePersonal = document.querySelector('#nav-item4')
 const gridFunction1 = document.getElementById('gridFun1')
 const gridFunction2 = document.getElementById('gridFun2')//maybe delete
 const gridFunction3 = document.getElementById('gridFun3')
+const countMemo = document.querySelector('#count-memo')
 
 
 //swatches colorBox
@@ -38,6 +39,9 @@ const colorBox6 =document.getElementById('color-Box6')
 const colorBox7 =document.getElementById('color-Box7')
 const colorBox8 =document.getElementById('color-Box8')
 const colorBox9 =document.getElementById('color-Box9')
+
+//countmemo
+
 
 
 //swatches colorBox evenlistener
@@ -233,6 +237,7 @@ async function showData() {
 				event.preventDefault();
 				delTask(event.target.id);
 			})
+			// countMemo.innerHTML = display.childElementCount-1;
 		}
 
 		const updateButton = document.querySelectorAll('.update-btn')
@@ -243,8 +248,10 @@ async function showData() {
 				addBtn.classList.add('hidden')
 				editTaskById(event.target.id)
 			})
+			// countMemo.innerHTML = display.childElementCount-1;
 		}
-	}
+		countMemo.innerHTML = display.childElementCount-1;
+	}	
 }
 showAllButton.addEventListener('click', showData)
 
@@ -334,6 +341,7 @@ async function showTypeData(taskType) {
 			})
 		}
 	}
+	countMemo.innerHTML = display.childElementCount-1;
 }
 
 // add new task

@@ -318,6 +318,11 @@ div select{
     padding: 3px 20px;   
     
 }
+.countDiv{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 10px;
+}
 .footer{
     display: none;
     justify-content: space-between;
@@ -345,8 +350,8 @@ div select{
         height: 0px
     }
     .nav{
-        display: none;
-        /* visibility: hidden; */
+        position: fixed;
+        display: none;        
         z-index: -1;
     }
      .nav-menu{
@@ -438,12 +443,12 @@ div select{
         width: 100%;        
     }     
     
-    .todayTodo{
+    /* .todayTodo{
         display: block;
     } 
     .tomorrowTodo{
         display: block;
-    }
+    } */
     
     .add-btn{
         visibility: visible;
