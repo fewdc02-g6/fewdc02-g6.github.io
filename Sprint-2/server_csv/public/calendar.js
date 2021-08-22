@@ -1,3 +1,4 @@
+"use strict"
 var month = [
     "January",
     "February",
@@ -48,7 +49,25 @@ var taskTopBarColors = [
     'aqua',
 ];
 /*
-var allTasks = [
+var allTasks = async () => {
+    let dataArr
+    const response = await fetch('http://localhost:8080/todolist')
+	if (response.ok) {
+		dataArr = await response.json()
+        console.log(dataArr)
+        return dataArr
+    } else{
+        console.log('not ok')
+    }
+    // allTasks = dataArr
+    // console.log(allTasks)
+    console.log(allTasks)
+    return allTasks
+}
+*/
+
+/*
+var allTasks() = [
     { taskId: 1, taskTitle: 'task 1', taskDesc: 'task 1 description', date: new Date(new Date().getTime() + (1 * 24 * 60 * 60 * 1000)), completed: false },
     { taskId: 2, taskTitle: 'task 2', taskDesc: 'task 2 description', date: new Date(new Date().getTime() + (1 * 24 * 60 * 60 * 1000)), completed: false },
     { taskId: 3, taskTitle: 'task 3', taskDesc: 'task 3 description', date: new Date(new Date().getTime() + (1 * 24 * 60 * 60 * 1000)), completed: false },
@@ -137,7 +156,7 @@ function getMonth(currentDay) {
     var now = new Date();
     var currentMonth = month[currentDay.getMonth()];
     var monthArr = [];
-    for (i = 1 - currentDay.getDate(); i < 31; i++) {
+    for (let i = 1 - currentDay.getDate(); i < 31; i++) {
         var tomorrow = new Date(currentDay);
         tomorrow.setDate(currentDay.getDate() + i);
         if (currentMonth !== month[tomorrow.getMonth()]) {
@@ -214,7 +233,7 @@ function initCalender(monthData) {
             }
         });
     $("td.selectable").click(function() {
-        dateClickHandler($(this));
+        // dateClickHandler($(this));
     });
 }
 initCalender(getMonth(new Date()));
@@ -224,7 +243,7 @@ $(".fa-angle-double-right").click(function() {
     $(".right-wrapper").toggleClass("is-active");
     $(this).toggleClass("is-active");
 });
-
+/*
 function dateClickHandler(elem) {
     var day1 = parseInt($(elem).html());
     selectedDate = new Date(calendarYear, calendarMonth, day1);
@@ -273,7 +292,7 @@ function getTaskHtml(task) {
         </div>
     `;
 }
-
+*/
 $(".fa-angle-left").click(function() {
     getPrevMonth();
     // $(".main").addClass("is-rotated-left");
@@ -289,7 +308,7 @@ $(".fa-angle-right").click(function() {
     //     $(".main").removeClass("is-rotated-right");
     // }, 195);
 });
-
+/*
 function getTaskByDate(selectedDate) {
     var endDate = (new Date(selectedDate)).setDate(selectedDate.getDate() + 1);
     var dateTasks = allTasks.filter(task => task.date >= selectedDate && task.date < endDate);
@@ -301,3 +320,4 @@ function deleteTask(deletedTaskId) {
     let selectedDateTasks = getTaskByDate(selectedDate);
     displayTasks(selectedDateTasks);
 }
+*/

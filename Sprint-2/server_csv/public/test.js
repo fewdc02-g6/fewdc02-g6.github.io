@@ -1,28 +1,36 @@
 "use strict"
 var YY,MM,DD, dateArr, date
 
-/*
+
 window.addEventListener('load',()=>{
-	YY = document.querySelector('.year')
-	MM = document.querySelector('.month')
+	
 		
-	console.log(YY)
-	console.log(MM)
-	console.log(MM.innerHTML)
-	console.log(YY.innerHTML)
+	// console.log(YY)
+	// console.log(MM)
+	// console.log(MM.innerHTML)
+	// console.log(YY.innerHTML)
 	dateArr = document.querySelectorAll('.selectable')
 	dateArr.forEach( i =>{		
 		i.addEventListener('click', (event)=>{
+			YY = document.querySelector('.year')
+			MM = document.querySelector('.month')
 			DD = event.target.innerText
-			date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
-			console.log(date)
-			
-			
+			date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`			
+			showTaskByDate(date)	
 	
 		})
+		
 	})
 })
-*/
+
+const showTaskByDate = async (date) =>{
+	console.log(date)
+	let response = await fetch('http://localhost:8080/todolist')
+	if(response.ok){
+
+	}
+}
+
 const monthToNum = (text) =>{
 	switch (text){
 		case "January":
@@ -51,7 +59,7 @@ const monthToNum = (text) =>{
 			return '12';
 	}
 }
-const monthFull = (text) =>{
+const monthToFull = (text) =>{
 	switch (text){
 		case "Jan":
 			return 'January';
@@ -80,9 +88,7 @@ const monthFull = (text) =>{
 	}
 }
 
-async function showTaskByDate(date){
 
-}
 /*
 let now = new Date()
 // let Y = now.getFullYear()
