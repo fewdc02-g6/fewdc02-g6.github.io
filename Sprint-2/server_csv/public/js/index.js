@@ -78,19 +78,6 @@ gridFunction1.addEventListener('click',()=>{
 
 // eventListener
 
-calendar.addEventListener('click', ()=>{
-    
-    displayArea.innerHTML = 
-    `<iframe
-    src="http://localhost:8080/calendar.html" 
-    title="calendar"
-    width="100%"
-    height="700px"
-    ></iframe>`
-    
-})
-
-
 colorBox1.addEventListener('click',()=>{		
 	navBar.style.backgroundColor = '#f00555d9';
 	navMenu.style.backgroundColor = '#f00555d9';

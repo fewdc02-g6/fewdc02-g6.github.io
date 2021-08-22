@@ -8,12 +8,12 @@ const rightArrow = document.querySelector('.fa-angle-right')
 const displayTaskArea = document.querySelector('#divToDoList')
 const divToDoHeader = document.querySelector('.to-do-list-header')
 const memos = document.querySelector('.memo')
-/*const footerMenuBtn = document.getElementById('footerBtn1')
+const footerMenuBtn = document.getElementById('footerBtn1')
 const navBar = document.querySelector('.nav')
 const addBtn = document.querySelector('.add-btn')
 const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
 const popupWrapper = document.querySelector('.popup-wrapper')
-*/
+
 // event listeners
 window.addEventListener('load', () => {
 	// console.log(YY)
@@ -69,7 +69,7 @@ rightArrow.addEventListener('click', () => {
 		})
 	})
 })
-/*
+
 addBtn.addEventListener('click', () => {
 	popupWrapper.classList.remove('hidden')
 	addBtn.classList.add('hidden')
@@ -86,7 +86,7 @@ document.querySelector('.add-form').addEventListener('submit', event => {
 	addTask(event)
 	taskID++
 })
-/*
+
 // HTTP request
 // add new task
 async function addTask(event) {
@@ -127,7 +127,7 @@ async function delTask(id) {
 		window.location.replace("http://localhost:8080/calendar.html")		
 	}
 }
-*/
+
 // get task by date
 const getTaskByDate = async (date) => {
 	$('#divToDoList').empty()
@@ -194,7 +194,7 @@ const getTaskByDate = async (date) => {
 
 			}
 		}
-		/*
+		
 		console.log(arr)
 		for(let i = 0; i <arr.length ; i++){
 			displayTaskArea.innerHTML +=				
@@ -210,7 +210,7 @@ const getTaskByDate = async (date) => {
 			</div>    
 			</div>`; 
 			
-		}*/
+		}
 	}
 
 }
@@ -278,7 +278,7 @@ const monthToFull = (text) => {
 			return 'December';
 	}
 }
-/*
+
 footerMenuBtn.addEventListener('click', () => {
 	if (footerMenuBtn.value == 'on') {
 		navBar.classList.add('show')
