@@ -55,7 +55,7 @@ form p{
     0%{
         color: #216cf3d9;
         word-spacing: 18px;        
-        opacity: 0.4;
+        opacity: 0.6;
     }
 
     100%{        
@@ -65,8 +65,8 @@ form p{
 @keyframes inputLoginanimation{
     0%{
         color: black;
-        transform: translateY(13px); 
-        opacity: 0.2;       
+        transform: translateY(12px); 
+        opacity: 0.4;       
     }
     100%{
         transform: translateY();  
