@@ -24,9 +24,9 @@ html {
 .hidden{
     display: none ;
 }
-/* 
+
 .add-btn{
-    /* visibility: hidden; 
+    /* visibility: hidden; */
     background:#216cf3d9;
     border-radius: 79px;
     color: #ffffffcf;
@@ -76,7 +76,7 @@ div select{
     border-radius: 12px;
     background: rgba(59, 59, 255, 0.7);
     color: white;
-} */
+} 
 .main {
     position: relative;
     width: 100vw;
@@ -477,20 +477,20 @@ div select{
         margin-left: 0rem;
         margin-top: 1rem;
         /* height: 48vh; */
+        width: 100%;
     }
-    /* .add-btn{
+     .add-btn{
         visibility: visible;
     }  */
-    /*----------------newadd 08/22-------------
+    /* ----------------newadd 08/22------------- */
     .nav{
         position: fixed;
         display: none;        
         z-index: 1;
-        top: -6px;
-        left: -1px;
+
     }   
     .footer{
         display: flex;
         z-index: 3;
-    }-*/
+    }
 }

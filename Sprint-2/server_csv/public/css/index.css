@@ -5,13 +5,6 @@
 
 }
 
-iframe {
-    display: block;
-    position: relative;
-    z-index: -1;
-
-}
-
 .section{
     display: flex;
     height: 610px;
