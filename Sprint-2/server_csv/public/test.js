@@ -82,14 +82,14 @@ const getTaskByDate = async (date) => {
 				console.log(data.duedate)
 
 				displayTaskArea.innerHTML +=
-				`<div class="displayDemo">
+					`<div class="displayDemo" id="${data.id}">
 				<div class="memoLeftContent">
 					<p class="memoTitle">${data.name}</p>
 					<p class="memoContent description">${data.description}</p>
 				</div>
 				<div class="functionX">
-					<svg id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
-					<svg id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
+					<svg class="update-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
+					<svg class="delete-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
 				</div>
 				</div>`
 				/*				
@@ -104,6 +104,23 @@ const getTaskByDate = async (date) => {
 				<svg class="delete-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
 				</div>    
 				</div>`; */
+				const delButton = document.querySelectorAll('.delete-btn')
+				for (let item of delButton) {
+					item.addEventListener('click', (event) => {
+						event.preventDefault();
+						delTask(event.target.id);
+					})
+				}
+				const updateButton = document.querySelectorAll('.update-btn')
+				for (let item of updateButton) {
+					item.addEventListener('click', (event) => {
+						event.preventDefault();
+						popupUpdateArea.classList.remove('hidden')
+						addBtn.classList.add('hidden')
+						editTaskById(event.target.id)
+					})
+					// countMemo.innerHTML = display.childElementCount-1;
+				}
 				rightArrow.addEventListener('click', () => {
 					console.log('del')
 					displayTaskArea.innerText = 'Please Pick a Date.'
@@ -119,7 +136,7 @@ const getTaskByDate = async (date) => {
 		console.log(arr)
 		for(let i = 0; i <arr.length ; i++){
 			displayTaskArea.innerHTML +=				
-			`<div class="memo memo-${arr[i].id}" id="${arr[i].id}">
+			`<div class="memo memo-${arr.id}" id="${arr[i].id}">
 			<div class="memoTopBorder ${arr[i].type} ${arr[i].type}"></div>
 			<div class="memoTopBar">
 			<p id="${arr[i].id}" class="memoType blue">${arr[i].name}</p> 
@@ -139,6 +156,18 @@ const getTaskByDate = async (date) => {
 const clearDisplayArea = (arr) => {
 	divToDoHeader.innerHTML = obj.duedate;
 
+}
+
+// del task
+async function delTask(id) {
+	const url = 'http://localhost:8080/todolist/' + id
+	const response = await fetch(url, {
+		method: 'DELETE'
+	})
+	if (response.ok) {
+		alert(`Task is deleted`)
+		window.location.replace("http://localhost:8080/calendar.html")		
+	}
 }
 
 const monthToNum = (text) => {
@@ -198,15 +227,15 @@ const monthToFull = (text) => {
 	}
 }
 
-footerMenuBtn.addEventListener('click', ()=>{
-	if(footerMenuBtn.value=='on'){
+footerMenuBtn.addEventListener('click', () => {
+	if (footerMenuBtn.value == 'on') {
 		navBar.classList.add('show')
-		document.getElementById('footerBtn1').value='off'
-	}else{
+		document.getElementById('footerBtn1').value = 'off'
+	} else {
 		navBar.classList.remove('show')
-		document.getElementById('footerBtn1').value='on'
+		document.getElementById('footerBtn1').value = 'on'
 	}
-	
+
 })
 
 /*
