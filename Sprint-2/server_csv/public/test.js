@@ -26,6 +26,33 @@ window.addEventListener('load', () => {
 	})
 })
 
+leftArrow.addEventListener('click', ()=>{
+	dateArr = document.querySelectorAll('.selectable')
+	dateArr.forEach(i => {
+		i.addEventListener('click', (event) => {
+			YY = document.querySelector('.year')
+			MM = document.querySelector('.month')
+			DD = event.target.innerText
+			date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
+			divToDoHeader.innerHTML = date;
+			getTaskByDate(date)
+		})
+	})
+})
+rightArrow.addEventListener('click', ()=>{
+	dateArr = document.querySelectorAll('.selectable')
+	dateArr.forEach(i => {
+		i.addEventListener('click', (event) => {
+			YY = document.querySelector('.year')
+			MM = document.querySelector('.month')
+			DD = event.target.innerText
+			date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
+			divToDoHeader.innerHTML = date;
+			getTaskByDate(date)
+		})
+	})
+})
+
 // functions
 const getTaskByDate = async (date) => {
 	console.log(date)
