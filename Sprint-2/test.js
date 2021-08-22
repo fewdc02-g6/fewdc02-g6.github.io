@@ -1,3 +1,4 @@
+"use strict"
 var YY,MM,DD, dateArr, date
 
 /*
@@ -82,7 +83,7 @@ const monthFull = (text) =>{
 async function showTaskByDate(date){
 
 }
-
+/*
 let now = new Date()
 // let Y = now.getFullYear()
 // let M = now.getMonth()
@@ -93,3 +94,4 @@ let arr = dateStr.split(' ')
 	console.log(now)
 	console.log(arr)
 
+*/
