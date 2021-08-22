@@ -39,8 +39,41 @@
 </head>
 
 <body>
+    <!-- add task form & update task form-->
+    <!--
     <div class="popup-update-area hidden"></div>
+    <div class="popup-wrapper hidden">
+        <div class="add-memo">
+            <form class="add-form">
+                <form action="http://localhost:8080/" method="POST"> 
+                    <svg  id='add-memo-delete-btn' width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                       
+                    <div>
+                        <label for="type">Type</label>        
+                        <select id="type" name ="type" required>
+                            <option value="family">Family</option>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                        </select>  <br>
+                    </div>
+                    <div>
+                        <label for="name">Memo Title</label>                                       
+                        <input id="name" name="name" type="text" required>  
+                        <br>               
+                    </div>
+                    <div>
+                        <label for="duedate">Due Date</label>                                       
+                        <input id="duedate" name="duedate" type="date" required><br>                
+                    </div>
+                   <label for="message"></label>
+                   <textarea id="description" name="description" required rows="8" cols="40"></textarea>
+                    <input id="submit-btn" type="submit" value="Add">
+                </form>
+            </form>
+        </div>
+    </div> -->
+    <!-- add task form & update task form-->
     <div class="main">
+        <!--
         <div class="nav">
             <div class="nav-menu">
                 <h2 class="greeting">To Do List</h2>
@@ -52,6 +85,7 @@
                 <a class="nav-menu-item" id='nav-item6' href="./login_page.html">LogOut</a>
             </div>
         </div>
+    -->
         <div class="sideb">
             <div class='calender-picker'>
                 <div class="header"><i class="fa fa-angle-left" aria-hidden="false"></i><span><span class="month">
@@ -157,6 +191,8 @@
             </div>
         </div>
     </div>
+    <!-- <button class="add-btn">+</button>             -->
+<!--
     <div class="footer">
         <button value='on' id='footerBtn1'><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
                 fill-rule="evenodd" clip-rule="evenodd">
@@ -174,6 +210,7 @@
                         d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 15l-5.247-6.44-5.263 6.44-.737-.678 6-7.322 6 7.335-.753.665z" />
                 </svg></a></button>
     </div>
+-->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 

@@ -1,5 +1,6 @@
 "use strict"
 
+
 // global variables
 var YY, MM, DD, dateArr, date
 const leftArrow = document.querySelector('.fa-angle-left')
@@ -7,9 +8,12 @@ const rightArrow = document.querySelector('.fa-angle-right')
 const displayTaskArea = document.querySelector('#divToDoList')
 const divToDoHeader = document.querySelector('.to-do-list-header')
 const memos = document.querySelector('.memo')
-const footerMenuBtn = document.getElementById('footerBtn1')
+/*const footerMenuBtn = document.getElementById('footerBtn1')
 const navBar = document.querySelector('.nav')
-
+const addBtn = document.querySelector('.add-btn')
+const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
+const popupWrapper = document.querySelector('.popup-wrapper')
+*/
 // event listeners
 window.addEventListener('load', () => {
 	// console.log(YY)
@@ -65,8 +69,66 @@ rightArrow.addEventListener('click', () => {
 		})
 	})
 })
+/*
+addBtn.addEventListener('click', () => {
+	popupWrapper.classList.remove('hidden')
+	addBtn.classList.add('hidden')
 
-// functions
+})
+
+addMemoDeleteBtn.addEventListener('click', () => {
+	popupWrapper.classList.add('hidden')
+	addBtn.classList.remove('hidden')
+})
+
+document.querySelector('.add-form').addEventListener('submit', event => {
+	event.preventDefault();
+	addTask(event)
+	taskID++
+})
+/*
+// HTTP request
+// add new task
+async function addTask(event) {
+	const form = event.target
+	let type = form.type.value
+	const dataObj = {
+		id: taskID,
+		name: form.name.value,
+		description: form.description.value,
+		duedate: form.duedate.value,
+		type: form.type.value
+	}
+	const response = await fetch('http://localhost:8080/todolist',
+		{
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(dataObj)
+		})
+	if (response.ok) {
+		console.log('success')
+		alert('Task Added!')
+		popupWrapper.classList.add('hidden')
+		addBtn.classList.remove('hidden')
+		// showData()
+	}
+}
+
+// del task
+async function delTask(id) {
+	const url = 'http://localhost:8080/todolist/' + id
+	const response = await fetch(url, {
+		method: 'DELETE'
+	})
+	if (response.ok) {
+		alert(`Task is deleted`)
+		window.location.replace("http://localhost:8080/calendar.html")		
+	}
+}
+*/
+// get task by date
 const getTaskByDate = async (date) => {
 	$('#divToDoList').empty()
 	// console.log(date)
@@ -158,17 +220,7 @@ const clearDisplayArea = (arr) => {
 
 }
 
-// del task
-async function delTask(id) {
-	const url = 'http://localhost:8080/todolist/' + id
-	const response = await fetch(url, {
-		method: 'DELETE'
-	})
-	if (response.ok) {
-		alert(`Task is deleted`)
-		window.location.replace("http://localhost:8080/calendar.html")		
-	}
-}
+
 
 const monthToNum = (text) => {
 	switch (text) {
@@ -226,7 +278,7 @@ const monthToFull = (text) => {
 			return 'December';
 	}
 }
-
+/*
 footerMenuBtn.addEventListener('click', () => {
 	if (footerMenuBtn.value == 'on') {
 		navBar.classList.add('show')

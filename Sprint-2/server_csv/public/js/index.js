@@ -10,8 +10,9 @@ const welcomeText = document.querySelector('.welcome-text')
 const addBtn = document.querySelector('.add-btn')
 
 
-
-// eventListener
+// global variables
+const showAllButton = document.querySelector('.show-all-button')
+const displayArea = document.querySelector('.memolist')
 const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
 const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
@@ -27,6 +28,8 @@ const gridFunction1 = document.getElementById('gridFun1')
 const gridFunction2 = document.getElementById('gridFun2')//maybe delete
 const gridFunction3 = document.getElementById('gridFun3')
 const countMemo = document.querySelector('#count-memo')
+const calendar = document.querySelector('.calendar')
+const iframe = document.querySelector('iframe')
 
 
 //swatches colorBox
@@ -73,6 +76,19 @@ gridFunction1.addEventListener('click',()=>{
 	}
 })
 
+// eventListener
+
+calendar.addEventListener('click', ()=>{
+    
+    displayArea.innerHTML = 
+    `<iframe
+    src="http://localhost:8080/calendar.html" 
+    title="calendar"
+    width="100%"
+    height="700px"
+    ></iframe>`
+    
+})
 
 
 colorBox1.addEventListener('click',()=>{		
@@ -203,19 +219,18 @@ window.addEventListener('load', showTodayDate)
 
 // HTTP methods
 
-const showAllButton = document.querySelector('.show-all-button')
-const display = document.querySelector('.memolist')
+
 let taskID = 1;
 
 
 // get all data 
 async function showData() {
-	display.innerHTML = "<br>"
+	displayArea.innerHTML = "<br>"
 	const response = await fetch('http://localhost:8080/todolist')
 	if (response.ok) {
 		const dataArr = await response.json()
 		for (let i = 0; i < dataArr.length; i++) {
-			display.innerHTML +=
+			displayArea.innerHTML +=
 				`<div class="memo memo-${dataArr[i].id}" id="${dataArr[i].id}">
     			<div class="memoTopBorder ${(dataArr[i].type)} ${dataArr[i].type}"></div>
     			<div class="memoTopBar">
@@ -237,7 +252,7 @@ async function showData() {
 				event.preventDefault();
 				delTask(event.target.id);
 			})
-			// countMemo.innerHTML = display.childElementCount-1;
+			// countMemo.innerHTML = displayArea.childElementCount-1;
 		}
 
 		const updateButton = document.querySelectorAll('.update-btn')
@@ -248,9 +263,9 @@ async function showData() {
 				addBtn.classList.add('hidden')
 				editTaskById(event.target.id)
 			})
-			// countMemo.innerHTML = display.childElementCount-1;
+			// countMemo.innerHTML = displayArea.childElementCount-1;
 		}
-		countMemo.innerHTML = display.childElementCount-1;
+		countMemo.innerHTML = displayArea.childElementCount-1;
 	}	
 }
 showAllButton.addEventListener('click', showData)
@@ -300,13 +315,13 @@ async function showTaskById(id) {
 
 // show task by type
 async function showTypeData(taskType) {
-	display.innerHTML = "<br>"
+	displayArea.innerHTML = "<br>"
 	const response = await fetch('http://localhost:8080/todolist')
 	if (response.ok) {
 		const dataArr = await response.json()
 		for (let obj of dataArr) {
 			if (taskType === obj.type){
-				display.innerHTML +=
+				displayArea.innerHTML +=
 				`<div class="memo memo-${obj.id}" id="${obj.id}">
     			<div class="memoTopBorder ${(obj.type)} ${obj.type}"></div>
     			<div class="memoTopBar">
@@ -341,7 +356,7 @@ async function showTypeData(taskType) {
 			})
 		}
 	}
-	countMemo.innerHTML = display.childElementCount-1;
+	countMemo.innerHTML = displayArea.childElementCount-1;
 }
 
 // add new task
