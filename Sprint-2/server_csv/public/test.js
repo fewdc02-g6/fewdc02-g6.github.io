@@ -6,7 +6,7 @@ const leftArrow = document.querySelector('.fa-angle-left')
 const rightArrow = document.querySelector('.fa-angle-right')
 const displayTaskArea = document.querySelector('#divToDoList')
 const divToDoHeader = document.querySelector('.to-do-list-header')
-
+const memos = document.querySelector('.memo')
 // event listeners
 window.addEventListener('load', () => {
 	// console.log(YY)
@@ -26,7 +26,8 @@ window.addEventListener('load', () => {
 	})
 })
 
-leftArrow.addEventListener('click', ()=>{
+leftArrow.addEventListener('click', ()=>{            
+	displayTaskArea.innerHTML = ``
 	dateArr = document.querySelectorAll('.selectable')
 	dateArr.forEach(i => {
 		i.addEventListener('click', (event) => {
@@ -41,6 +42,8 @@ leftArrow.addEventListener('click', ()=>{
 })
 
 rightArrow.addEventListener('click', ()=>{
+	displayTaskArea.innerHTML = ``
+
 	dateArr = document.querySelectorAll('.selectable')
 	dateArr.forEach(i => {
 		i.addEventListener('click', (event) => {
@@ -57,6 +60,7 @@ rightArrow.addEventListener('click', ()=>{
 // functions
 const getTaskByDate = async (date) => {
 	console.log(date)
+	displayTaskArea.innerHTML = ''
 	let response = await fetch('http://localhost:8080/todolist')
 	if (response.ok) {
 		const dataArr = await response.json()
@@ -66,9 +70,7 @@ const getTaskByDate = async (date) => {
 				console.log(date)
 				console.log(data.duedate)
 				
-				
-				
-				displayTaskArea.innerHTML +=
+				displayTaskArea.innerHTML +=				
 					`<div class="memo memo-${data.id}" id="${data.id}">
     			<div class="memoTopBorder ${data.type} ${data.type}"></div>
     			<div class="memoTopBar">
@@ -83,6 +85,7 @@ const getTaskByDate = async (date) => {
         		<svg  class="update-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
     			</div>    
 				</div>`; 
+				
 			}
 		}
 	}
