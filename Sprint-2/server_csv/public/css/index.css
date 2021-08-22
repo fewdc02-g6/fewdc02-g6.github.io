@@ -6,7 +6,7 @@
 }
 .section{
     display: flex;
-    height: 600px;
+    height: 610px;
 }
 .hidden{
     display: none ;
@@ -121,8 +121,7 @@ div select{
 
 .rightMain{
     width: 100%;  
-       
-     
+    overflow: auto;       
 }
 .welcome-text{
     padding: 30px;
@@ -137,6 +136,9 @@ div select{
 .miniFunction{
     display: flex;
     justify-content: flex-end;
+}
+#gridFun1 img:hover{
+    width: 37px;
 }
 #gridFun3{
     margin-right: 4px;
@@ -346,9 +348,9 @@ div select{
 
 
 @media screen and (max-width:500px){
-    .section{
+    /* .section{
         height: 0px
-    }
+    } */
     .nav{
         position: fixed;
         display: none;        
