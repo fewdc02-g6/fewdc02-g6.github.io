@@ -303,6 +303,10 @@ html {
     display: block;
     background-color: #216cf3d9;
   }
+  .show{
+    display: block !important;
+    /* display: flex; */
+}
   .nav-menu{
     display: flex;
     flex-direction: column;
@@ -371,6 +375,8 @@ html {
         position: fixed;
         display: none;        
         z-index: 1;
+        top: -6px;
+        left: -1px;
     }   
     .footer{
         display: flex;
