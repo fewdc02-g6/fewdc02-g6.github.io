@@ -6,6 +6,7 @@ const leftArrow = document.querySelector('.fa-angle-left')
 const rightArrow = document.querySelector('.fa-angle-right')
 const displayTaskArea = document.querySelector('#divToDoList')
 const divToDoHeader = document.querySelector('.to-do-list-header')
+
 // event listeners
 window.addEventListener('load', () => {
 	// console.log(YY)
@@ -19,6 +20,7 @@ window.addEventListener('load', () => {
 			MM = document.querySelector('.month')
 			DD = event.target.innerText
 			date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
+			divToDoHeader.innerHTML = date;
 			getTaskByDate(date)
 		})
 	})
@@ -35,9 +37,9 @@ const getTaskByDate = async (date) => {
 			if (data.duedate === date) {
 				console.log(date)
 				console.log(data.duedate)
-				displayTaskArea.otterHTML = `<div id='divToDoList' class="to-do-list-items">
-                </div>`
-				divToDoHeader.innerHTML = data.duedate;
+				
+				
+				/*
 				displayTaskArea.innerHTML +=
 					`<div class="memo memo-${data.id}" id="${data.id}">
     			<div class="memoTopBorder ${data.type} ${data.type}"></div>
@@ -52,19 +54,19 @@ const getTaskByDate = async (date) => {
         		<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/></svg>
         		<svg  class="update-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
     			</div>    
-				</div>`;
+				</div>`; */
 			}
 
 		}
 
 	}
 }
-// console.log(divToDoHeader)
+
 const showTaskByDate = obj => {
 
 	divToDoHeader.innerHTML = obj.duedate;
-
-	displayTaskArea.appeninnerHTML =
+/*
+	displayTaskArea.innerHTML =
 		`<div class="memo memo-${obj.id}" id="${obj.id}">
     			<div class="memoTopBorder ${obj.type} ${obj.type}"></div>
     			<div class="memoTopBar">
@@ -79,7 +81,7 @@ const showTaskByDate = obj => {
         		<svg  class="update-btn" id="${obj.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
     			</div>    
 				</div>`;
-
+*/
 
 }
 
