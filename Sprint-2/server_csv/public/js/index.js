@@ -214,7 +214,7 @@ async function showData() {
 				`<div class="memo memo-${dataArr[i].id}" id="${dataArr[i].id}">
     			<div class="memoTopBorder ${(dataArr[i].type)} ${dataArr[i].type}"></div>
     			<div class="memoTopBar">
-        		<p id="${dataArr[i].id}" class="memoType blue">Task-${dataArr[i].id}: ${dataArr[i].name}</p> 
+        		<p id="${dataArr[i].id}" class="memoType blue">${dataArr[i].name}</p> 
         		<svg class="delete-btn" id="${dataArr[i].id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
     			</div>    
     			<div class="memoContent description">${dataArr[i].description}</div>
@@ -305,7 +305,7 @@ async function showTypeData(taskType) {
 				`<div class="memo memo-${obj.id}" id="${obj.id}">
     			<div class="memoTopBorder ${(obj.type)} ${obj.type}"></div>
     			<div class="memoTopBar">
-        		<p id="${obj.id}" class="memoType blue">Task-${obj.id}: ${obj.name}</p> 
+        		<p id="${obj.id}" class="memoType blue">${obj.name}</p> 
         		<svg class="delete-btn" id="${obj.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
     			</div>    
     			<div class="memoContent description">${obj.description}</div>
