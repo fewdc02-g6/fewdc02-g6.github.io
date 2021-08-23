@@ -324,7 +324,7 @@ function deleteTask(deletedTaskId) {
 
 
 
-/*-----------------------addBtn-----------------*/
+/*-----------------------addBtn--------------
 const addBtn = document.querySelector('.add-btn')
 const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
@@ -340,3 +340,4 @@ addMemoDeleteBtn.addEventListener('click', () => {
 	popupWrapper.classList.add('hidden')
 	addBtn.classList.remove('hidden')
 })
+---*/

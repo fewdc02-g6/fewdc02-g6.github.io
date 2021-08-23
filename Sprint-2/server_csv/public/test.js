@@ -194,8 +194,8 @@ const getTaskByDate = async (date) => {
 
 			}
 		}
-		
-		console.log(arr)
+		/*
+		// console.log(arr)
 		for(let i = 0; i <arr.length ; i++){
 			displayTaskArea.innerHTML +=				
 			`<div class="memo memo-${arr.id}" id="${arr[i].id}">
@@ -210,7 +210,7 @@ const getTaskByDate = async (date) => {
 			</div>    
 			</div>`; 
 			
-		}
+		}*/
 	}
 
 }

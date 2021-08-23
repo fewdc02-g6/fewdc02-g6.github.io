@@ -1,4 +1,4 @@
-"use strict"
+// "use strict"
 // let meMo
 // load website will show all task
 window.addEventListener('load', ()=>{
@@ -6,11 +6,9 @@ window.addEventListener('load', ()=>{
 }
 )
 
-const welcomeText = document.querySelector('.welcome-text')
-const addBtn = document.querySelector('.add-btn')
-
-
 // global variables
+const addBtn = document.querySelector('.add-btn')
+const welcomeText = document.querySelector('.welcome-text')
 const showAllButton = document.querySelector('.show-all-button')
 const displayArea = document.querySelector('.memolist')
 const popupWrapper = document.querySelector('.popup-wrapper')
@@ -29,7 +27,7 @@ const gridFunction2 = document.getElementById('gridFun2')//maybe delete
 const gridFunction3 = document.getElementById('gridFun3')
 const countMemo = document.querySelector('#count-memo')
 const calendar = document.querySelector('.calendar')
-const iframe = document.querySelector('iframe')
+// const iframe = document.querySelector('iframe')
 
 
 //swatches colorBox
