@@ -159,8 +159,8 @@ const getTaskByDate = async (date) => {
 				console.log(data.duedate)
 
 				displayTaskArea.innerHTML +=
-					`<div class="displayDemo" id="${data.id}">
-				<div class="memoLeftContent">
+					`<div class="display-demo" id="${data.id}">
+				<div class="memo-left-content">
 					<p class="memoTitle">${data.name}</p>
 					<p class="memoContent description">${data.description}</p>
 				</div>
