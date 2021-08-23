@@ -22,51 +22,44 @@ window.addEventListener('load', () => {
 	// console.log(YY.innerHTML)
 	dateArr = document.querySelectorAll('.selectable')
 	dateArr.forEach(i => {
-		i.addEventListener('click', (event) => {
-			YY = document.querySelector('.year')
-			MM = document.querySelector('.month')
-			DD = event.target.innerText
-			date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
-			divToDoHeader.innerHTML = date;
-			getTaskByDate(date)
-		})
+		i.addEventListener('click', pickDate)
 	})
 	displayTaskArea.innerText = 'Please Pick a Date.'
 })
 
-leftArrow.addEventListener('click', () => {
-	displayTaskArea.replaceChildren
+const pickDate = event =>{
+	YY = document.querySelector('.year')
+    MM = document.querySelector('.month')
+    DD = event.target.innerText
+    date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
+    divToDoHeader.innerHTML = date;
+    getTaskByDate(date)
+}
+
+leftArrow.addEventListener('click', () => {	
 	// $('#divToDoList').empty() 
 	// displayTaskArea.innerText = 'Please Pick a Date.'         
 	// displayTaskArea.innerHTML = null
 	dateArr = document.querySelectorAll('.selectable')
 	dateArr.forEach(i => {
-		i.addEventListener('click', (event) => {
-			YY = document.querySelector('.year')
-			MM = document.querySelector('.month')
-			DD = event.target.innerText
-			date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
-			divToDoHeader.innerHTML = date;
-			getTaskByDate(date)
-		})
+		i.removeEventListener('click', pickDate)
+	})
+	dateArr.forEach(i => {
+		i.addEventListener('click', pickDate)
 	})
 })
 
 rightArrow.addEventListener('click', () => {
 	// $('#divToDoList').empty() 
-	displayTaskArea.replaceChildren
+	// displayTaskArea.replaceChildren
 	// displayTaskArea.innerText = 'Please Pick a Date.'
 	// displayTaskArea.innerHTML = null
 	dateArr = document.querySelectorAll('.selectable')
+    dateArr.forEach(i => {
+		i.removeEventListener('click', pickDate)
+	})
 	dateArr.forEach(i => {
-		i.addEventListener('click', (event) => {
-			YY = document.querySelector('.year')
-			MM = document.querySelector('.month')
-			DD = event.target.innerText
-			date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
-			divToDoHeader.innerHTML = date;
-			getTaskByDate(date)
-		})
+		i.addEventListener('click', pickDate)
 	})
 })
 
