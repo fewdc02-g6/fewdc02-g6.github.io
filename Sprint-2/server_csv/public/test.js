@@ -84,7 +84,7 @@ addMemoDeleteBtn.addEventListener('click', () => {
 document.querySelector('.add-form').addEventListener('submit', event => {
 	event.preventDefault();
 	addTask(event)
-	taskID++
+	// taskID++
 })
 
 // HTTP request
@@ -93,7 +93,7 @@ async function addTask(event) {
 	const form = event.target
 	let type = form.type.value
 	const dataObj = {
-		id: taskID,
+		id: taskID(),
 		name: form.name.value,
 		description: form.description.value,
 		duedate: form.duedate.value,
@@ -126,6 +126,21 @@ async function delTask(id) {
 		alert(`Task is deleted`)
 		window.location.replace("http://localhost:8080/calendar.html")		
 	}
+}
+
+
+// task ID
+async function taskID() {
+    let idArr = []
+    let response = await fetch('http://localhost:8080/todolist')
+	if (response.ok) {
+		const dataArr = await response.json()
+        for (let data of dataArr){
+            idArr.push(parseInt(data.id))
+        }
+    }
+    let ID = Math.max(...idArr)
+   return ID
 }
 
 // get task by date
