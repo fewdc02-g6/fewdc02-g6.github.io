@@ -29,6 +29,19 @@ const countMemo = document.querySelector('#count-memo')
 const calendar = document.querySelector('.calendar')
 // const iframe = document.querySelector('iframe')
 
+/*
+calendar.addEventListener('click', ()=>{
+
+	displayArea.innerHTML = 
+	`<iframe
+	src="./calendar.html" 
+	title="calendar"
+	width="100%"
+	height="700px"
+	></iframe>`
+
+})
+*/
 
 //swatches colorBox
 const colorBox1 =document.getElementById('color-Box1')
