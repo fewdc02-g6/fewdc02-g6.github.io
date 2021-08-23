@@ -139,7 +139,7 @@ async function taskID() {
             idArr.push(parseInt(data.id))
         }
     }
-    let ID = Math.max(...idArr)
+    let ID = Math.max(...idArr) + 1
    return ID
 }
 
