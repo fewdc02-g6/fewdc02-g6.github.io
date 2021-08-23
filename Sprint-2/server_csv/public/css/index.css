@@ -117,9 +117,7 @@ div select{
     margin: 10px;
     border-radius: 12px;
     background: rgba(59, 59, 255, 0.7);
-    color: white;
-    transform: ;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
+    color: white;    
 }
 
 .rightMain{
