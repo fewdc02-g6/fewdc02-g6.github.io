@@ -32,10 +32,9 @@ export class Service {
     }
 
     async addTodoList(post: AddTodoListForm) {
-
         const filePath = __dirname + '/TodoList.csv'
         console.log(post)
-        const reformedInput = "\n" + post.id + "," + post.name + "," + post.description + ","  + post.duedate + "," + post.type
+        const reformedInput = "\n" + post.id + "," + post.name + "," + post.description + ","  + post.duedate + "," + post.type + "," + post.completed
 
         await fs.appendFile(filePath, reformedInput, (e) => console.log(e))
 
@@ -64,10 +63,11 @@ export class Service {
     // [done]
     async updateTodoList(
         id: string, 
-        name?: string, 
-        description?: string, 
-        duedate?: string, 
-        type?: string) {
+        name: string, 
+        description: string, 
+        duedate: string, 
+        type: string,
+        completed:string) {
 
         const filePath = __dirname + '/TodoList.csv'
         const data = await fs.promises.readFile(filePath, 'utf-8')
@@ -83,6 +83,7 @@ export class Service {
                 words[2] = "" + description;
                 words[3] = "" + duedate;
                 words[4] = "" + type;
+                words[5] = "" + completed
                 result = result + words.join(',') + "\n"
             } else {
                 result = result + lines[i] + "\n"
