@@ -1,0 +1,7 @@
+id,name,description,duedate,type,completed
+1,Fa jer,Singing contest,2021-09-01,WORK,false
+2,Fa jer,Adv. shooting,2021-09-01,WORK,true
+3,Fa jer,MV shooting,2021-09-01,FAMILY,false
+4,Fa jer,Photo shooting,2021-09-01,FAMILY,true
+5,Fa jer,MV Shooting,2021-09-01,PERSONAL,false
+6,Fa jer,TV Show,2021-09-01,PERSONAL,true
