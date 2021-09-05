@@ -6,10 +6,14 @@ import { Service } from './service';
 import { UserService } from './UserService';
 import { UserController } from './UserController';
 import { createUserRoute } from './userRoutes';
+import cors from 'cors';
+
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(cors())
 
 const service = new Service();
 const controller = new Controller(service);
