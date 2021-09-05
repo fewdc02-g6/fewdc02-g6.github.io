@@ -1,11 +1,12 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  text-decoration: none;
   font-family: 'Noto Sans JP', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-container{
+  display: flex;
+  min-height: 580px;
 }

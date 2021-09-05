@@ -1,0 +1,22 @@
+.nav{
+  background-color: #216cf3d9;
+  min-height: 100%;
+}
+
+.nav-menu{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.nav-menu-item{
+  box-shadow: 2px 4px 5px rgb(71 61 128 / 9%);
+  color: #ffffffcf;
+  margin: 5px;
+  padding: 18px;
+  font-weight: 700;
+}
+
+.nav-menu-item:hover{
+  color: white;
+}

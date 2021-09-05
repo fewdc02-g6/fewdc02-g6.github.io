@@ -1,16 +1,14 @@
-
-const getAllData = async() =>{
-    try{
+const getAllData = async () => {
+    try {
         let response = await fetch('http://localhost:8080/todolist')
-        if(response.ok){
+        if (response.ok) {
             let data = await response.json()
             console.log(data)
+            return data
+
         }
-    } catch(error){
+    } catch (error) {
         console.log(error.message)
-
     }
-
-    // return data
 }
 export default getAllData
