@@ -13,6 +13,8 @@ const navBar = document.querySelector('.nav')
 const addBtn = document.querySelector('.add-btn')
 const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
 const popupWrapper = document.querySelector('.popup-wrapper')
+const popupUpdateArea = document.querySelector('.popup-update-area')
+const showToday = document.querySelector('.today-date')
 
 // event listeners
 window.addEventListener('load', () => {
@@ -28,16 +30,25 @@ window.addEventListener('load', () => {
 
 })
 
-const pickDate = event =>{
+const showTodayDate = () =>{
+	let now = new Date()
+	let dateStr = new Date().toDateString()
+	showToday.innerHTML = dateStr
+	console.log(now)
+	console.log(dateStr)
+}
+window.addEventListener('load', showTodayDate)
+
+const pickDate = event => {
 	YY = document.querySelector('.year')
-    MM = document.querySelector('.month')
-    DD = event.target.innerText
-    date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
-    divToDoHeader.innerHTML = date;
-    getTaskByDate(date)
+	MM = document.querySelector('.month')
+	DD = event.target.innerText
+	date = `${YY.innerHTML}-${monthToNum(MM.innerHTML)}-${DD}`
+	divToDoHeader.innerHTML = date;
+	getTaskByDate(date)
 }
 
-leftArrow.addEventListener('click', () => {	
+leftArrow.addEventListener('click', () => {
 	// $('#divToDoList').empty() 
 	// displayTaskArea.innerText = 'Please Pick a Date.'         
 	// displayTaskArea.innerHTML = null
@@ -56,7 +67,7 @@ rightArrow.addEventListener('click', () => {
 	// displayTaskArea.innerText = 'Please Pick a Date.'
 	// displayTaskArea.innerHTML = null
 	dateArr = document.querySelectorAll('.selectable')
-    dateArr.forEach(i => {
+	dateArr.forEach(i => {
 		i.removeEventListener('click', pickDate)
 	})
 	dateArr.forEach(i => {
@@ -117,23 +128,23 @@ async function delTask(id) {
 	})
 	if (response.ok) {
 		alert(`Task is deleted`)
-		window.location.replace("http://localhost:8080/calendar.html")		
+		window.location.replace("http://localhost:8080/calendar.html")
 	}
 }
 
 
 // task ID
 async function taskID() {
-    let idArr = []
-    let response = await fetch('http://localhost:8080/todolist')
+	let idArr = []
+	let response = await fetch('http://localhost:8080/todolist')
 	if (response.ok) {
 		const dataArr = await response.json()
-        for (let data of dataArr){
-            idArr.push(parseInt(data.id))
-        }
-    }
-    let ID = Math.max(...idArr) + 1
-   return ID
+		for (let data of dataArr) {
+			idArr.push(parseInt(data.id))
+		}
+	}
+	let ID = Math.max(...idArr) + 1
+	return ID
 }
 
 // get task by date
@@ -152,28 +163,19 @@ const getTaskByDate = async (date) => {
 				console.log(data.duedate)
 
 				displayTaskArea.innerHTML +=
-					`<div class="display-demo" id="${data.id}">
-				<div class="memo-left-content">
-					<p class="memoTitle">${data.name}</p>
-					<p class="memoContent description">${data.description}</p>
-				</div>
-				<div class="functionX">
-					<svg class="update-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
-					<svg class="delete-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
-				</div>
+				`<div class="display-demo" id="${data.id}">
+					<div class="${data.type}" style="width: 5px"></div>
+
+					<div class="memo-left-content">
+						<p class="memoTitle">Task: ${data.name}</p>
+						<p class="memoContent description">Detail: ${data.description}</p>
+					</div>
+					<div class="functionX">
+						<svg class="update-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
+						<svg class="delete-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
+					</div>
 				</div>`
-				/*				
-				`<div class="memo memo-${data.id}" id="${data.id}">
-				<div class="memoTopBorder ${data.type} ${data.type}"></div>
-				<div class="memoTopBar">
-				<p id="${data.id}" class="memoType blue">${data.name}</p> 
-				</div>    
-				<div class="memoContent description">${data.description}</div>
-				<div class="memoMiniFunction">      
-				<svg  class="update-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
-				<svg class="delete-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
-				</div>    
-				</div>`; */
+
 				const delButton = document.querySelectorAll('.delete-btn')
 				for (let item of delButton) {
 					item.addEventListener('click', (event) => {

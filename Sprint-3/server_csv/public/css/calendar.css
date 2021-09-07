@@ -112,6 +112,7 @@ div select{
     float: left;
     height: 100%;
     margin: auto;
+    min-height: 350px;
     max-height: 70%;
     /* max-width: 500px; */
     box-sizing: border-box;
