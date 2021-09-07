@@ -56,31 +56,36 @@ const colorBox9 =document.getElementById('color-Box9')
 
 
 //swatches colorBox evenlistener
-let swatchesOnOff = 0;
+let swatchesOnOff = 'false';
+
+function turnOffSwatch() {
+	document.querySelector('.swatches').style.display = 'none';
+	swatchesOnOff  = 'false';
+}
+
 gridFunction3.addEventListener('click',()=>{
-	if(swatchesOnOff =='0'){		
+	if(swatchesOnOff =='false'){		
 		document.querySelector('.swatches').style.display = 'flex';
-		swatchesOnOff  = '1';
+		swatchesOnOff  = 'true';
 	}else{
-		document.querySelector('.swatches').style.display = 'none';
-		swatchesOnOff  = '0';
+		turnOffSwatch();
 	}
 })
 
 //change memo display pattern
-let displayPattenOnOff = 0;
+let displayPattenOnOff = false;
 gridFunction1.addEventListener('click',()=>{	
 	let memoArr = document.querySelectorAll('.memo')	
-	if(displayPattenOnOff=='0'){		
+	if(displayPattenOnOff=='false'){		
 		for(let memo of memoArr){
 		memo.style.width = '35%'
 	}
-	displayPattenOnOff = '1';
+	displayPattenOnOff = 'true';
 	}else{		
 		for(let memo of memoArr){
 		memo.style.width = '20%'
 	}
-	displayPattenOnOff = '0';
+	displayPattenOnOff = 'false';
 	}
 })
 
@@ -91,36 +96,40 @@ colorBox1.addEventListener('click',()=>{
 	navMenu.style.backgroundColor = '#f00555d9';
 	addBtn.style.backgroundColor = '#f00555d9';
 	welcomeText.style.color = '#f00555d9';
-	greeTing.style.backgroundColor = '#f00555d9'
-		
+	greeTing.style.backgroundColor = '#f00555d9';
+	turnOffSwatch();	
 })
 colorBox2.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#f46236d1';
 	navMenu.style.backgroundColor = '#f46236d1';
 	addBtn.style.backgroundColor = '#f46236d1';
 	welcomeText.style.color = '#f46236d1';
-	greeTing.style.backgroundColor = '#f46236d1'	
+	greeTing.style.backgroundColor = '#f46236d1';
+	turnOffSwatch();	
 })
 colorBox3.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#f3d921d9';
 	navMenu.style.backgroundColor = '#f3d921d9';
 	addBtn.style.backgroundColor = '#f3d921d9';
 	welcomeText.style.color = '#f3d921d9';
-	greeTing.style.backgroundColor = '#f3d921d9';		
+	greeTing.style.backgroundColor = '#f3d921d9';
+	turnOffSwatch();		
 })
 colorBox4.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#2ec578c7';
 	navMenu.style.backgroundColor = '#2ec578c7';
 	addBtn.style.backgroundColor = '#2ec578c7';
 	welcomeText.style.color = '#2ec578c7';
-	greeTing.style.backgroundColor = '#2ec578c7'	
+	greeTing.style.backgroundColor = '#2ec578c7'
+	turnOffSwatch();	
 })
 colorBox5.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#00bcd4';
 	navMenu.style.backgroundColor = '#00bcd4';
 	addBtn.style.backgroundColor = '#00bcd4';
 	welcomeText.style.color = '#00bcd4';
-	greeTing.style.backgroundColor = '#00bcd4'	
+	greeTing.style.backgroundColor = '#00bcd4';
+	turnOffSwatch();	
 })
 
 colorBox6.addEventListener('click',()=>{
@@ -128,28 +137,32 @@ colorBox6.addEventListener('click',()=>{
 	navMenu.style.backgroundColor = '#216cf3d9';
 	addBtn.style.backgroundColor = '#216cf3d9';
 	welcomeText.style.color = '#216cf3d9';
-	greeTing.style.backgroundColor = '#216cf3d9'	
+	greeTing.style.backgroundColor = '#216cf3d9';
+	turnOffSwatch();	
 })
 colorBox7.addEventListener('click',()=>{
 	navBar.style.backgroundColor = '#673ab7d4';
 	navMenu.style.backgroundColor = '#673ab7d4';
 	addBtn.style.backgroundColor = '#673ab7d4';
 	welcomeText.style.color = '#673ab7d4';
-	greeTing.style.backgroundColor = '#673ab7d4'	
+	greeTing.style.backgroundColor = '#673ab7d4';
+	turnOffSwatch();	
 })
 colorBox8.addEventListener('click',()=>{
 	navBar.style.backgroundColor = 'gray';
 	navMenu.style.backgroundColor = 'gray';
 	addBtn.style.backgroundColor = 'gray';
 	welcomeText.style.color = 'gray';
-	greeTing.style.backgroundColor = 'gray'	
+	greeTing.style.backgroundColor = 'gray';
+	turnOffSwatch();
 })
 colorBox9.addEventListener('click',()=>{
 	navBar.style.backgroundColor = 'black';
 	navMenu.style.backgroundColor = 'black';
 	addBtn.style.backgroundColor = 'black';
 	welcomeText.style.color = 'black';
-	greeTing.style.backgroundColor = 'black'	
+	greeTing.style.backgroundColor = 'black';
+	turnOffSwatch();	
 })
 
 
