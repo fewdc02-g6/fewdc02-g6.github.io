@@ -360,6 +360,30 @@ div select{
     height: 100vh;
     margin: auto;
 }
+.display-demo{
+    display: flex;
+}
+.work{
+    background:#216cf3d9;
+    width:5px;
+
+}
+.family{
+    background:#f46236d1;
+    width:5px;
+
+}
+.personal{
+    background:#2ec578c7;
+    width:5px;
+}
+.indicator{
+    width:5px;
+    height:5px;
+}
+div#main-bottom{
+    display: flex;
+}
 
 /*--------------navbar ------*/
 .nav{
