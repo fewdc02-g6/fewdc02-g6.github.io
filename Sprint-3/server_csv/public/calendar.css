@@ -384,7 +384,10 @@ div select{
 div#main-bottom{
     display: flex;
 }
-
+.main-top{
+    position: sticky;
+    top:0px
+}
 /*--------------navbar ------*/
 .nav{
     flex: 1;
@@ -495,6 +498,9 @@ div select{
         flex-direction: column;
         width: 95%;
         /* max-height: 100vh; */
+    }
+    .main-top{
+        display: none !important;
     }
     .to-do-list {
         height: 200px;
