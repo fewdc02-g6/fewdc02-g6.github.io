@@ -83,7 +83,6 @@
     background-color:lightgray;
 }
 
-
 .popup-wrapper, .popup-update-area {    
     background: rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -160,8 +159,8 @@ div select{
     overflow: auto;          
 }
 .welcome-text{
-    padding: 10px;
-    margin: 10px 10px;
+    padding: 5px;
+    margin: 5px 5px;
     color: #216cf3d9;
 }
 .today-date {
