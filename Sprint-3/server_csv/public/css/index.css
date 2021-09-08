@@ -72,8 +72,16 @@
     display: none;
   }
 
+  
 /* navbar */
 
+.memolist{
+    background-image: url(https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1543844649000/photosp/b43cfeec-92b2-4f16-98b7-60a33b4b513a/stock-photo-text-background-list-minimalism-bulletin-board-to-do-cork-board-texture-background-room-for-text-b43cfeec-92b2-4f16-98b7-60a33b4b513a.jpg)
+}
+
+.rightMain{
+    background-color:lightgray;
+}
 
 
 .popup-wrapper, .popup-update-area {    
