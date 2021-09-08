@@ -1,9 +1,10 @@
-// "use strict"
+"use strict"
 // let meMo
 // load website will show all task
 // testing
 
 // global variables
+const showToday = document.querySelector('.today-date')
 const memoList = document.querySelector('.memolist')
 const addBtn = document.querySelector('.add-btn')
 const welcomeText = document.querySelector('.welcome-text')
@@ -27,19 +28,6 @@ const countMemo = document.querySelector('#count-memo')
 const calendar = document.querySelector('.calendar')
 // const iframe = document.querySelector('iframe')
 
-/*
-calendar.addEventListener('click', ()=>{
-
-	displayArea.innerHTML = 
-	`<iframe
-	src="./calendar.html" 
-	title="calendar"
-	width="100%"
-	height="700px"
-	></iframe>`
-
-})
-*/
 
 //swatches colorBox
 const colorBox1 =document.getElementById('color-Box1')
@@ -170,13 +158,6 @@ colorBox9.addEventListener('click',()=>{
 
 
 
-
-
-
-
-const showToday = document.querySelector('.today-date')
-
-
 typeWork.addEventListener('click', () => {
 	showTypeData('work')
 })
@@ -229,16 +210,17 @@ window.addEventListener('load', showTodayDate)
 let taskID = 1;
 
 
-// get all data 
+// show all task 
 async function showData() {
 	displayArea.innerHTML = ""
 	const response = await fetch('http://localhost:8080/todolist')
 	if (response.ok) {
 		const dataArr = await response.json()
 		for (let i = 0; i < dataArr.length; i++) {
+			let taskType = dataArr[i].type.toLowerCase()
 			displayArea.innerHTML +=
 				`<div class="memo memo-${dataArr[i].id}" id="${dataArr[i].id}">
-    			<div class="memoTopBorder ${(dataArr[i].type)} ${dataArr[i].type}"></div>
+    			<div class="memoTopBorder ${taskType} ${dataArr[i].type}"></div>
     			<div class="memoTopBar">
         		<p id="${dataArr[i].id}" class="memoType blue">${dataArr[i].name}</p> 
         		<svg class="delete-btn" id="${dataArr[i].id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
@@ -321,7 +303,7 @@ async function showTaskById(id) {
 
 // show task by type
 async function showTypeData(taskType) {
-	displayArea.innerHTML = "<br>"
+	displayArea.innerHTML = ""
 	const response = await fetch('http://localhost:8080/todolist')
 	if (response.ok) {
 		const dataArr = await response.json()
@@ -329,7 +311,7 @@ async function showTypeData(taskType) {
 			if (taskType === obj.type){
 				displayArea.innerHTML +=
 				`<div class="memo memo-${obj.id}" id="${obj.id}">
-    			<div class="memoTopBorder ${(obj.type)} ${obj.type}"></div>
+    			<div class="memoTopBorder ${taskType} "></div>
     			<div class="memoTopBar">
         		<p id="${obj.id}" class="memoType blue">${obj.name}</p> 
         		<svg class="delete-btn" id="${obj.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
@@ -373,7 +355,8 @@ async function addTask(event) {
 		name: form.name.value,
 		description: form.description.value,
 		duedate: form.duedate.value,
-		type: form.type.value
+		type: form.type.value,
+		completed: 'false'
 	}
 	const response = await fetch('http://localhost:8080/todolist',
 		{
@@ -473,6 +456,7 @@ async function editTaskById(id) {
 		targetData.description = event.target.description.value
 		targetData.duedate = event.target.duedate.value
 		targetData.type = event.target.type.value
+		targetData.completed = 'false'
 		updateTask(targetData)
 	})
 }
