@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch,Link } from 'react-router-dom'
 import Footer from './Footer'
-// import Test from './Test'
 import MemoList from './MainContent/MemoList'
-// import getAllData from '../components/getAllData'
+import Calendar from './Calendar/Calendar'
+import Form from './Form'
+import getAllData from '../components/getAllData'
+// import Test from './Test'
 
 
 export default function Main() {
@@ -35,6 +37,16 @@ export default function Main() {
         }
     ]
     const [memos, setMemos] = useState(initialvalue)
+    const [showForm, setShowForm] = useState('')
+    const hide =()=>{
+        setShowForm("block")
+    }
+    let data = getAllData()
+    console.log(data)
+    // const []
+    const addTask = (obj) =>{
+        let response = fetch()
+    }
     return (
         <>
             <Switch>
@@ -52,19 +64,28 @@ export default function Main() {
                 </Route>
                 <Route path='/calendar' >
                     <h1>Calendar</h1>
+                    <Calendar />
                 </Route>
                 <Route path='/logout' >
                     <h1>Log Out</h1>
                 </Route>
                 <Route path='/' exact>
                     <h1>Show All Task</h1>
-                    <MemoList memos={memos} taskType={'all'}/>
+                    <MemoList memos={memos} taskType={'all'} />
+                </Route>
+                <Route path='/update_task'>
+                    <Form buttonText='Update' />
+                </Route>
+                <Route path='/add_task'>
+                    <Form  buttonText='Add' />
                 </Route>
                 <Route path='/'>
                     <h1>404: Not Found</h1>
-                </Route>
+                </Route >
             </Switch>
-            <button className="add-btn">+</button>
+            <button className="add-btn">
+                    <Link to="/add_task">+</Link>
+                </button>
             <Footer />
         </>
     )
