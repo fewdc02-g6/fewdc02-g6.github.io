@@ -4,6 +4,7 @@
 
 
 // global variables
+const memoList = document.querySelector('.memolist')
 const addBtn = document.querySelector('.add-btn')
 const welcomeText = document.querySelector('.welcome-text')
 const showAllButton = document.querySelector('.show-all-button')
@@ -78,12 +79,13 @@ gridFunction1.addEventListener('click',()=>{
 	let memoArr = document.querySelectorAll('.memo')	
 	if(displayPattenOnOff=='false'){		
 		for(let memo of memoArr){
-		memo.style.width = '35%'
+			memoList.style.gridTemplateColumns = 'auto auto auto auto'
 	}
 	displayPattenOnOff = 'true';
 	}else{		
 		for(let memo of memoArr){
-		memo.style.width = '20%'
+			memoList.style.gridTemplateColumns = 'auto auto auto'
+
 	}
 	displayPattenOnOff = 'false';
 	}
