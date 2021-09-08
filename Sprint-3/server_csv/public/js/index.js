@@ -432,7 +432,7 @@ async function editTaskById(id) {
                         </div>                       
                         <input type="text" name="id" value="${selectedArr.id}" required hidden>          
                        <label for="message"></label>
-                       <textarea id="description" name="description" rows="8" cols="40" required>${selectedArr.description}</textarea>                
+                       <textarea id="description" name="description" rows="5" cols="40" required>${selectedArr.description}</textarea>                
                         <input id="update-btn" type="submit" value="Update">                
                     </form>
                 </form>
