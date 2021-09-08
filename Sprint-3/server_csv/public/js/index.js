@@ -80,6 +80,7 @@ gridFunction1.addEventListener('click',()=>{
 	if(displayPattenOnOff=='false'){		
 		for(let memo of memoArr){
 			memoList.style.gridTemplateColumns = 'auto auto auto auto'
+			// testing
 	}
 	displayPattenOnOff = 'true';
 	}else{		
