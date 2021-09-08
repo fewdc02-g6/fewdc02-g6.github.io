@@ -207,6 +207,73 @@ const getTaskByDate = async (date) => {
 	}
 }
 
+async function editTaskById(id) {
+	let tempArr = {}
+	let selectedArr = {}
+	const url = 'http://localhost:8080/todolist/'
+	const response = await fetch(url)
+	if (response.ok) {
+		tempArr = await response.json()
+		for (let item of tempArr) {
+			if (item.id === id) {
+				selectedArr = { ...item }
+			}
+		}
+	}
+	let addClassType = 'type-' + selectedArr.type.toLowerCase()
+	popupUpdateArea.innerHTML =
+		`<div class="add-memo">
+                <form class="update-form">
+                    <form action="http://localhost:8080/" method="PUT"> 
+                        <svg  id='popup-memo-close-button' width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                       
+                        <div>
+                            <label for="type">Type</label>        
+                            <select id="type" name ="type" required>
+                                <option value="family" class="type-family">Family</option>
+                                <option value="work" class="type-work">Work</option>
+                                <option value="personal" class="type-personal">Personal</option>
+                            </select>  <br>
+                        </div>
+                        <div>
+                            <label for="name">Memo Title</label>                                       
+                            <input id="name" name="name" type="text" value="${selectedArr.name}" required>  
+                            <br>               
+                        </div>
+                        <div>
+                            <label for="duedate">Due Date</label>                                       
+                            <input id="duedate" name="duedate" type="date" value="${selectedArr.duedate}" required><br>                
+                        </div>                       
+                        <input type="text" name="id" value="${selectedArr.id}" required hidden>          
+                       <label for="message"></label>
+                       <textarea id="description" name="description" rows="8" cols="40" required>${selectedArr.description}</textarea>                
+                        <input id="update-btn" type="submit" value="Update">                
+                    </form>
+                </form>
+            </div> `
+	console.log(addClassType)
+	document.querySelector(`.${addClassType}`).setAttribute('selected', 'selected')
+	document.querySelector('#popup-memo-close-button').addEventListener('click', () => {
+		popupUpdateArea.classList.add('hidden')
+		addBtn.classList.remove('hidden')
+	})
+	document.querySelector('#update-btn').addEventListener('click', () => {
+		popupUpdateArea.classList.add('hidden')
+		addBtn.classList.remove('hidden')
+	})
+	let updateTarget = document.querySelector(`.update-form`)
+	updateTarget.addEventListener('submit', (event) => {
+		let targetData = {}
+		event.preventDefault();
+		targetData.id = event.target.id.value
+		targetData.name = event.target.name.value
+		targetData.description = event.target.description.value
+		targetData.duedate = event.target.duedate.value
+		targetData.type = event.target.type.value
+		targetData.completed = 'false'
+		updateTask(targetData)
+	})
+}
+
 const clearDisplayArea = (arr) => {
 	divToDoHeader.innerHTML = obj.duedate;
 }
