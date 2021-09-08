@@ -151,7 +151,7 @@ async function taskID() {
 const getTaskByDate = async (date) => {
 	$('#divToDoList').empty()
 	// console.log(date)
-	displayTaskArea.innerHTML = ''
+	
 	let response = await fetch('http://localhost:8080/todolist')
 	if (response.ok) {
 		const dataArr = await response.json()
@@ -161,16 +161,16 @@ const getTaskByDate = async (date) => {
 			if (data.duedate === date) {
 				// arr.push(data)
 				console.log(data.duedate)
-
+				displayTaskArea.innerHTML = ''
 				displayTaskArea.innerHTML +=
 				`<div class="display-demo" id="${data.id}">
-					<div class="${data.type}" style="width: 5px"></div>
+					<div class="${data.type}" ></div>
 
 					<div class="memo-left-content">
 						<p class="memoTitle">Task: ${data.name}</p>
 						<p class="memoContent description">Detail: ${data.description}</p>
 					</div>
-					<div class="functionX">
+					<div class="function">
 						<svg class="update-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg>
 						<svg class="delete-btn" id="${data.id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
 					</div>
@@ -201,6 +201,8 @@ const getTaskByDate = async (date) => {
 					console.log('del')
 					displayTaskArea.innerText = 'Please Pick a Date.'
 				})
+			}else{
+				// displayTaskArea.innerHTML = "<p>No task on this day...</p>"
 			}
 		}
 		
@@ -275,9 +277,25 @@ async function editTaskById(id) {
 	})
 }
 
+async function updateTask(dataObj) {
+	let dataId = dataObj.id
+	let memo = 'memo-' + dataObj.id
+	let editMemo = document.querySelector(`.${memo}`)
+	const url = 'http://localhost:8080/todolist/' + dataObj.id
+	let response = await fetch(url, {
+		method: 'PUT',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(dataObj)
+	})
+	if (response.ok) {
+		
+	}
+}
+
 const clearDisplayArea = (arr) => {
 	divToDoHeader.innerHTML = obj.duedate;
 }
+
 
 
 
