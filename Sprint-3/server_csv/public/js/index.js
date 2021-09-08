@@ -228,7 +228,7 @@ let taskID = 1;
 
 // get all data 
 async function showData() {
-	displayArea.innerHTML = "<br>"
+	displayArea.innerHTML = ""
 	const response = await fetch('http://localhost:8080/todolist')
 	if (response.ok) {
 		const dataArr = await response.json()
