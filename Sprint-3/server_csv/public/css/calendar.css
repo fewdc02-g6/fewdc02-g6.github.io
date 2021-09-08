@@ -517,7 +517,7 @@ div select{
     }
     .to-do-list {
         width: 100%;
-
+        max-width: none;
         height: 200px;
         /* max-width: 380px; */
         /* margin: 1rem 1rem 0rem; */
