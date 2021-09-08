@@ -222,7 +222,7 @@ async function showData() {
 				`<div class="memo memo-${dataArr[i].id}" id="${dataArr[i].id}">
     			<div class="memoTopBorder ${taskType} ${dataArr[i].type}"></div>
     			<div class="memoTopBar">
-        		<p id="${dataArr[i].id}" class="memoType blue">${dataArr[i].name}</p> 
+        		<p id="${dataArr[i].id}" class="memoType">${dataArr[i].name}</p> 
         		<svg class="delete-btn" id="${dataArr[i].id}" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/></svg>                           
     			</div>    
     			<div class="memoContent description">${dataArr[i].description}</div>
@@ -240,7 +240,7 @@ async function showData() {
 				event.preventDefault();
 				delTask(event.target.id);
 			})
-			// countMemo.innerHTML = displayArea.childElementCount-1;
+			
 		}
 
 		const updateButton = document.querySelectorAll('.update-btn')
@@ -251,9 +251,9 @@ async function showData() {
 				addBtn.classList.add('hidden')
 				editTaskById(event.target.id)
 			})
-			// countMemo.innerHTML = displayArea.childElementCount-1;
+			
 		}
-		countMemo.innerHTML = displayArea.childElementCount-1;
+		countMemo.innerHTML = displayArea.childElementCount;
 	}	
 }
 showAllButton.addEventListener('click', showData)

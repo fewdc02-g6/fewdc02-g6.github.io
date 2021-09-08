@@ -4,7 +4,10 @@
     font-family: 'Noto Sans JP', sans-serif;
 
 }
-
+body{
+    background: repeating-linear-gradient(
+    162deg, #956eaeed, #2424cef2 400px);
+}
 .section{
     display: flex;
     height: 100vh;
@@ -24,7 +27,7 @@
   .nav{
     flex: 1;
     display: block;
-    background-color: #216cf3d9;
+    /* background-color: #216cf3d9; */
   }
   .nav-menu{
     display: flex;
@@ -38,22 +41,25 @@
     color: white;
   }
   h2.greeting{
-    background:#216cf3d9;
-    box-shadow: 2px 4px 5px rgb(71 61 128 / 9%);
+    /* background:#216cf3d9; */
+    box-shadow: 2px 4px 5px rgb(2 20 20 / 20%);
     height: fit-content;
     width: max-content;
     padding: 45px 80px;   
     color: white;
   }
   .nav-menu-item{
-    box-shadow: 2px 4px 5px rgb(71 61 128 / 9%);
+    box-shadow: 2px 4px 5px rgb(2 20 20 / 20%);
     color: #ffffffcf;
     margin: 5px;
+    height: 3rem;
     padding: 18px;
     font-weight: 700;
+    font-size: 20px;
   }
   .nav-menu-item:hover{
     color: white;
+    background: #ffffff17;
   }
   a{
     text-decoration: none;
@@ -145,9 +151,15 @@ div select{
     width: 56px;
     border-radius: 12px;
     background: rgba(59, 59, 255, 0.5);
-    color: white;    
+    color: #8bf7e4ed;    
 }
 #submit-btn:hover, #update-btn:hover{
+    transform: scale(1.1);
+}
+.update-btn{
+    fill:#8bf7e4ed;
+}
+.update-btn:hover{
     transform: scale(1.1);
 }
 .rightMain{
@@ -157,7 +169,7 @@ div select{
 .welcome-text{
     padding: 10px;
     margin: 10px 10px;
-    color: #216cf3d9;
+    color: white;
 }
 .today-date {
     word-spacing: 2px;
@@ -174,6 +186,8 @@ div select{
 #gridFun3{
     margin-right: 9px;
     padding: 7px;
+    transform: scale(1.1);
+    fill: #8bf7e4ed;
 }
 #gridFun3 svg:hover{
     transform: scale(1.2);
@@ -207,8 +221,12 @@ div select{
 .memo{
     width:16rem;    
     margin: 16px;
+    color: #8bf7e4ed;
     box-shadow: 2px 4px 5px rgb(71 61 128 / 22%);
-    background: white;
+    background: #ffffff14;
+}
+.memo:hover{
+    background: #ffffff38;
 }
 
 /* color */
@@ -280,10 +298,11 @@ div select{
 }
 .delete-btn{
     border-radius: 100px;
-    padding: 3px;    
+    padding: 3px; 
+    fill: #8bf7e4ed;   
 }
 .delete-btn:hover{
-    background: #5e3ab712;
+    transform: scale(1.1);
 }
 .memoTopBar{
     display: flex;
@@ -291,16 +310,18 @@ div select{
 }
 .memoType{
     width: 68%;
+    letter-spacing: 2px;
     overflow-wrap: break-word;
+    color: white;
     border-radius: 7px;
     text-align: center;
     padding: 6px;
-    background: lavender;
+    background: #89d3c661;
     margin: 13px;
 }
 
 .memoContent{    
-    padding: 0px 10px 10px 10px;
+    padding: 0px 10px 10px 13px;
     line-height: 20px;
 }
 .description{
@@ -345,7 +366,7 @@ div select{
 }
 .add-btn{
     /* visibility: hidden; */
-    background:#216cf3d9;
+    background: repeating-radial-gradient(#8bf7e4ed, transparent 29px);
     border-radius: 79px;
     color: #ffffffcf;
     font-size: 36px;
