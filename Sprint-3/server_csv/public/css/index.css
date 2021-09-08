@@ -290,8 +290,10 @@ div select{
     justify-content: space-between;
 }
 .memoType{
+    width: 68%;
+    overflow-wrap: break-word;
     border-radius: 7px;
-    width: fit-content;
+    text-align: center;
     padding: 6px;
     background: lavender;
     margin: 13px;
@@ -300,6 +302,10 @@ div select{
 .memoContent{    
     padding: 0px 10px 10px 10px;
     line-height: 20px;
+}
+.description{
+    width: 92%;
+    overflow-wrap: break-word;
 }
 .memoMiniFunction{
     padding: 10px;
