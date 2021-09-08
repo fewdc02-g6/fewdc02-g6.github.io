@@ -78,7 +78,7 @@ gridFunction1.addEventListener('click',()=>{
 	let memoArr = document.querySelectorAll('.memo')	
 	if(displayPattenOnOff=='false'){		
 		for(let memo of memoArr){
-		memo.style.width = '35%'
+		memolist.style.width = '35%'
 	}
 	displayPattenOnOff = 'true';
 	}else{		
