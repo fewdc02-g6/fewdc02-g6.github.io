@@ -1,4 +1,4 @@
-// "use strict"
+"use strict"
 // let meMo
 // load website will show all task
 // testing
