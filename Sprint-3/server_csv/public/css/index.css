@@ -160,7 +160,7 @@ div select{
     fill:#8bf7e4ed;
 }
 .update-btn:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .rightMain{
     width: 100%;    
@@ -180,7 +180,10 @@ div select{
     display: flex;
     justify-content: flex-end;
 }
-#gridFun1 img:hover{
+#gridFun1{
+    fill: #8bf7e4ed;
+}
+#gridFun1 :hover{
     transform: scale(1.2);
 }
 #gridFun3{
@@ -192,10 +195,10 @@ div select{
 #gridFun3 svg:hover{
     transform: scale(1.2);
 }
-.gridFunction img{
+/* .gridFunction img{
     width: 35px;
     padding: 0px 10px;
-}
+} */
 .swatches{
     display: none;
     width: 80px;    
