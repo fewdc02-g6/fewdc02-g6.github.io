@@ -355,7 +355,8 @@ async function addTask(event) {
 		name: form.name.value,
 		description: form.description.value,
 		duedate: form.duedate.value,
-		type: form.type.value
+		type: form.type.value,
+		completed: 'false'
 	}
 	const response = await fetch('http://localhost:8080/todolist',
 		{
@@ -455,6 +456,7 @@ async function editTaskById(id) {
 		targetData.description = event.target.description.value
 		targetData.duedate = event.target.duedate.value
 		targetData.type = event.target.type.value
+		targetData.completed = 'false'
 		updateTask(targetData)
 	})
 }
