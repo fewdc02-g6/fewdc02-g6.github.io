@@ -1,7 +1,6 @@
 "use strict"
-// let meMo
-// load website will show all task
-// testing
+
+
 
 // global variables
 const showToday = document.querySelector('.today-date')
@@ -22,25 +21,21 @@ const typeWork = document.querySelector('#nav-item2')
 const typeFamily = document.querySelector('#nav-item3')
 const typePersonal = document.querySelector('#nav-item4')
 const gridFunction1 = document.getElementById('gridFun1')
-const gridFunction2 = document.getElementById('gridFun2')//maybe delete
+const gridFunction2 = document.getElementById('gridFun2')
 const gridFunction3 = document.getElementById('gridFun3')
 const countMemo = document.querySelector('#count-memo')
 const calendar = document.querySelector('.calendar')
-// const iframe = document.querySelector('iframe')
 
-//swatches colorBox
-const colorBox1 =document.getElementById('color-Box1')
-const colorBox2 =document.getElementById('color-Box2')
-const colorBox3 =document.getElementById('color-Box3')
-const colorBox4 =document.getElementById('color-Box4')
-const colorBox5 =document.getElementById('color-Box5')
-const colorBox6 =document.getElementById('color-Box6')
-const colorBox7 =document.getElementById('color-Box7')
-const colorBox8 =document.getElementById('color-Box8')
-const colorBox9 =document.getElementById('color-Box9')
-
-//countmemo
-
+//switches colorBox
+const colorBox1 = document.getElementById('color-Box1')
+const colorBox2 = document.getElementById('color-Box2')
+const colorBox3 = document.getElementById('color-Box3')
+const colorBox4 = document.getElementById('color-Box4')
+const colorBox5 = document.getElementById('color-Box5')
+const colorBox6 = document.getElementById('color-Box6')
+const colorBox7 = document.getElementById('color-Box7')
+const colorBox8 = document.getElementById('color-Box8')
+const colorBox9 = document.getElementById('color-Box9')
 
 
 //swatches colorBox evenlistener
@@ -48,98 +43,96 @@ let swatchesOnOff = 'false';
 
 function turnOffSwatch() {
 	document.querySelector('.swatches').style.display = 'none';
-	swatchesOnOff  = 'false';
+	swatchesOnOff = 'false';
 }
 
-gridFunction3.addEventListener('click',()=>{
-	if(swatchesOnOff =='false'){		
+gridFunction3.addEventListener('click', () => {
+	if (swatchesOnOff == 'false') {
 		document.querySelector('.swatches').style.display = 'flex';
-		swatchesOnOff  = 'true';
-	}else{
+		swatchesOnOff = 'true';
+	} else {
 		turnOffSwatch();
 	}
 })
 
 //change memo display pattern
 let displayPattenOnOff = false;
-gridFunction1.addEventListener('click',()=>{	
-	let memoArr = document.querySelectorAll('.memo')	
-	if(displayPattenOnOff=='false'){		
-		for(let memo of memoArr){
+gridFunction1.addEventListener('click', () => {
+	let memoArr = document.querySelectorAll('.memo')
+	if (displayPattenOnOff == 'false') {
+		for (let memo of memoArr) {
 			memoList.style.gridTemplateColumns = 'auto auto auto auto'
 			memo.style.width = '15rem'
-			// testing
-	}
-	displayPattenOnOff = 'true';
-	}else{		
-		for(let memo of memoArr){
+		}
+		displayPattenOnOff = 'true';
+	} else {
+		for (let memo of memoArr) {
 			memoList.style.gridTemplateColumns = 'auto auto auto'
 			memo.style.width = '18rem'
-	}
-	displayPattenOnOff = 'false';
+		}
+		displayPattenOnOff = 'false';
 	}
 })
 
 // eventListener
-
-colorBox1.addEventListener('click',()=>{		
+colorBox1.addEventListener('click', () => {
 	navBar.style.backgroundColor = '#f00555d9';
 	navMenu.style.backgroundColor = '#f00555d9';
 	addBtn.style.backgroundColor = '#f00555d9';
 	welcomeText.style.color = '#f00555d9';
 	greeTing.style.backgroundColor = '#f00555d9';
-	turnOffSwatch();	
+	turnOffSwatch();
 })
-colorBox2.addEventListener('click',()=>{
+colorBox2.addEventListener('click', () => {
 	navBar.style.backgroundColor = '#f46236d1';
 	navMenu.style.backgroundColor = '#f46236d1';
 	addBtn.style.backgroundColor = '#f46236d1';
 	welcomeText.style.color = '#f46236d1';
 	greeTing.style.backgroundColor = '#f46236d1';
-	turnOffSwatch();	
+	turnOffSwatch();
 })
-colorBox3.addEventListener('click',()=>{
+colorBox3.addEventListener('click', () => {
 	navBar.style.backgroundColor = '#f3d921d9';
 	navMenu.style.backgroundColor = '#f3d921d9';
 	addBtn.style.backgroundColor = '#f3d921d9';
 	welcomeText.style.color = '#f3d921d9';
 	greeTing.style.backgroundColor = '#f3d921d9';
-	turnOffSwatch();		
+	turnOffSwatch();
 })
-colorBox4.addEventListener('click',()=>{
+colorBox4.addEventListener('click', () => {
 	navBar.style.backgroundColor = '#2ec578c7';
 	navMenu.style.backgroundColor = '#2ec578c7';
 	addBtn.style.backgroundColor = '#2ec578c7';
 	welcomeText.style.color = '#2ec578c7';
 	greeTing.style.backgroundColor = '#2ec578c7'
-	turnOffSwatch();	
+	turnOffSwatch();
 })
-colorBox5.addEventListener('click',()=>{
+colorBox5.addEventListener('click', () => {
 	navBar.style.backgroundColor = '#00bcd4';
 	navMenu.style.backgroundColor = '#00bcd4';
 	addBtn.style.backgroundColor = '#00bcd4';
 	welcomeText.style.color = '#00bcd4';
 	greeTing.style.backgroundColor = '#00bcd4';
-	turnOffSwatch();	
+	turnOffSwatch();
 })
 
-colorBox6.addEventListener('click',()=>{
+colorBox6.addEventListener('click', () => {
 	navBar.style.backgroundColor = '#216cf3d9';
 	navMenu.style.backgroundColor = '#216cf3d9';
 	addBtn.style.backgroundColor = '#216cf3d9';
 	welcomeText.style.color = '#216cf3d9';
 	greeTing.style.backgroundColor = '#216cf3d9';
-	turnOffSwatch();	
+	turnOffSwatch();
 })
-colorBox7.addEventListener('click',()=>{
+colorBox7.addEventListener('click', () => {
 	navBar.style.backgroundColor = '#673ab7d4';
 	navMenu.style.backgroundColor = '#673ab7d4';
 	addBtn.style.backgroundColor = '#673ab7d4';
 	welcomeText.style.color = '#673ab7d4';
 	greeTing.style.backgroundColor = '#673ab7d4';
-	turnOffSwatch();	
+	turnOffSwatch();
 })
-colorBox8.addEventListener('click',()=>{
+colorBox8.addEventListener('click', () => {
 	navBar.style.backgroundColor = 'gray';
 	navMenu.style.backgroundColor = 'gray';
 	addBtn.style.backgroundColor = 'gray';
@@ -147,16 +140,14 @@ colorBox8.addEventListener('click',()=>{
 	greeTing.style.backgroundColor = 'gray';
 	turnOffSwatch();
 })
-colorBox9.addEventListener('click',()=>{
+colorBox9.addEventListener('click', () => {
 	navBar.style.backgroundColor = 'black';
 	navMenu.style.backgroundColor = 'black';
 	addBtn.style.backgroundColor = 'black';
 	welcomeText.style.color = 'black';
 	greeTing.style.backgroundColor = 'black';
-	turnOffSwatch();	
+	turnOffSwatch();
 })
-
-
 
 typeWork.addEventListener('click', () => {
 	showTypeData('work')
@@ -171,7 +162,6 @@ typePersonal.addEventListener('click', () => {
 addBtn.addEventListener('click', () => {
 	popupWrapper.classList.remove('hidden')
 	addBtn.classList.add('hidden')
-
 })
 
 addMemoDeleteBtn.addEventListener('click', () => {
@@ -179,36 +169,27 @@ addMemoDeleteBtn.addEventListener('click', () => {
 	addBtn.classList.remove('hidden')
 })
 
-
-footerMenuBtn.addEventListener('click', ()=>{
-	if(footerMenuBtn.value=='on'){
+footerMenuBtn.addEventListener('click', () => {
+	if (footerMenuBtn.value == 'on') {
 		navBar.classList.add('show')
-		document.getElementById('footerBtn1').value='off'
-	}else{
+		document.getElementById('footerBtn1').value = 'off'
+	} else {
 		navBar.classList.remove('show')
-		document.getElementById('footerBtn1').value='on'
+		document.getElementById('footerBtn1').value = 'on'
 	}
-	
 })
 
-
+showAllButton.addEventListener('click', showData)
 
 // show Date 
-const showTodayDate = () =>{
+const showTodayDate = () => {
 	let now = new Date()
 	let dateStr = new Date().toDateString()
 	showToday.innerHTML = dateStr
-	console.log(now)
-	console.log(dateStr)
 }
-window.addEventListener('load', showTodayDate)
-
 
 // HTTP methods
-
-
 let taskID = 1;
-
 
 // show all task 
 async function showData() {
@@ -240,7 +221,6 @@ async function showData() {
 				event.preventDefault();
 				delTask(event.target.id);
 			})
-			
 		}
 
 		const updateButton = document.querySelectorAll('.update-btn')
@@ -251,12 +231,10 @@ async function showData() {
 				addBtn.classList.add('hidden')
 				editTaskById(event.target.id)
 			})
-			
 		}
 		countMemo.innerHTML = displayArea.childElementCount;
-	}	
+	}
 }
-showAllButton.addEventListener('click', showData)
 
 // show task by ID
 async function showTaskById(id) {
@@ -268,7 +246,8 @@ async function showTaskById(id) {
 		tempArr = await response.json()
 		for (let item of tempArr) {
 			if (item.id === id) {
-				selectedArr = { ...item }
+				selectedArr = item
+				// selectedArr = { ...item }
 			}
 		}
 	}
@@ -308,9 +287,9 @@ async function showTypeData(taskType) {
 	if (response.ok) {
 		const dataArr = await response.json()
 		for (let obj of dataArr) {
-			if (taskType === obj.type){
+			if (taskType === obj.type) {
 				displayArea.innerHTML +=
-				`<div class="memo memo-${obj.id}" id="${obj.id}">
+					`<div class="memo memo-${obj.id}" id="${obj.id}">
     			<div class="memoTopBorder ${taskType} "></div>
     			<div class="memoTopBar">
         		<p id="${obj.id}" class="memoType blue">${obj.name}</p> 
@@ -383,17 +362,16 @@ document.querySelector('.add-form').addEventListener('submit', event => {
 // delete task
 async function delTask(id) {
 	let isDel = window.confirm('Confirm delete?')
-	if(isDel){
+	if (isDel) {
 		const url = 'http://localhost:8080/todolist/' + id
 		const response = await fetch(url, {
 			method: 'DELETE'
 		})
-		if (response.ok) {			
+		if (response.ok) {
 			alert(`Task-${id} was deleted`)
 			showData()
 		}
-	} 
-	
+	}
 }
 
 // transform task to form by id
@@ -406,9 +384,11 @@ async function editTaskById(id) {
 		tempArr = await response.json()
 		for (let item of tempArr) {
 			if (item.id === id) {
-				selectedArr = { ...item }
+				selectedArr = item
+				// selectedArr = { ...item }
 			}
-		}
+			}
+		
 	}
 	let addClassType = 'type-' + selectedArr.type.toLowerCase()
 	popupUpdateArea.innerHTML =
@@ -480,7 +460,9 @@ async function updateTask(dataObj) {
 	}
 }
 
-window.addEventListener('load', ()=>{
+// load website will show all task and the date of today
+window.addEventListener('load', showTodayDate)
+window.addEventListener('load', () => {
 	showData()
 })
 
