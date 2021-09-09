@@ -115,20 +115,20 @@
 #type{
     color:rgba(59, 59, 255, 0.8);
     margin-left: 55px;
-    width: 113px;
+    width: 153px;
     border-radius: 4px;
     height: 23px;
 }
 #name{
     color:rgba(59, 59, 255, 0.8);
     margin-left: 8px;
-    width: 110px;   
+    width: 150px;   
     height: 19px;
 }
 #duedate{
     color:rgba(59, 59, 255, 0.8);
     margin-left: 24px;
-    width: 110px;
+    width: 150px;
 }
 .add-form{
     color: rgba(59, 59, 255, 0.5);
@@ -158,7 +158,7 @@ div select{
     width: 56px;
     border-radius: 12px;
     background: rgba(59, 59, 255, 0.5);
-    color: #8bf7e4ed;    
+    color: #fff;    
 }
 #submit-btn:hover, #update-btn:hover{
     transform: scale(1.1);

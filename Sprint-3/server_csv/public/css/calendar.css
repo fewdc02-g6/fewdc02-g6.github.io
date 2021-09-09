@@ -419,12 +419,14 @@ html {
 
 }
 .add-memo{    
-    margin-top: 128px;
+    border-radius: 15px;
+    border: 2px solid rgba(59, 59, 255, 0.5);
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-top: 160px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid;
     width: fit-content;    
-    background: white;    
+    background: white;      
 }
 #add-memo-delete-btn,#popup-memo-close-button{
     left: 290px;
@@ -434,20 +436,20 @@ html {
 #type{
     color:rgba(59, 59, 255, 0.8);
     margin-left: 55px;
-    width: 113px;
+    width: 155px;
     border-radius: 4px;
     height: 23px;
 }
 #name{
     color:rgba(59, 59, 255, 0.8);
     margin-left: 8px;
-    width: 110px;   
+    width: 149px;   
     height: 19px;
 }
 #duedate{
     color:rgba(59, 59, 255, 0.8);
     margin-left: 24px;
-    width: 110px;
+    width: 150px;
 }
 .add-form{
     border: 2px solid rgba(59, 59, 255, 0.5);
