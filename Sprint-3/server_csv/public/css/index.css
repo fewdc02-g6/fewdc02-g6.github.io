@@ -230,8 +230,8 @@ div select{
    
 }
 .memo{
-    width:16rem;    
-    margin: 16px;
+    width: 15rem;    
+    margin: 5px 0px 5px 5px;
     box-shadow: 2px 4px 5px rgb(71 61 128 / 22%);
     background: #ffffff9e;
     border-radius: 10px
@@ -526,7 +526,7 @@ div select{
         font-size: 30px;    
       }
      .memo{        
-        width: 100%;  
+        width: 92vw;  
         margin: 0;      
     }    
     .memoType{

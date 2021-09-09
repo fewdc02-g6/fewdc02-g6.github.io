@@ -20,7 +20,7 @@ html {
     font-size: 36px;
     padding: 2px 13px;
     position: fixed;
-    bottom: 25px;
+    bottom: 50px;
     right: 20px;
     z-index: 100;
 }
@@ -346,9 +346,8 @@ html {
 
 /* main-up */
 .welcome-text{
-    margin: 0;
-    /* padding: 10px; */
-    /* margin: 10px 10px; */
+    padding: 10px 0px 0px 10px;
+    /* margin: 5px 0px 0px 5px; */
     color: #216cf3d9;
     background-color: lightgray;
 
@@ -358,6 +357,8 @@ html {
 }
 .today-date {
     word-spacing: 2px;
+    margin: 0;
+
 }
 
 /*--------------navbar ------*/
@@ -505,6 +506,7 @@ div select{
 }
 @media screen and (max-width: 950px){
     .nav{
+        min-height: 580px;
     position: fixed;
     display: none;
     z-index: 1;
@@ -522,7 +524,7 @@ div select{
         /* max-height: 100vh; */
     }
     .welcome-text{
-        margin-top: 65px;
+        margin-top: 45px;
     }
     #main-bottom{
         flex-direction: column;
@@ -537,8 +539,8 @@ div select{
         height: 200px;
         /* max-width: 380px; */
         /* margin: 1rem 1rem 0rem; */
-        /* margin-left: 0rem;
-        margin-top: 1rem; */
+        /* margin-left: 0rem;*/
+        margin-top: 1rem; 
         /* height: 48vh; */
     }
      .add-btn{

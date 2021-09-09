@@ -67,13 +67,14 @@ gridFunction1.addEventListener('click',()=>{
 	if(displayPattenOnOff=='false'){		
 		for(let memo of memoArr){
 			memoList.style.gridTemplateColumns = 'auto auto auto auto'
+			memo.style.width = '15rem'
 			// testing
 	}
 	displayPattenOnOff = 'true';
 	}else{		
 		for(let memo of memoArr){
 			memoList.style.gridTemplateColumns = 'auto auto auto'
-
+			memo.style.width = '18rem'
 	}
 	displayPattenOnOff = 'false';
 	}
