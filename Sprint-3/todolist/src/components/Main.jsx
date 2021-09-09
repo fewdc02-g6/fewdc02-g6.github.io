@@ -3,11 +3,16 @@ import { Route, Switch } from 'react-router-dom'
 import Footer from './Footer'
 // import Test from './Test'
 import MemoList from './MainContent/MemoList'
-// import getAllData from '../components/getAllData'
+import getAllData from '../components/getAllData'
 
 
 export default function Main() {
     // const navList = ['Show All Task', 'Work', 'Family', 'Personal', 'Calendar', 'Log Out']
+    
+    // const response = await fetch('http://localhost:8080/todolist')
+
+    let data = getAllData()
+    console.log(data)
     let initialvalue = [
         {
             id: 1,
@@ -35,6 +40,7 @@ export default function Main() {
         }
     ]
     const [memos, setMemos] = useState(initialvalue)
+    setMemos(newdata)
     return (
         <>
             <Switch>
