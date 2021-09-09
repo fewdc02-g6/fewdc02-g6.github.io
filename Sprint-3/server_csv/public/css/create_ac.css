@@ -1,12 +1,14 @@
+body{
+    background: repeating-linear-gradient( 
+    162deg, #956eae75,#4040d794 551px);
+}
+
 .mainContainer{
     margin: 0px;
     font-family: 'Noto Sans JP', sans-serif;
 }
 .creatACTable{
-    margin: 30px auto;
-    margin: 2;
-    
-    width: 83%;
+    height: 100vh;
     text-align: center;
     border-radius: 14px;
 }
