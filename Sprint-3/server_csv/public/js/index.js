@@ -1,7 +1,5 @@
 "use strict"
 
-
-
 // global variables
 const showToday = document.querySelector('.today-date')
 const memoList = document.querySelector('.memolist')

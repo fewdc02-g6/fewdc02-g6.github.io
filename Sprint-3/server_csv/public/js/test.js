@@ -1,6 +1,5 @@
 "use strict"
 
-
 // global variables
 var YY, MM, DD, dateArr, date
 const leftArrow = document.querySelector('.fa-angle-left')
@@ -17,7 +16,6 @@ const popupUpdateArea = document.querySelector('.popup-update-area')
 const showToday = document.querySelector('.today-date')
 const countMemo = document.querySelector('#count-memo')
 
-
 // event listeners
 window.addEventListener('load', () => {
 	// console.log(YY)
@@ -29,7 +27,6 @@ window.addEventListener('load', () => {
 		i.addEventListener('click', pickDate)
 	})
 	displayTaskArea.innerText = 'Please Pick a Date.'
-
 })
 
 const showTodayDate = () =>{
@@ -211,7 +208,6 @@ const getTaskByDate = async (date) => {
 				// displayTaskArea.innerHTML = "<p>No task on this day...</p>"
 			}
 		}
-		
 	}
 }
 
@@ -294,16 +290,12 @@ async function updateTask(dataObj) {
 		body: JSON.stringify(dataObj)
 	})
 	if (response.ok) {
-		
 	}
 }
 
 const clearDisplayArea = (arr) => {
 	divToDoHeader.innerHTML = obj.duedate;
 }
-
-
-
 
 const monthToNum = (text) => {
 	switch (text) {
