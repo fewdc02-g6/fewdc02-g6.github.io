@@ -122,15 +122,19 @@ async function addTask(event) {
 	}
 }
 
-// del task
+// delete task
 async function delTask(id) {
-	const url = 'http://localhost:8080/todolist/' + id
-	const response = await fetch(url, {
-		method: 'DELETE'
-	})
-	if (response.ok) {
-		alert(`Task is deleted`)
-		window.location.replace("http://localhost:8080/calendar.html")
+	let isDel = window.confirm('Confirm delete?')
+	if(isDel){
+
+		const url = 'http://localhost:8080/todolist/' + id
+		const response = await fetch(url, {
+			method: 'DELETE'
+		})
+		if (response.ok) {
+			alert(`Task is deleted`)
+			window.location.replace("http://localhost:8080/calendar.html")
+		}
 	}
 }
 

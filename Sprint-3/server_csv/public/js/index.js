@@ -391,9 +391,7 @@ async function delTask(id) {
 			alert(`Task-${id} was deleted`)
 			showData()
 		}
-	} else{
-		showData()
-	}
+	} 
 	
 }
 
