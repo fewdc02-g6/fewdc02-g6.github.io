@@ -76,9 +76,16 @@
     display: none;
   }
 
+  
 /* navbar */
 
+.memolist{
+    background-image: url(https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1543844649000/photosp/b43cfeec-92b2-4f16-98b7-60a33b4b513a/stock-photo-text-background-list-minimalism-bulletin-board-to-do-cork-board-texture-background-room-for-text-b43cfeec-92b2-4f16-98b7-60a33b4b513a.jpg)
+}
 
+.rightMain{
+    background-color:lightgray;
+}
 
 .popup-wrapper, .popup-update-area {    
     background: rgba(0, 0, 0, 0.2);
@@ -165,8 +172,8 @@ div select{
     overflow: auto;          
 }
 .welcome-text{
-    letter-spacing: 2px;
-    padding: 34px;
+    padding: 5px;
+    margin: 5px 5px;
     color: #216cf3d9;
 }
     
@@ -215,6 +222,7 @@ div select{
 }
 .memolist{         
     display: grid;
+    justify-content: start;
     grid-template-columns: auto auto auto auto;
    
 }
@@ -405,19 +413,23 @@ div select{
 
 @media screen and (max-width: 1060px) {   
     .nav{
+        top: 0;
         position: fixed;
-        display: none;        
+        display: none;
         z-index: 1;
+        bottom: 55px;
     }   
+    .nav-menu-item{
+        height: unset;
+    }
     .footer{
-        background: #8bf7e473;
+        background: white;
         height: 55px;
         display: flex;
         z-index: 3;
     }
     .footer button ,.footer button a{
         transform: scale(1.5);
-        fill: white;
         border: none;
         padding: 0px 13px 0px 13px;
         background: none;
@@ -432,7 +444,8 @@ div select{
 @media screen and (max-width:500px){    
     
      .nav-menu{
-        background-color: #251e1ead;
+        height: 100%;
+        justify-content: space-around;
         display: flex;
         flex-direction: column;
     }
@@ -513,7 +526,6 @@ div select{
         margin: 0;      
     }    
     .memoType{
-        background: repeating-radial-gradient(#8bf7e4ed, transparent 250px);
     } 
        
     .add-btn{

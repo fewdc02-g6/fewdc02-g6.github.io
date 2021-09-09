@@ -222,13 +222,13 @@ div select{
 .bg-black{
     background-color: black;
 }
-.work{
+.work, .WORK{
     background:#216cf3d9;
 }
-.family{
+.family, .FAMILY{
     background:#f46236d1;
 }
-.personal{
+.personal, .PERSONAL{
     background:#2ec578c7;
 }
 .bg-yellow{
