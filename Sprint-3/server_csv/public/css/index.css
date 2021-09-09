@@ -225,8 +225,8 @@ div select{
 .memolist{         
     display: grid;
     /* justify-content: start; */
-    grid-template-columns: 17ch 17ch 17ch 17ch;
-    /* grid-template-columns: auto auto auto auto; */
+    /* grid-template-columns: 17ch 17ch 17ch 17ch; */
+    grid-template-columns: auto auto auto auto;
    
 }
 .memo{
@@ -538,9 +538,12 @@ div select{
     
     .memolist{        
         justify-content:center;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         /* grid-template-rows: auto; */
         grid-template-columns: none;
+        padding: 10px;
     }
     .memoContent{
         color: #2424cee3;

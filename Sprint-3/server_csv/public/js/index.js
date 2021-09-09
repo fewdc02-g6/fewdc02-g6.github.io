@@ -381,14 +381,20 @@ document.querySelector('.add-form').addEventListener('submit', event => {
 
 // delete task
 async function delTask(id) {
-	const url = 'http://localhost:8080/todolist/' + id
-	const response = await fetch(url, {
-		method: 'DELETE'
-	})
-	if (response.ok) {
-		alert(`Task-${id} was deleted`)
+	let isDel = window.confirm('Confirm delete?')
+	if(isDel){
+		const url = 'http://localhost:8080/todolist/' + id
+		const response = await fetch(url, {
+			method: 'DELETE'
+		})
+		if (response.ok) {			
+			alert(`Task-${id} was deleted`)
+			showData()
+		}
+	} else{
 		showData()
 	}
+	
 }
 
 // transform task to form by id
