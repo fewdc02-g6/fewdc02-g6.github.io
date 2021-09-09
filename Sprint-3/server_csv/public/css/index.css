@@ -172,8 +172,8 @@ div select{
     overflow: auto;          
 }
 .welcome-text{
-    padding: 5px;
-    margin: 5px 5px;
+    padding: 5px 0px 0px 5px;
+    margin: 5px 0px 0px 5px;
     color: #216cf3d9;
 }
     
@@ -222,18 +222,20 @@ div select{
 }
 .memolist{         
     display: grid;
-    justify-content: start;
-    grid-template-columns: auto auto auto auto;
+    /* justify-content: start; */
+    grid-template-columns: 17ch 17ch 17ch 17ch;
+    /* grid-template-columns: auto auto auto auto; */
    
 }
 .memo{
     width:16rem;    
     margin: 16px;
     box-shadow: 2px 4px 5px rgb(71 61 128 / 22%);
-    background: #ffffff14;
+    background: #ffffff9e;
+    border-radius: 10px
 }
 .memo:hover{
-    background: #ffffff38;
+    background: #ffffffc7;
 }
 
 /* color */
@@ -389,12 +391,12 @@ div select{
     background: repeating-radial-gradient(#8bf7e4ed, transparent 40px);
     
 }
-.countDiv{
+/* .countDiv{
     display: flex;
     justify-content: flex-end;
     padding: 0px 10px;
     color: white;
-}
+} */
 .footer{
     display: none;
     justify-content: space-between;

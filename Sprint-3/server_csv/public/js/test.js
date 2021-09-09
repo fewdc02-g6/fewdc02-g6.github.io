@@ -15,6 +15,8 @@ const addMemoDeleteBtn = document.getElementById('add-memo-delete-btn')
 const popupWrapper = document.querySelector('.popup-wrapper')
 const popupUpdateArea = document.querySelector('.popup-update-area')
 const showToday = document.querySelector('.today-date')
+const countMemo = document.querySelector('#count-memo')
+
 
 // event listeners
 window.addEventListener('load', () => {

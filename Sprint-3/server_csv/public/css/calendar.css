@@ -4,6 +4,7 @@ html {
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
     outline: none;
+    text-decoration: none;
     /* perspective: 1000px; */
 }
 
@@ -49,7 +50,7 @@ html {
     display: flex;
     justify-content: space-around;
     max-width: 100%;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .main.is-rotated-left {
@@ -61,12 +62,13 @@ html {
 }
 
 .sideb {
+    font-size: 20px;
     max-width: 55%;
     background-color: white;
     max-height: 450px;
     margin: 3px;
     box-sizing: content-box;
-    padding: 15px;
+    /* padding: 15px; */
     border: 1px solid lightgray;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /* flex-grow: 1;
@@ -80,14 +82,14 @@ html {
 }
 
 .main .header {
-    padding: 15px 0 20px;
+    padding: 15px 0 15px;
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
 .main .header i {
-    padding: 0 5px;
+    padding: 4px 15px;
     cursor: pointer;
 }
 
@@ -221,6 +223,7 @@ html {
     display: flex;
     flex-direction: column;
     margin: 3px;
+    font-size: 20px;
 
 }
 
@@ -343,9 +346,15 @@ html {
 
 /* main-up */
 .welcome-text{
-    padding: 10px;
-    margin: 10px 10px;
+    margin: 0;
+    /* padding: 10px; */
+    /* margin: 10px 10px; */
     color: #216cf3d9;
+    background-color: lightgray;
+
+}
+.welcome-text h2{
+    margin: 0;
 }
 .today-date {
     word-spacing: 2px;
@@ -356,8 +365,8 @@ html {
     /* flex: 1; */
     display: block;
     background-color: #216cf3d9;
-    height: 100vh;
-    min-height: 450px;
+    /* height: 100vh;
+    min-height: 450px; */
   }
   .show{
     display: block !important;
@@ -367,6 +376,7 @@ html {
     display: flex;
     flex-direction: column;
     font-family: 'Noto Sans JP', sans-serif;
+
   }
   .nav-greet{
     display: flex;
@@ -375,12 +385,12 @@ html {
     color: white;
   }
   h2.greeting{
-    background:#216cf3d9;
-    box-shadow: 2px 4px 5px rgb(71 61 128 / 9%);
-    margin: 0px;
+      margin: 0;
+    box-shadow: 2px 4px 5px rgb(2 20 20 / 20%);
+    letter-spacing: 6px;
     height: fit-content;
     width: max-content;
-    padding: 80px;   
+    padding: 45px 50px;   
     color: white;
   }
   .nav-menu-item{
@@ -390,6 +400,7 @@ html {
     padding: 18px;
     font-weight: 700;
     font-size: 20px;
+    text-decoration: none;
 
   }
   .nav-menu-item:hover{
