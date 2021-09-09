@@ -47,8 +47,11 @@ html {
 
 #main-bottom{
     display: flex;
+    justify-content: space-around;
     max-width: 100%;
+    margin: auto;
 }
+
 .main.is-rotated-left {
     transform: translate(-50%, -50%) rotateY(-4deg);
 }
@@ -510,7 +513,7 @@ div select{
     }
     #main-bottom{
         flex-direction: column;
-        /* margin: 0rem 1rem ; */
+
     }
     .sideb{
         max-width: 100%;
