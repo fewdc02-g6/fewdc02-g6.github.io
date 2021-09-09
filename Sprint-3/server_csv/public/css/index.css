@@ -390,7 +390,7 @@ div select{
 .add-btn:hover{
     color: white;
     transform: scale(1.1); 
-    background: repeating-radial-gradient(#8bf7e4ed, transparent 40px);
+    /* background: repeating-radial-gradient(#8bf7e4ed, transparent 40px); */
     
 }
 /* .countDiv{
