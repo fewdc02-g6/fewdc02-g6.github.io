@@ -4,10 +4,7 @@
     font-family: 'Noto Sans JP', sans-serif;
 
 }
-body{
-    background: repeating-linear-gradient(
-    162deg, #956eaeed,#4040d7f2 400px);
-}
+
 .section{
     display: flex;
     height: 100vh;
@@ -27,7 +24,7 @@ body{
   .nav{
     flex: 1;
     display: block;
-    /* background-color: #216cf3d9; */
+    background-color: #216cf3d9;
   }
   .nav-menu{
     display: flex;
@@ -41,8 +38,9 @@ body{
     color: white;
   }
   h2.greeting{
-    background: repeating-radial-gradient(#8bf7e4ed, transparent 191px);
+    /* background: repeating-radial-gradient(#8bf7e4ed, transparent 240px); */
     box-shadow: 2px 4px 5px rgb(2 20 20 / 20%);
+    letter-spacing: 6px;
     height: fit-content;
     width: max-content;
     padding: 45px 80px;   
@@ -157,7 +155,7 @@ div select{
     transform: scale(1.1);
 }
 .update-btn{
-    fill:#8bf7e4ed;
+    /* fill:#8bf7e4ed; */
 }
 .update-btn:hover{
     transform: scale(1.2);
@@ -167,9 +165,9 @@ div select{
     overflow: auto;          
 }
 .welcome-text{
-    background: repeating-radial-gradient(#8bf7e4ed, transparent 899px);
-    padding: 34px;    
-    color: white;
+    letter-spacing: 2px;
+    padding: 34px;
+    color: #216cf3d9;
 }
     
 
@@ -182,9 +180,7 @@ div select{
     display: flex;
     justify-content: flex-end;
 }
-#gridFun1{
-    fill: #8bf7e4ed;
-}
+
 #gridFun1:hover{
     transform: scale(1.2);
 }
@@ -192,7 +188,6 @@ div select{
     margin-right: 9px;
     padding: 7px;
     transform: scale(1.1);
-    fill: #8bf7e4ed;
 }
 #gridFun3 svg:hover{
     transform: scale(1.2);
@@ -226,7 +221,6 @@ div select{
 .memo{
     width:16rem;    
     margin: 16px;
-    color: #8bf7e4ed;
     box-shadow: 2px 4px 5px rgb(71 61 128 / 22%);
     background: #ffffff14;
 }
@@ -305,7 +299,6 @@ div select{
 .delete-btn{
     border-radius: 100px;
     padding: 3px; 
-    fill: #8bf7e4ed;   
 }
 .delete-btn:hover{
     transform: scale(1.1);
@@ -322,7 +315,7 @@ div select{
     border-radius: 7px;
     text-align: center;
     padding: 6px;
-    background: repeating-radial-gradient(#8bf7e4ed, transparent 139px);
+    background: #2957d9a6;
     margin: 13px;
 }
 
@@ -372,7 +365,7 @@ div select{
 }
 .add-btn{
     /* visibility: hidden; */
-    background: repeating-radial-gradient(#8bf7e4ed, transparent 29px);
+    background: #216cf3d9;
     border-radius: 79px;
     color: #ffffffcf;
     font-size: 36px;
