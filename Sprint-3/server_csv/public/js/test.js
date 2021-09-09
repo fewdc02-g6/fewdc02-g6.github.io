@@ -100,7 +100,7 @@ async function addTask(event) {
 		name: form.name.value,
 		description: form.description.value,
 		duedate: form.duedate.value,
-		type: form.type.value
+		type: form.type.value.toLowerCase()
 	}
 	const response = await fetch('http://localhost:8080/todolist',
 		{
