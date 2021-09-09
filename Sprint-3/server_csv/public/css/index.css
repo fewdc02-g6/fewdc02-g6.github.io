@@ -80,6 +80,8 @@
 /* navbar */
 
 .memolist{
+    background-repeat: repeat;
+    background-size: cover;
     background-image: url(https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1543844649000/photosp/b43cfeec-92b2-4f16-98b7-60a33b4b513a/stock-photo-text-background-list-minimalism-bulletin-board-to-do-cork-board-texture-background-room-for-text-b43cfeec-92b2-4f16-98b7-60a33b4b513a.jpg)
 }
 
@@ -537,7 +539,6 @@ div select{
     .memolist{        
         justify-content:center;
         display: grid;
-        grid-gap: 30px;
         /* grid-template-rows: auto; */
         grid-template-columns: none;
     }
