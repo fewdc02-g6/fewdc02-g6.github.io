@@ -215,6 +215,7 @@ div select{
 }
 .memolist{         
     display: grid;
+    justify-content: start;
     grid-template-columns: auto auto auto auto;
    
 }
@@ -405,19 +406,23 @@ div select{
 
 @media screen and (max-width: 1060px) {   
     .nav{
+        top: 0;
         position: fixed;
-        display: none;        
+        display: none;
         z-index: 1;
+        bottom: 55px;
     }   
+    .nav-menu-item{
+        height: unset;
+    }
     .footer{
-        background: #8bf7e473;
+        background: white;
         height: 55px;
         display: flex;
         z-index: 3;
     }
     .footer button ,.footer button a{
         transform: scale(1.5);
-        fill: white;
         border: none;
         padding: 0px 13px 0px 13px;
         background: none;
@@ -432,7 +437,8 @@ div select{
 @media screen and (max-width:500px){    
     
      .nav-menu{
-        background-color: #251e1ead;
+        height: 100%;
+        justify-content: space-around;
         display: flex;
         flex-direction: column;
     }
@@ -513,7 +519,6 @@ div select{
         margin: 0;      
     }    
     .memoType{
-        background: repeating-radial-gradient(#8bf7e4ed, transparent 250px);
     } 
        
     .add-btn{
