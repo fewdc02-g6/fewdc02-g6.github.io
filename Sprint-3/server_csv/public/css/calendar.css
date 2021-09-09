@@ -384,11 +384,13 @@ html {
     color: white;
   }
   .nav-menu-item{
-    box-shadow: 2px 4px 5px rgb(71 61 128 / 9%);
+    box-shadow: 2px 4px 5px rgb(2 20 20 / 20%);
     color: #ffffffcf;
     margin: 5px;
     padding: 18px;
     font-weight: 700;
+    font-size: 20px;
+
   }
   .nav-menu-item:hover{
     color: white;
